@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#141a16">
+    <meta name="description" content="A family archive tracing the Pardo, Bibi, Safdieh, Massry, and connected family lines across generations.">
+    <title>The Pardo Family Archive</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="wordmark" href="#top" aria-label="Pardo family archive home">
+        <span class="wordmark-seal">P</span>
+        <span><strong>THE PARDO</strong><small>FAMILY ARCHIVE</small></span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a class="nav-link active" href="#overview">Overview</a>
+        <a class="nav-link" href="#tree">Family tree</a>
+        <a class="nav-link" href="#ancestors">Ancestors</a>
+        <a class="nav-link" href="#photos">Photos</a>
+        <a class="nav-link" href="#names">Surnames</a>
+        <a class="nav-link" href="#stories">Stories</a>
+      </nav>
+      <label class="search-box" aria-label="Search family archive">
+        <span aria-hidden="true">⌕</span>
+        <input id="global-search" type="search" placeholder="Find a name" autocomplete="off">
+        <kbd>/</kbd>
+      </label>
+      <label class="import-button" for="gedcom-file">
+        <span aria-hidden="true">＋</span> Import GEDCOM
+      </label>
+      <input id="gedcom-file" class="visually-hidden" type="file" accept=".ged,.gedcom,text/plain">
+    </header>
+
+    <main id="top">
+      <section class="hero" id="overview">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-mark"></span> A living record · New York and beyond</p>
+          <h1>The story<br>carried <em>forward.</em></h1>
+          <p class="hero-intro">A family shaped by old cities, new beginnings, and the names kept alive between them. Follow the branches from Baghdad and Aleppo to Brooklyn and Jerusalem.</p>
+          <a class="text-link" href="#tree">Explore the family tree <span aria-hidden="true">↘</span></a>
+        </div>
+        <figure class="hero-image">
+          <img src="https://media.geni.com/p13/b7/14/ab/70/5344484cdf3cfd4d/dwekkhalousi_original.jpg?hash=ac4aeba78bf94ade6f2f26d4ff153e72a31c93822cd901420822fc913f60623c.1799308799" alt="Archival portrait preserved with the Dweck Khalousi family record" loading="eager">
+          <figcaption><span>01 / ARCHIVE IMAGE</span><span>A portrait preserved in the Dweck family records</span></figcaption>
+        </figure>
+        <div class="hero-side-note" aria-hidden="true">EST. IN MANY PLACES · HELD IN ONE FAMILY</div>
+      </section>
+
+      <section class="snapshot" aria-label="Archive at a glance">
+        <div class="snapshot-intro"><span class="eyebrow">THE ARCHIVE AT A GLANCE</span><span id="dataset-label">Family highlights from the GEDCOM</span></div>
+        <div class="stat"><strong id="people-count">—</strong><span>relatives indexed</span></div>
+        <div class="stat"><strong id="surname-count">—</strong><span>family names</span></div>
+        <div class="stat"><strong>500<span class="stat-plus">+</span></strong><span>years of recorded history</span></div>
+        <div class="stat stat-places"><strong>3</strong><span>continents in the family story</span></div>
+      </section>
+
+      <section class="section tree-section" id="tree">
+        <div class="section-heading">
+          <div><p class="eyebrow">01 — THE FAMILY TREE</p><h2>One family, many branches.</h2></div>
+          <p class="section-aside">Start with Nathan, then follow the recorded connections back through both sides of the family.</p>
+        </div>
+        <div class="tree-toolbar">
+          <div class="tree-legend"><span><i class="legend-dot green"></i> Pardo line</span><span><i class="legend-dot coral"></i> Bibi line</span><span id="tree-count">All recorded generations</span></div>
+          <button class="quiet-button" id="show-all-people" type="button">Browse everyone <span aria-hidden="true">↗</span></button>
+        </div>
+        <div class="tree-canvas" id="family-tree" aria-live="polite"></div>
+        <div class="tree-connections" id="tree-connections" aria-live="polite"></div>
+      </section>
+
+      <section class="section ancestors-section" id="ancestors">
+        <div class="section-heading">
+          <div><p class="eyebrow">02 — SCHOLARS &amp; COMMUNITY LEADERS</p><h2>Teachers, rabbis, and keepers of tradition.</h2></div>
+          <p class="section-aside">People in the supplied family record identified with a religious title or scholarly role. Descriptions follow what that record documents.</p>
+        </div>
+        <div class="notable-grid" id="notable-grid" aria-live="polite"></div>
+      </section>
+
+      <section class="section photos-section" id="photos">
+        <div class="section-heading">
+          <div><p class="eyebrow">03 — THE FAMILY ALBUM</p><h2>Faces carried through the archive.</h2></div>
+          <p class="section-aside">Photographs attached to deceased relatives’ records in the supplied GEDCOM. Select a photograph to view the original.</p>
+        </div>
+        <div class="photo-grid" id="photo-grid" aria-live="polite"></div>
+      </section>
+
+      <section class="section names-section" id="names">
+        <div class="section-heading names-heading">
+          <div><p class="eyebrow">04 — THE NAME INDEX</p><h2>Every name keeps a thread.</h2></div>
+          <p class="section-aside">Birth names, married names, and the spellings carried across languages. Choose a name to find relatives in that branch.</p>
+        </div>
+        <div class="name-controls">
+          <label class="directory-search"><span aria-hidden="true">⌕</span><input id="surname-search" type="search" placeholder="Search surnames or places" autocomplete="off"></label>
+          <div class="filter-label" id="surname-result-count">FAMILY NAMES</div>
+        </div>
+        <div class="surname-list" id="surname-list" aria-live="polite"></div>
+        <div class="people-panel" id="people-panel" aria-live="polite">
+          <div class="people-panel-heading"><div><p class="eyebrow">PEOPLE IN THIS ARCHIVE</p><h3 id="people-heading">The relatives</h3></div><button class="clear-filter" id="clear-filter" type="button">Clear filter <span aria-hidden="true">×</span></button></div>
+          <div class="people-grid" id="people-grid"></div>
+        </div>
+      </section>
+
+      <section class="story-band" id="stories">
+        <div class="story-band-inner">
+          <p class="eyebrow">05 — A FAMILY JOURNEY</p>
+          <div class="story-columns">
+            <h2>Across borders.<br><em>Still together.</em></h2>
+            <div class="story-copy">
+              <p>Joseph Obadiah Bibi was remembered as a master engraver and silversmith. His work took him as far as Bombay. In 1910, he and his son Reuben left Beirut for Tunis; the family story then passes through Lyon, Ellis Island, San Francisco, and finally New York.</p>
+              <p>The record places Joseph on Ellis Island in 1915 and in New York by 1918. A route measured in years and cities became a new chapter for the Bibi family in Brooklyn.</p>
+              <span class="source-note">FROM THE FAMILY NOTES · JOSEPH OBADIAH BIBI</span>
+            </div>
+          </div>
+          <div class="route" aria-label="Recorded migration route: Baghdad, Beirut, Tunis, Lyon, New York">
+            <div class="route-line"></div>
+            <div class="route-stop"><i></i><span>BAGHDAD</span><small>earlier generations</small></div>
+            <div class="route-stop"><i></i><span>BEIRUT</span><small>family departure</small></div>
+            <div class="route-stop"><i></i><span>TUNIS · LYON</span><small>on the way</small></div>
+            <div class="route-stop"><i></i><span>NEW YORK</span><small>a new home</small></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section timeline-section" id="timeline">
+        <div class="section-heading">
+          <div><p class="eyebrow">04 — DATES THAT STAY</p><h2>Milestones in the record.</h2></div>
+          <p class="section-aside">A few moments documented across the family tree. Dates and spellings follow the supplied records.</p>
+        </div>
+        <div class="timeline" id="timeline-list"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <a class="wordmark footer-mark" href="#top"><span class="wordmark-seal">P</span><span><strong>THE PARDO</strong><small>FAMILY ARCHIVE</small></span></a>
+      <p>Made to remember the people behind the names.</p>
+      <a class="back-top" href="#top">BACK TO TOP ↑</a>
+    </footer>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
