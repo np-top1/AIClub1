@@ -27,6 +27,10 @@ const timelineItems = [
 let people = [...initialPeople];
 let familyLinks = [];
 let archivePhotos = [];
+let showAllPhotos = false;
+let visiblePhotoCount = 24;
+let galleryPhotos = [];
+let viewerIndex = 0;
 let activeSurname = "";
 let searchTerm = "";
 let toastTimer;
@@ -163,7 +167,68 @@ function renderNotables() {
 }
 
 function renderPhotos() {
-  $("#photo-grid").innerHTML = archivePhotos.length ? archivePhotos.slice(0, 16).map((photo) => `<a class="photo-card" href="${escapeHtml(photo.url)}" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer"><img src="${escapeHtml(photo.url)}" alt="Photograph from the archive of ${escapeHtml(photo.name)}" loading="lazy"><span>${escapeHtml(photo.name)}</span><small>${escapeHtml(photo.caption || "Family archive")}</small></a>`).join("") : `<div class="empty-state">No photographs of deceased relatives are available in the supplied record.</div>`;
+  const personOrder = new Map(people.map((person, index) => [person.name, index]));
+  const portraitsByPerson = new Map();
+  const seenUrlsByPerson = new Map();
+  for (const photo of archivePhotos) {
+    if (!photo.url) continue;
+    if (!seenUrlsByPerson.has(photo.name)) seenUrlsByPerson.set(photo.name, new Set());
+    const seenUrls = seenUrlsByPerson.get(photo.name);
+    if (seenUrls.has(photo.url)) continue;
+    seenUrls.add(photo.url);
+    if (!portraitsByPerson.has(photo.name)) portraitsByPerson.set(photo.name, []);
+    portraitsByPerson.get(photo.name).push(photo);
+  }
+  const photoQuality = (photo) => {
+    const source = `${photo.url} ${photo.caption || ""}`.toLowerCase();
+    let score = 0;
+    if (/\.(?:jpe?g|webp)(?:[?#]|$)/.test(photo.url)) score += 3;
+    if (/(?:portrait|family|sisters|cousins|dsc_|img_|photo_)/.test(source)) score += 2;
+    if (/(?:draft|registration|census|ketub|document|family.tree|record|certificate|pdf|doc\.png|screenshot)/.test(source)) score -= 10;
+    if (photo.caption) score -= 1;
+    return score;
+  };
+  const curatedPhotos = [...portraitsByPerson.values()].map((portraits) => [...portraits].sort((a, b) => photoQuality(b) - photoQuality(a))[0]);
+  const primaryPeople = new Set(["Joseph Obadiah Bibi", "Reuben Bibi", "Mordechai Murad Maslaton", "Shemuel Eliezer Pardo", "Abraham Ezra Dweck Khalousi HaKohen", "Haim Pinhas Pardo", "Rephael רפאל מאיר Meyuhas", "Yoshiyahu Yosef Pinto", "Menahem Dweck"]);
+  const sortGallery = (a, b) => Number(primaryPeople.has(b.name)) - Number(primaryPeople.has(a.name))
+    || personOrder.get(a.name) - personOrder.get(b.name);
+  const curated = curatedPhotos.sort(sortGallery);
+  const fullAlbum = [...portraitsByPerson.values()].flat().sort(sortGallery);
+  const query = $("#photo-search").value.trim().toLocaleLowerCase();
+  galleryPhotos = (showAllPhotos ? fullAlbum : curated).filter((photo) => photo.name.toLocaleLowerCase().includes(query));
+  const shown = galleryPhotos.slice(0, visiblePhotoCount);
+  const uniquePeople = new Set(galleryPhotos.map((photo) => photo.name)).size;
+  $("#photo-count").textContent = showAllPhotos
+    ? `${galleryPhotos.length} photos · ${uniquePeople} relatives`
+    : `${galleryPhotos.length} relatives · one portrait each`;
+  $("#photo-view-toggle").textContent = showAllPhotos ? "One portrait per relative" : `Browse every photo (${fullAlbum.length})`;
+  $("#photo-view-toggle").setAttribute("aria-pressed", String(showAllPhotos));
+  $("#photo-grid").innerHTML = shown.length ? shown.map((photo, index) => `<button class="photo-card" type="button" data-photo-index="${index}" aria-label="View photo of ${escapeHtml(photo.name)}"><span class="photo-image-wrap"><img src="${escapeHtml(photo.url)}" alt="Photograph of ${escapeHtml(photo.name)}" loading="lazy"><span class="photo-open-hint">OPEN GALLERY ↗</span></span><span class="photo-person">${escapeHtml(photo.name)}</span><small>${escapeHtml(photo.caption || "Family archive")}</small></button>`).join("") : `<div class="empty-state">No family photos match that name.</div>`;
+  $("#photo-load-more").hidden = shown.length >= galleryPhotos.length;
+  $("#photo-load-more").textContent = showAllPhotos ? "Show more photos ↓" : "Show more relatives ↓";
+  $("#photo-grid").querySelectorAll("[data-photo-index]").forEach((card) => card.addEventListener("click", () => openPhoto(Number(card.dataset.photoIndex))));
+}
+
+function openPhoto(index) {
+  viewerIndex = index;
+  updatePhotoViewer();
+  $("#photo-viewer").showModal();
+}
+
+function updatePhotoViewer() {
+  const photo = galleryPhotos[viewerIndex];
+  if (!photo) return;
+  $("#photo-viewer-image").src = photo.url;
+  $("#photo-viewer-image").alt = `Photograph of ${photo.name}`;
+  $("#photo-viewer-name").textContent = photo.name;
+  $("#photo-viewer-caption").textContent = photo.caption || "Family archive";
+  $("#photo-viewer-count").textContent = `${viewerIndex + 1} / ${galleryPhotos.length}`;
+}
+
+function movePhoto(direction) {
+  if (!galleryPhotos.length) return;
+  viewerIndex = (viewerIndex + direction + galleryPhotos.length) % galleryPhotos.length;
+  updatePhotoViewer();
 }
 
 function renderSurnames() {
@@ -234,7 +299,7 @@ function parseGedcom(text) {
       families.push(family);
       continue;
     }
-    const person = { id, name: "", given: "", surname: "", surnames: [], birth: "", death: "", place: "", familyIds: [], roles: [], photos: [] };
+    const person = { id, name: "", given: "", surname: "", surnames: [], birth: "", death: "", place: "", familyIds: [], roles: [], photos: [], deceased: false };
     let currentEvent = "";
     let currentObject = false;
     for (const line of lines.slice(1)) {
@@ -242,7 +307,7 @@ function parseGedcom(text) {
       if ((match = line.match(/^1 NAME (.+)/))) { if (!person.name) person.name = match[1].replace(/\//g, "").trim(); const surname = match[1].match(/\/([^/]+)\//)?.[1]?.trim(); if (surname && !person.surnames.includes(surname)) person.surnames.push(surname); if (!person.surname && surname) person.surname = surname; }
       else if ((match = line.match(/^2 GIVN (.+)/))) { if (!person.given) person.given = match[1].trim(); }
       else if ((match = line.match(/^2 SURN (.+)/))) { const surname = match[1].trim(); if (!person.surnames.includes(surname)) person.surnames.push(surname); if (!person.surname) person.surname = surname; }
-      else if ((match = line.match(/^1 (BIRT|DEAT)/))) { currentEvent = match[1]; currentObject = false; }
+      else if ((match = line.match(/^1 (BIRT|DEAT)/))) { currentEvent = match[1]; currentObject = false; if (currentEvent === "DEAT") person.deceased = true; }
       else if ((match = line.match(/^2 DATE (.+)/)) && currentEvent) { person[currentEvent === "BIRT" ? "birth" : "death"] = match[1].trim(); }
       else if ((match = line.match(/^2 PLAC (.+)/)) && currentEvent) { if (!person.place) person.place = match[1].split(",").slice(0, 2).join(",").trim(); }
       else if ((match = line.match(/^1 (?:TITL|OCCU) (.+)/))) { person.roles.push(match[1].trim()); currentObject = false; }
@@ -276,7 +341,7 @@ function parseGedcom(text) {
     person.birth = person.birth.match(/\d{3,4}/)?.[0] || "";
     person.death = person.death.match(/\d{3,4}/)?.[0] || "";
     person.roles = [...new Set(person.roles.filter(Boolean))];
-    person.photos = person.death ? person.photos.map((photo) => typeof photo === "string" ? { url: photo, caption: "" } : photo).filter((photo) => /\.(?:jpe?g|png|webp)(?:[?#]|$)/i.test(photo.url)) : [];
+    person.photos = person.deceased ? person.photos.map((photo) => typeof photo === "string" ? { url: photo, caption: "" } : photo).filter((photo) => /\.(?:jpe?g|png|webp)(?:[?#]|$)/i.test(photo.url)) : [];
   }
   const photos = individuals.flatMap((person) => person.photos.map((photo) => ({ ...photo, name: person.name })));
   const surnameMap = new Map();
@@ -339,6 +404,17 @@ function renderAll() {
 
 $("#gedcom-file").addEventListener("change", (event) => importGedcom(event.target.files[0]));
 $("#surname-search").addEventListener("input", () => { activeSurname = ""; renderSurnames(); renderPeople(); });
+$("#photo-search").addEventListener("input", () => { visiblePhotoCount = 24; renderPhotos(); });
+$("#photo-view-toggle").addEventListener("click", () => { showAllPhotos = !showAllPhotos; visiblePhotoCount = 24; renderPhotos(); });
+$("#photo-load-more").addEventListener("click", () => { visiblePhotoCount += 24; renderPhotos(); });
+$("#photo-viewer-close").addEventListener("click", () => $("#photo-viewer").close());
+$("#photo-viewer-prev").addEventListener("click", () => movePhoto(-1));
+$("#photo-viewer-next").addEventListener("click", () => movePhoto(1));
+$("#photo-viewer").addEventListener("click", (event) => { if (event.target === $("#photo-viewer")) $("#photo-viewer").close(); });
+$("#photo-viewer").addEventListener("keydown", (event) => {
+  if (event.key === "ArrowLeft") { event.preventDefault(); movePhoto(-1); }
+  if (event.key === "ArrowRight") { event.preventDefault(); movePhoto(1); }
+});
 $("#global-search").addEventListener("input", (event) => { searchTerm = event.target.value.trim(); activeSurname = ""; renderSurnames(); renderPeople(); if (searchTerm) $("#names").scrollIntoView({ behavior: "smooth" }); });
 $("#clear-filter").addEventListener("click", () => { activeSurname = ""; searchTerm = ""; $("#surname-search").value = ""; $("#global-search").value = ""; renderSurnames(); renderPeople(); });
 $("#show-all-people").addEventListener("click", () => { activeSurname = ""; renderSurnames(); renderPeople(); $("#names").scrollIntoView({ behavior: "smooth" }); });
