@@ -16,13 +16,110 @@ const surnameRecords = [
 ].map(([name, places]) => ({ name, places }));
 
 const timelineItems = [
-  { year: "1522", title: "A line begins in Rome", detail: "Moshe Galante is recorded in Rome; the family line later reaches Safed and Jerusalem." },
-  { year: "1565", title: "The Pinto rabbinic line", detail: "Rabbi Yoshiyahu Yosef Pinto is born in Damascus, part of the family's documented scholarly history." },
-  { year: "1914", title: "Safdieh and Shmalo-Dwek", detail: "Abraham Safdieh and Sarah Shmalo-Dwek marry in New York, according to the marriage record." },
-  { year: "1946", title: "A Brooklyn ketubah", detail: "The marriage record for Eli Safdieh and Esther Maslaton places the family at Ocean Parkway Jewish Center." },
-  { year: "1956", title: "From Egypt to Jerusalem", detail: "David Pardo and Matilda Betesh move from Egypt to Jerusalem with their son, as remembered in the family notes." },
-  { year: "2006", title: "The Pardo household", detail: "The GEDCOM records Nathan Albert Pardo as the child of A. A. Pardo and A. Bibi." }
+  { year: "1522", title: "A Galante ancestor in Rome", detail: "Moshe Galante is recorded in Rome; later generations of this line are associated with Safed and Jerusalem.", citations: ["gedcom"] },
+  { year: "1565", title: "The Pinto rabbinic line", detail: "Josiah (Yoshiyahu) Yosef Pinto is born in Damascus and later serves as a rabbi there.", citations: ["pinto"] },
+  { year: "1756", title: "Raphael Meyuhas becomes Rishon Le-Zion", detail: "Raphael Meyuhas ben Samuel is appointed chief rabbi (Rishon Le-Zion) of Jerusalem after the death of Israel Jacob Algazi. The reference also records his earlier service as av beit din and a 1723 mission to Constantinople.", citations: ["meyuhas"] },
+  { year: "c. 1808–1811", title: "The Mann family reaches Lebanon", detail: "Nagi Girgi Zeidan’s family history describes Isaac Mann’s migration from Lithuania toward Safed and the family’s early settlement in Saida, followed by a move to Beirut.", citations: ["mann"] },
+  { year: "1814", title: "David Pardo arrives in Jerusalem", detail: "A Monastir community history says the 1839 Montefiore census recorded David Pardo, a young miller from Monastir, arriving in Jerusalem in 1814 and marrying a Jerusalem woman.", citations: ["monastir-pardo"] },
+  { year: "1822", title: "Haim Pinhas Pardo is born", detail: "The Monastir account identifies Haim Pinhas as David Pardo’s son, says he married Yael (daughter of Rabbi Shemuel Meyuhas), and names their children Malka, David, and Shemuel Eliezer. It describes Haim as a Jerusalem rabbi and preacher; the family tree records Shemuel Eliezer as their son.", citations: ["monastir-pardo", "gedcom"] },
+  { year: "1875", title: "A Pardo home in Mishkenot Yisrael", detail: "The account says brothers David and Shemuel Eliezer Pardo helped establish Mishkenot Yisrael outside Jerusalem’s Old City walls; it dates the neighborhood’s founding to 1875.", citations: ["monastir-pardo"] },
+  { year: "1882", title: "Haim Pinhas and Yael die in Jerusalem", detail: "The account reports that Haim Pinhas Pardo and his wife Yael died in 1882 and were buried on the Mount of Olives.", citations: ["monastir-pardo"] },
+  { year: "c. 1890", title: "From Baghdad to Damascus", detail: "In the family account, Joseph Obadiah Bibi, his wife Farha, and his brother Salim (Solomon) leave Baghdad and settle in Damascus.", citations: ["family-account"] },
+  { year: "1895", title: "Aleppo’s hakham bashi controversy", detail: "The family tree records Abraham Dweck Hakohen Khalousi’s life as 1800–1901. Yaron Harel’s study examines his removal from office in 1895.", citations: ["gedcom", "abraham-cambridge", "abraham-liverpool"] },
+  { year: "1910s", title: "Joseph and Reuben Bibi reach California", detail: "The family account places Joseph Obadiah and Reuben’s departure from Damascus around 1910. Sampson Mills’ family history says Joseph and Reuben came from France for the California World’s Fair in the 1910s, then settled in the United States and moved to New York.", citations: ["family-account", "bibi-founder-history"] },
+  { year: "1914", title: "Safdieh and Shmalo-Dwek", detail: "Abraham Safdieh and Sarah Shmalo-Dwek marry in New York, according to the marriage record.", citations: ["gedcom"] },
+  { year: "1920", title: "A shared voyage to a new home", detail: "Farha, her remaining children, and Salim’s family are remembered as arriving on the same ship as Hacham Murad and Sarah Maslaton and their children. Salim’s descendants are not included in this ancestor tree.", citations: ["family-account"] },
+  { year: "1938", title: "Shemuel Eliezer Pardo dies", detail: "A Monastir community history remembers Rabbi Shemuel Eliezer Pardo as a Jerusalem preacher, Hebrew educator, and teacher in the Sephardic Talmud Torah for about 30 years.", citations: ["monastir-pardo"] },
+  { year: "1946", title: "A Brooklyn ketubah", detail: "The marriage record for Eli Safdieh and Esther Maslaton places the family at Ocean Parkway Jewish Center.", citations: ["gedcom"] },
+  { year: "1956", title: "David and Matilda go to Israel", detail: "David Pardo and Matilda Betesh leave Egypt for Israel, while their son Albert Pardo and his wife Arlette take a separate route to America with their children.", citations: ["gedcom"] },
+  { year: "1957", title: "Albert and Arlette reach Paris", detail: "Albert Pardo and Arlette travel to Paris with their children on their way from Egypt to America.", citations: ["family-account"] },
+  { year: "1958", title: "Arrival at Idlewild Airport", detail: "The family account records Albert, Arlette, and their children arriving at then-Idlewild Airport aboard a TWA 707.", citations: ["family-account"] },
+  { year: "2006", title: "The Pardo household", detail: "The GEDCOM records Nathan Albert Pardo as the child of A. A. Pardo and A. Bibi.", citations: ["gedcom"] }
 ];
+
+const citationSources = [
+  {
+    id: "abraham-cambridge",
+    label: "Yaron Harel, “Abraham Dweck Hakohen Khalousi: The Last Hakham Bashi Born in Aleppo,” Cambridge Core, in Intrigue and Revolution.",
+    url: "https://www.cambridge.org/core/books/intrigue-and-revolution/abraham-dweck-hakohen-khalousi-the-last-hakham-bashi-born-in-aleppo/B206E6775FDAD5CDD7637E7AEAF68E2B"
+  },
+  {
+    id: "abraham-liverpool",
+    label: "Yaron Harel, “Abraham Dweck Hakohen Khalousi: The Last Hakham Bashi Born in Aleppo,” Liverpool University Press Scholarship Online, chapter 6.",
+    url: "https://liverpool.universitypressscholarship.com/view/10.3828/liverpool/9781904113874.001.0001/upso-9781904113874-chapter-006"
+  },
+  {
+    id: "abraham-researchgate",
+    label: "ResearchGate copy of “Abraham Dweck Hakohen Khalousi: The Last Hakham Bashi Born in Aleppo” (repository copy of the same study).",
+    url: "https://www.researchgate.net/publication/349619542_Abraham_Dweck_Hakohen_Khalousi_The_Last_Hakham_Bashi_Born_in_Aleppo"
+  },
+  {
+    id: "galante",
+    label: "“Galante,” The Jewish Encyclopedia (1901–1906).",
+    url: "https://www.jewishencyclopedia.com/view.jsp?letter=G&artid=24"
+  },
+  {
+    id: "pinto",
+    label: "“Pinto,” The Jewish Encyclopedia (1901–1906), entry on Josiah ben Joseph Pinto.",
+    url: "https://www.jewishencyclopedia.com/view.jsp?letter=P&artid=342"
+  },
+  {
+    id: "maslaton",
+    label: "Sarina Roffé, “Rabbi Murad Maslaton, A Great Leader,” JewishGen Rabbinic Journal.",
+    url: "https://www.jewishgen.org/rabbinic/journal/maslaton.htm"
+  },
+  {
+    id: "lebanon",
+    label: "Alain Farhi, “The Jews of Lebanon: History and Records,” paper presented at the 32nd IAJGS International Conference on Jewish Genealogy, 2012.",
+    url: "https://www.farhi.org/Documents/The%20Jews%20of%20Lebanon.htm"
+  },
+  {
+    id: "mann",
+    label: "Nagi Girgi Zeidan, “L’Histoire de la famille juive libanaise Mann” (French), 17 June 2009.",
+    url: "https://www.farhi.org/Documents/HISTOIRE%20DE%20LA%20FAMILLE%20MANN%20JUIVE%20LIBANAISE.htm"
+  },
+  {
+    id: "family-account",
+    label: "Family account provided by the archive owner: Joseph Obadiah Bibi, Farha, Salim (Solomon), and the family’s Baghdad–Damascus migration and 1920 voyage. Recorded here as family testimony, not independently verified.",
+    url: ""
+  },
+  {
+    id: "gedcom",
+    label: "Supplied family-tree GEDCOM export. Dates, names, and relationships are reproduced as recorded and are not independently verified by this website.",
+    url: ""
+  },
+  {
+    id: "meyuhas",
+    label: "“Meyuhas, Raphael Meyuhas ben Samuel,” Encyclopedia.com, from Encyclopaedia Judaica.",
+    url: "https://www.encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/meyuhas-raphael-meyuhas-ben-samuel"
+  },
+  {
+    id: "bibi-founder-history",
+    label: "“Founder History,” Sampson Mills, family history of Joseph and Reuben Bibi and the family business.",
+    url: "https://www.sampsonmills.com/founder-history"
+  },
+  {
+    id: "bibi-museum",
+    label: "Sephardic Heritage Museum, excerpt from the forthcoming book Our Stories: 100 Years — Syrian Jewish Life in America, 1890–1990s; Facebook post preview.",
+    url: "https://www.facebook.com/SephardicHeritageMuseum/posts/excerpt-from-our-upcoming-coffee-table-book-our-stories-100-years-syrian-jewish-/1139876531162019/"
+  },
+  {
+    id: "monastir-pardo",
+    label: "“The Pardo Preachers of Jerusalem,” Monastir-Bitola family-stories group post. Hebrew transcript supplied by the archive owner; historical claims are attributed to that post and have not all been independently verified.",
+    url: "https://www.facebook.com/groups/393479247525941/posts/966942956846231/"
+  }
+];
+
+const notableCitationIds = {
+  "Abraham Ezra Dweck Khalousi HaKohen": ["abraham-cambridge", "abraham-liverpool", "abraham-researchgate"],
+  "Moshe משה Galante II": ["galante"],
+  "Rephael רפאל מאיר Meyuhas": ["meyuhas"],
+  "Yoshiyahu Yosef Pinto": ["pinto"],
+  "Mordechai Murad Maslaton": ["maslaton"],
+  "Haim Pinhas Pardo": ["monastir-pardo", "gedcom"],
+  "Shemuel Eliezer Pardo": ["monastir-pardo", "gedcom"],
+  "Joseph Youssef Mann": ["mann"]
+};
 
 let people = [...initialPeople];
 let familyLinks = [];
@@ -128,30 +225,62 @@ function findParentPath(descendant, ancestorId, visited = new Set()) {
 
 function renderTreeConnections(root) {
   const adele = people.find((person) => person.name === "A. Bibi");
-  const albert = people.find((person) => person.name === "Albert Pardo");
+  const albertAri = people.find((person) => person.name === "A. A. Pardo");
   const menahem = people.find((person) => person.name === "Menahem Dweck");
   const eliyahu = people.find((person) => person.name === "Eliyahu Ben Seruya");
   const itzhak = people.find((person) => person.name.startsWith("Itzhak Ben Seruya"));
-  if (!adele || !albert || !menahem || !eliyahu || !itzhak) {
+  if (!adele || !albertAri || !menahem || !eliyahu || !itzhak) {
     $("#tree-connections").innerHTML = "";
     return;
   }
   const adeleToMenahem = findParentPath(adele, menahem.id);
   const adeleToEliyahu = findParentPath(adele, eliyahu.id);
+  const albertToMenahem = findParentPath(albertAri, menahem.id);
+  const albertToItzhak = findParentPath(albertAri, itzhak.id);
+  const brothersSharedParents = (eliyahu.parents || [])
+    .filter((parentId) => (itzhak.parents || []).includes(parentId))
+    .map(personById)
+    .filter(Boolean);
   const relatedPerson = (person) => `<button class="connection-person" type="button" data-person="${escapeHtml(person.id)}">${escapeHtml(person.name)} ↗</button>`;
-  $("#tree-connections").innerHTML = `<div class="connection-heading"><p class="eyebrow">TWO BLOOD-ANCESTOR CONNECTIONS</p><p>Family clarification identifies two separate ways A. Bibi and Albert Pardo’s ancestry lines meet.</p></div><div class="connection-grid"><article class="connection-card"><span>01 · SHARED ANCESTOR</span><h3>Both descend from Rabbi Menahem Dweck.</h3><p>The export records Menahem Dweck as a rabbi and connects his Dweck line into Adele’s ancestry. The family clarification confirms Albert Pardo also descends from him; his full path is not spelled out in this export.</p><small>${escapeHtml(adeleToMenahem?.map((person) => person.name).join(" → ") || `${adele.name} → ${menahem.name}`)}<br>${escapeHtml(albert.name)} → descendant line → ${escapeHtml(menahem.name)} · family clarification</small><div class="connection-people">${relatedPerson(menahem)}</div></article><article class="connection-card"><span>02 · DESCENDANTS OF BROTHERS</span><h3>Eliyahu and Itzhak Ben Seruya were brothers.</h3><p>Adele’s recorded ancestry reaches Eliyahu Ben Seruya. The family clarification identifies Itzhak Ben Seruya as his brother and connects Albert Pardo through the other sibling branch.</p><small>${escapeHtml(adeleToEliyahu?.map((person) => person.name).join(" → ") || `${adele.name} → ${eliyahu.name}`)}<br>${escapeHtml(albert.name)} → descendant line through ${escapeHtml(itzhak.name)} · family clarification</small><div class="connection-people">${relatedPerson(eliyahu)}${relatedPerson(itzhak)}</div></article></div><p class="connection-source">The GEDCOM supplies Adele’s recorded ancestor links; the additional Albert Pardo links and the brothers’ relationship are family-provided clarifications.</p>`;
+  const siblingDescription = brothersSharedParents.length
+    ? `The updated GEDCOM records ${brothersSharedParents.map((parent) => parent.name).join(" and ")} as parent${brothersSharedParents.length > 1 ? "s" : ""} of both brothers.`
+    : "The supplied family record identifies Eliyahu and Itzhak as brothers.";
+  const ancestryPath = (path, ancestor) => path?.map((person) => person.name).join(" → ") || `${albertAri.name} → ${ancestor.name}`;
+  const adelePath = (path, ancestor) => path?.map((person) => person.name).join(" → ") || `${adele.name} → ${ancestor.name}`;
+  $("#tree-connections").innerHTML = `<div class="connection-heading"><p class="eyebrow">TWO BLOOD-ANCESTOR CONNECTIONS</p><p>Follow both A. Bibi’s and her husband A. A. Pardo’s documented family lines.</p></div><div class="connection-grid"><article class="connection-card"><span>01 · SHARED ANCESTOR</span><h3>A. Bibi and A. A. Pardo both descend from Rabbi Menahem Dweck.</h3><p>The archive records both ancestor paths through their maternal lines.</p><small>${escapeHtml(adelePath(adeleToMenahem, menahem))}<br>${escapeHtml(ancestryPath(albertToMenahem, menahem))}</small><div class="connection-people">${relatedPerson(menahem)}</div></article><article class="connection-card"><span>02 · DESCENDANTS OF BROTHERS</span><h3>A. Bibi and A. A. Pardo descend from the Ben Seruya brothers.</h3><p>${escapeHtml(siblingDescription)} Adele’s line runs through Eliyahu; Albert Ari’s line runs through Itzhak.</p><small>${escapeHtml(adelePath(adeleToEliyahu, eliyahu))}<br>${escapeHtml(ancestryPath(albertToItzhak, itzhak))}</small><div class="connection-people">${brothersSharedParents.map(relatedPerson).join("")}${relatedPerson(eliyahu)}${relatedPerson(itzhak)}</div></article></div><p class="connection-source">Ancestry paths shown above follow the supplied GEDCOM. The relationship between A. Bibi and A. A. Pardo is documented as their marriage; each descends from these ancestors independently.</p>`;
   $("#tree-connections").querySelectorAll("[data-person]").forEach((button) => button.addEventListener("click", () => focusPerson(button.dataset.person)));
 }
 
 const notableDescriptions = {
-  "Abraham Ezra Dweck Khalousi HaKohen": "The record identifies him as Hakham Bashi and Grand Rabbi / Chief Rabbi of Aleppo.",
-  "Moshe משה Galante II": "Recorded as the first Rishon Le-Zion and Chief Rabbi of Jerusalem; the family notes also identify him as a rabbinic author.",
-  "Rephael רפאל מאיר Meyuhas": "Recorded with the title HaRishon Le-Zion, a senior rabbinic office in Jerusalem.",
-  "Yoshiyahu Yosef Pinto": "A rabbi and author; the family record credits him with a commentary on Ein Yaakov.",
+  "Abraham Ezra Dweck Khalousi HaKohen": "Yaron Harel’s study identifies Abraham Dweck Hakohen Khalousi as Aleppo’s last hakham bashi and examines his controversial 1895 removal from office. Harel notes the episode caused turmoil in Aleppo, Istanbul, and Jerusalem, but was later omitted from printed accounts and denied by community elders. The chapter places his leadership in the local structure of Syrian Jewish communities, rather than a single chief rabbinate over the whole region.",
+  "Moshe משה Galante II": "A Jewish Encyclopedia entry records Moses ben Jonathan Galante’s dates (1621–1689) and works including Zebah ha-Shelamim and Korban Chagigah. The family record identifies him as a Jerusalem rabbi and the first Rishon Le-Zion.",
+  "Rephael רפאל מאיר Meyuhas": "The Encyclopaedia Judaica biography describes Raphael Meyuhas ben Samuel as a Jerusalem-born scholar who headed the Bet Ya'akov yeshivah, served as av beit din, and was appointed Rishon Le-Zion in 1756. It also records a 1723 mission to Constantinople and several published works.",
+  "Yoshiyahu Yosef Pinto": "The Jewish Encyclopedia describes Josiah ben Joseph Pinto (c. 1565–1648) as a Syrian rabbi and preacher based in Damascus, and lists his homiletical writings and commentary on Ein Yaakov.",
+  "Mordechai Murad Maslaton": "A JewishGen biography of Rabbi Murad Maslaton (1876–1959) describes his teaching of Hebrew and Arabic at the Alliance Israelite school in Damascus, his leadership and teaching at Ahi Ezer, and his later service to the Syrian Jewish community in Brooklyn.",
+  "Haim Pinhas Pardo": "The Monastir community-history post describes Haim Pinhas Pardo (1822–1882) as a Jerusalem rabbi and prominent preacher, son of David Pardo, who came from Monastir. It says Haim and his wife Yael were buried on the Mount of Olives. The supplied family tree records Shemuel Eliezer Pardo as their son.",
+  "Shemuel Eliezer Pardo": "A Monastir community-history post remembers Rabbi Shemuel Eliezer Pardo (1857–1938) as a leading Jerusalem preacher, a regular preacher at Rabban Yohanan ben Zakkai Synagogue, an advocate of Hebrew-speaking families, and a teacher in the Sephardic Talmud Torah for about 30 years. It also credits him and his brother David with helping establish Mishkenot Yisrael in 1875, and says he made part of his home into a synagogue later called Ohel Shemuel.",
   "Avraham Moshe Meyuchas": "Described in the family notes as one of the sages of Jerusalem.",
-  "Joseph Youssef Mann": "Recorded as a rabbi and as Beirut’s first mukhtar (mayor).",
+  "Joseph Youssef Mann": "Nagi Girgi Zeidan’s history of the Mann family identifies Yousef as a rabbi in Beirut and names Isaac and Eliyahou as his sons. It says Eliyahou, not Yousef, served as mukhtar of Beirut’s Jewish community until 1900; Eliyahou’s son Isaac then held the role until 1930. The article presents some earlier family-history details as tentative.",
   "Shimon Dwek": "Recorded as a rabbi and author of Reah Sadeh."
 };
+
+function citationMarkers(ids = []) {
+  return ids.map((id) => {
+    const index = citationSources.findIndex((source) => source.id === id);
+    if (index < 0) return "";
+    return `<sup class="citation-marker"><a href="#citation-${escapeHtml(id)}" aria-label="See citation ${index + 1}">[${index + 1}]</a></sup>`;
+  }).join(" ");
+}
+
+function renderCitations() {
+  $("#citations-list").innerHTML = citationSources.map((source, index) => {
+    const title = escapeHtml(source.label);
+    const linkedTitle = source.url
+      ? `<a href="${escapeHtml(source.url)}" target="_blank" rel="noopener noreferrer">${title}</a>`
+      : title;
+    return `<li id="citation-${escapeHtml(source.id)}"><span class="citation-number">${index + 1}.</span> ${linkedTitle}</li>`;
+  }).join("");
+}
 
 function renderNotables() {
   const notablePeople = people.map((person) => ({
@@ -161,8 +290,9 @@ function renderNotables() {
   $("#notable-grid").innerHTML = notablePeople.length ? notablePeople.map((person) => {
     const roles = person.notableRoles.join(" · ");
     const description = notableDescriptions[person.name] || `Identified in the family record as ${roles}.`;
+    const citations = citationMarkers(notableCitationIds[person.name]);
     const life = person.death ? [person.birth, person.death].filter(Boolean).join("–") : "";
-    return `<article class="notable-card"><span class="notable-role">${escapeHtml(roles)}</span><h3>${escapeHtml(person.name)}</h3><p>${escapeHtml(description)}</p><small>${escapeHtml([life, person.place].filter(Boolean).join(" · "))}</small></article>`;
+    return `<article class="notable-card"><span class="notable-role">${escapeHtml(roles)}</span><h3>${escapeHtml(person.name)}</h3><p>${escapeHtml(description)} ${citations}</p><small>${escapeHtml([life, person.place].filter(Boolean).join(" · "))}</small></article>`;
   }).join("") : `<div class="empty-state">No titled or scholarly ancestors are available in this record.</div>`;
 }
 
@@ -263,7 +393,7 @@ function renderPeople() {
 }
 
 function renderTimeline() {
-  $("#timeline-list").innerHTML = timelineItems.map((item) => `<article class="timeline-item"><time>${escapeHtml(item.year)}</time><h3>${escapeHtml(item.title)}</h3><p>${escapeHtml(item.detail)}</p></article>`).join("");
+  $("#timeline-list").innerHTML = timelineItems.map((item) => `<article class="timeline-item"><time>${escapeHtml(item.year)}</time><h3>${escapeHtml(item.title)}</h3><p>${escapeHtml(item.detail)} ${citationMarkers(item.citations)}</p></article>`).join("");
 }
 
 function focusPerson(id) {
@@ -400,6 +530,7 @@ function renderAll() {
   renderSurnames();
   renderPeople();
   renderTimeline();
+  renderCitations();
 }
 
 $("#gedcom-file").addEventListener("change", (event) => importGedcom(event.target.files[0]));

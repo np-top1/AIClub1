@@ -111,6 +111,7 @@ h2 { margin-bottom: 0; font: 500 clamp(30px, 4vw, 43px)/1.15 var(--display); }
 .story-band-inner { position: relative; z-index: 1; padding: 72px 11.5vw 58px; }
 .story-band .eyebrow { color: #c9d2c5; }
 .story-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 8vw; align-items: start; }
+.pardo-jerusalem-story { margin-top: 48px; padding-top: 38px; border-top: 1px solid #82978566; }
 .story-columns h2 { font-size: clamp(38px, 5vw, 57px); }
 .story-columns h2 em { color: #d5bc87; }
 .story-copy p { margin-bottom: 14px; color: #e0e5db; font-size: 13px; line-height: 1.8; }
@@ -128,6 +129,13 @@ h2 { margin-bottom: 0; font: 500 clamp(30px, 4vw, 43px)/1.15 var(--display); }
 .timeline-item time { color: var(--green); font: 10px var(--mono); }
 .timeline-item h3 { margin: 9px 0 5px; font: 500 18px var(--display); }
 .timeline-item p { max-width: 230px; margin: 0; color: var(--muted); font-size: 10px; line-height: 1.7; }
+.citations-section { background: var(--paper-deep); }
+.citations-list { display: grid; gap: 12px; max-width: 980px; margin: 0; padding-left: 29px; color: var(--muted); font-size: 11px; line-height: 1.7; }
+.citations-list li { padding-left: 4px; overflow-wrap: anywhere; }
+.citations-list li::marker { color: var(--gold); font: 10px var(--mono); }
+.citations-list a { color: var(--green); text-decoration: underline; text-decoration-color: #9dad9855; text-underline-offset: 3px; }
+.citations-list a:hover, .citations-list a:focus-visible { color: var(--ink); }
+.citation-number { display: none; }
 .footer { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 22px 6.2vw; border-top: 1px solid var(--line); }
 .footer p { margin: 0; color: var(--muted); font-size: 10px; }
 .back-top { color: var(--green); font: 9px var(--mono); }
@@ -166,11 +174,15 @@ h2 { margin-bottom: 0; font: 500 clamp(30px, 4vw, 43px)/1.15 var(--display); }
 .connection-source { margin: 12px 0 0; color: var(--muted); }
 .ancestors-section { background: var(--paper-deep); }
 .notable-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); gap: 1px; border: 1px solid var(--line); background: var(--line); }
+.notable-context { max-width: 850px; margin: 0 0 18px; color: var(--muted); font-size: 11px; line-height: 1.7; }
 .notable-card { min-width: 0; min-height: 165px; padding: 18px; background: var(--paper); }
 .notable-role { color: var(--green); font: 9px var(--mono); }
 .notable-card h3 { margin: 11px 0 7px; font: 500 19px/1.2 var(--display); overflow-wrap: break-word; }
 .notable-card p { margin: 0 0 12px; color: var(--muted); font-size: 11px; line-height: 1.65; }
 .notable-card small { color: var(--muted); font: 9px var(--mono); }
+.citation-marker { margin-left: 3px; font: 9px var(--mono); vertical-align: super; }
+.citation-marker a { color: var(--gold); text-decoration: underline; text-decoration-color: #d0aa6655; text-underline-offset: 2px; }
+.citation-marker a:hover, .citation-marker a:focus-visible { color: var(--ink); text-decoration-color: currentColor; }
 .gallery-toolbar { display: flex; align-items: center; gap: 19px; margin: 24px 0 18px; }
 .gallery-search { display: flex; align-items: center; gap: 9px; width: min(320px, 100%); padding: 8px 0; border-bottom: 1px solid var(--line); color: var(--muted); }
 .gallery-search > span { font-size: 20px; line-height: 1; }
