@@ -34,7 +34,6 @@ const timelineItems = [
   { year: "1956", title: "David and Matilda go to Israel", detail: "David Pardo and Matilda Betesh leave Egypt for Israel, while their son Albert Pardo and his wife Arlette take a separate route to America with their children.", citations: ["gedcom"] },
   { year: "1957", title: "Albert and Arlette reach Paris", detail: "Albert Pardo and Arlette travel to Paris with their children on their way from Egypt to America.", citations: ["family-account"] },
   { year: "1958", title: "Arrival at Idlewild Airport", detail: "The family account records Albert, Arlette, and their children arriving at then-Idlewild Airport aboard a TWA 707.", citations: ["family-account"] },
-  { year: "2006", title: "The Pardo household", detail: "The GEDCOM records Nathan Albert Pardo as the child of A. A. Pardo and A. Bibi.", citations: ["gedcom"] }
 ];
 
 const citationSources = [
@@ -131,6 +130,7 @@ let viewerIndex = 0;
 let activeSurname = "";
 let searchTerm = "";
 let toastTimer;
+const previewRootName = "Nathan Albert Pardo";
 
 const $ = (selector) => document.querySelector(selector);
 const escapeHtml = (value = "") => String(value).replace(/[&<>"']/g, (char) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[char]);
@@ -150,7 +150,10 @@ function renderStats() {
 }
 
 function renderTree() {
-  const root = people.find((person) => person.name === "Nathan Albert Pardo") || people[0];
+  const root = people.find((person) => person.name === previewRootName)
+    || [...people].filter((person) => (person.parents || []).length)
+      .sort((a, b) => Number(b.death || 0) - Number(a.death || 0))[0]
+    || people[0];
   if (!root) return;
   const generations = [[root]];
   const seen = new Set([root.id]);
@@ -192,23 +195,25 @@ function renderTree() {
       }
     }
   }
-  const menahem = people.find((person) => person.name === "Menahem Dweck");
+  const menahem = people.find((person) => person.surname === "Dweck" && seen.has(person.id));
   if (menahem && seen.has(menahem.id)) {
     if (!branchMembership.has(menahem.id)) branchMembership.set(menahem.id, new Set());
     branchMembership.get(menahem.id).add("paternal");
     sharedParents.set(menahem.id, Math.max(sharedParents.get(menahem.id) || 0, 2));
   }
   $("#tree-count").textContent = `${seen.size.toLocaleString()} connected relatives · ${generations.length} generations`;
-  $("#family-tree").innerHTML = `<p class="tree-hint">Scroll sideways to follow the generations. Each relative lists their recorded parents; names marked “shared ancestor” connect multiple branches.</p><div class="tree-scroll" tabindex="0" aria-label="Scrollable family tree, from Nathan Albert Pardo to earlier generations"><div class="tree-generations">${generations.map((generation, index) => `<section class="tree-generation"><h3>${index === 0 ? "ROOT" : index === 1 ? "PARENTS" : index === 2 ? "GRANDPARENTS" : `GENERATION ${index}`}<span>${generation.length} ${generation.length === 1 ? "person" : "people"}</span></h3><div class="tree-generation-people">${generation.map((person) => { const branches = branchMembership.get(person.id) || new Set(); const branch = branches.size > 1 ? "interwoven-line" : branches.has("maternal") ? "maternal-line" : branches.has("paternal") ? "paternal-line" : ""; return nodeMarkup(person, sharedParents.get(person.id) || 0, branch); }).join("")}</div></section>`).join("")}</div></div>`;
+  $("#family-tree").innerHTML = `<p class="tree-hint">Scroll sideways to follow the generations. Each relative lists their recorded parents; names marked “shared ancestor” connect multiple branches.</p><div class="tree-scroll" tabindex="0" aria-label="Scrollable family tree across recorded generations"><div class="tree-generations">${generations.map((generation, index) => `<section class="tree-generation"><h3>${index === 0 ? "ROOT" : index === 1 ? "PARENTS" : index === 2 ? "GRANDPARENTS" : `GENERATION ${index}`}<span>${generation.length} ${generation.length === 1 ? "person" : "people"}</span></h3><div class="tree-generation-people">${generation.map((person) => { const branches = branchMembership.get(person.id) || new Set(); const branch = branches.size > 1 ? "interwoven-line" : branches.has("maternal") ? "maternal-line" : branches.has("paternal") ? "paternal-line" : ""; return nodeMarkup(person, sharedParents.get(person.id) || 0, branch); }).join("")}</div></section>`).join("")}</div></div>`;
   $("#family-tree").querySelectorAll("[data-person]").forEach((node) => node.addEventListener("click", () => focusPerson(node.dataset.person)));
   renderTreeConnections(root);
 }
 
 function nodeMarkup(person, sharedCount = 0, branch = "") {
   if (!person) return "";
-  const dates = [person.birth, person.death ? `–${person.death}` : ""].filter(Boolean).join(" ");
+  const dates = person.death
+    ? [person.birth, `–${person.death}`].filter(Boolean).join(" ")
+    : person.birth ? `Born ${person.birth}` : "";
   const parents = (person.parents || []).map(personById).filter(Boolean).map((parent) => parent.name);
-  const detail = [dates || person.place || person.surname || "Family record", parents.length ? `Parents: ${parents.join(" + ")}` : ""].filter(Boolean);
+  const detail = [[dates, person.place].filter(Boolean).join(" · ") || person.surname || "Family record", parents.length ? `Parents: ${parents.join(" + ")}` : ""].filter(Boolean);
   return `<button class="person-node ${branch}" type="button" data-person="${escapeHtml(person.id)}"><strong>${escapeHtml(person.name)}</strong><span>${escapeHtml(detail[0])}</span>${parents.length ? `<span class="node-parents">${escapeHtml(detail[1])}</span>` : ""}${sharedCount > 1 ? `<span class="shared-ancestor">SHARED ANCESTOR · ${sharedCount} BRANCHES</span>` : ""}</button>`;
 }
 
@@ -224,11 +229,16 @@ function findParentPath(descendant, ancestorId, visited = new Set()) {
 }
 
 function renderTreeConnections(root) {
-  const adele = people.find((person) => person.name === "A. Bibi");
-  const albertAri = people.find((person) => person.name === "A. A. Pardo");
-  const menahem = people.find((person) => person.name === "Menahem Dweck");
-  const eliyahu = people.find((person) => person.name === "Eliyahu Ben Seruya");
-  const itzhak = people.find((person) => person.name.startsWith("Itzhak Ben Seruya"));
+  const parents = (root?.parents || []).map(personById).filter(Boolean);
+  const adele = parents.find((person) => person.surname === "Bibi");
+  const albertAri = parents.find((person) => person.surname === "Pardo");
+  const menahem = people.find((person) => person.surname === "Dweck"
+    && findParentPath(adele, person.id) && findParentPath(albertAri, person.id));
+  const eliyahu = people.find((person) => person.surname.toLocaleLowerCase().includes("seruya")
+    && person.name.startsWith("E") && findParentPath(adele, person.id));
+  const itzhak = people.find((person) => person.surname.toLocaleLowerCase().includes("seruya")
+    && person.name.startsWith("I") && findParentPath(albertAri, person.id)
+    && (person.parents || []).some((parentId) => (eliyahu?.parents || []).includes(parentId)));
   if (!adele || !albertAri || !menahem || !eliyahu || !itzhak) {
     $("#tree-connections").innerHTML = "";
     return;
@@ -247,7 +257,8 @@ function renderTreeConnections(root) {
     : "The supplied family record identifies Eliyahu and Itzhak as brothers.";
   const ancestryPath = (path, ancestor) => path?.map((person) => person.name).join(" → ") || `${albertAri.name} → ${ancestor.name}`;
   const adelePath = (path, ancestor) => path?.map((person) => person.name).join(" → ") || `${adele.name} → ${ancestor.name}`;
-  $("#tree-connections").innerHTML = `<div class="connection-heading"><p class="eyebrow">TWO BLOOD-ANCESTOR CONNECTIONS</p><p>Follow both A. Bibi’s and her husband A. A. Pardo’s documented family lines.</p></div><div class="connection-grid"><article class="connection-card"><span>01 · SHARED ANCESTOR</span><h3>A. Bibi and A. A. Pardo both descend from Rabbi Menahem Dweck.</h3><p>The archive records both ancestor paths through their maternal lines.</p><small>${escapeHtml(adelePath(adeleToMenahem, menahem))}<br>${escapeHtml(ancestryPath(albertToMenahem, menahem))}</small><div class="connection-people">${relatedPerson(menahem)}</div></article><article class="connection-card"><span>02 · DESCENDANTS OF BROTHERS</span><h3>A. Bibi and A. A. Pardo descend from the Ben Seruya brothers.</h3><p>${escapeHtml(siblingDescription)} Adele’s line runs through Eliyahu; Albert Ari’s line runs through Itzhak.</p><small>${escapeHtml(adelePath(adeleToEliyahu, eliyahu))}<br>${escapeHtml(ancestryPath(albertToItzhak, itzhak))}</small><div class="connection-people">${brothersSharedParents.map(relatedPerson).join("")}${relatedPerson(eliyahu)}${relatedPerson(itzhak)}</div></article></div><p class="connection-source">Ancestry paths shown above follow the supplied GEDCOM. The relationship between A. Bibi and A. A. Pardo is documented as their marriage; each descends from these ancestors independently.</p>`;
+  const couple = `${adele.name} and ${albertAri.name}`;
+  $("#tree-connections").innerHTML = `<div class="connection-heading"><p class="eyebrow">TWO BLOOD-ANCESTOR CONNECTIONS</p><p>Follow both ${escapeHtml(adele.name)}’s and ${escapeHtml(albertAri.name)}’s documented family lines.</p></div><div class="connection-grid"><article class="connection-card"><span>01 · SHARED ANCESTOR</span><h3>${escapeHtml(couple)} both descend from Rabbi ${escapeHtml(menahem.name)}.</h3><p>The archive records both ancestor paths through their maternal lines.</p><small>${escapeHtml(adelePath(adeleToMenahem, menahem))}<br>${escapeHtml(ancestryPath(albertToMenahem, menahem))}</small><div class="connection-people">${relatedPerson(menahem)}</div></article><article class="connection-card"><span>02 · DESCENDANTS OF BROTHERS</span><h3>${escapeHtml(couple)} descend from the Ben Seruya brothers.</h3><p>${escapeHtml(siblingDescription)} ${escapeHtml(adele.name)}’s line runs through ${escapeHtml(eliyahu.name)}; ${escapeHtml(albertAri.name)}’s line runs through ${escapeHtml(itzhak.name)}.</p><small>${escapeHtml(adelePath(adeleToEliyahu, eliyahu))}<br>${escapeHtml(ancestryPath(albertToItzhak, itzhak))}</small><div class="connection-people">${brothersSharedParents.map(relatedPerson).join("")}${relatedPerson(eliyahu)}${relatedPerson(itzhak)}</div></article></div><p class="connection-source">The supplied family record describes ${escapeHtml(couple)} as both sixth and tenth cousins. The ancestry paths shown above follow the GEDCOM and document their two separate blood-ancestor connections.</p>`;
   $("#tree-connections").querySelectorAll("[data-person]").forEach((button) => button.addEventListener("click", () => focusPerson(button.dataset.person)));
 }
 
@@ -291,7 +302,9 @@ function renderNotables() {
     const roles = person.notableRoles.join(" · ");
     const description = notableDescriptions[person.name] || `Identified in the family record as ${roles}.`;
     const citations = citationMarkers(notableCitationIds[person.name]);
-    const life = person.death ? [person.birth, person.death].filter(Boolean).join("–") : "";
+    const life = person.death
+      ? [person.birth, person.death].filter(Boolean).join("–")
+      : person.birth ? `Born ${person.birth}` : "";
     return `<article class="notable-card"><span class="notable-role">${escapeHtml(roles)}</span><h3>${escapeHtml(person.name)}</h3><p>${escapeHtml(description)} ${citations}</p><small>${escapeHtml([life, person.place].filter(Boolean).join(" · "))}</small></article>`;
   }).join("") : `<div class="empty-state">No titled or scholarly ancestors are available in this record.</div>`;
 }
@@ -382,7 +395,9 @@ function renderPeople() {
   });
   $("#people-heading").textContent = activeSurname ? `${activeSurname} relatives` : query ? "Search results" : "The relatives";
   $("#people-grid").innerHTML = selected.length ? selected.map((person) => {
-    const life = [person.birth, person.death].filter(Boolean).join(" – ");
+    const life = person.death
+      ? [person.birth, person.death].filter(Boolean).join(" – ")
+      : person.birth ? `Born ${person.birth}` : "";
     return `<article class="relative-card" tabindex="0" role="button" data-person="${escapeHtml(person.id)}"><span class="relative-era">${escapeHtml(life || person.surname || "FAMILY RECORD")}</span><h4>${escapeHtml(person.name)}</h4><p>${escapeHtml(person.place || person.note || person.surname || "Connected family member")}</p></article>`;
   }).join("") : `<div class="empty-state">No relatives match. Clear the name filter or try another surname.</div>`;
   $("#people-grid").querySelectorAll("[data-person]").forEach((card) => {
@@ -471,7 +486,7 @@ function parseGedcom(text) {
     person.birth = person.birth.match(/\d{3,4}/)?.[0] || "";
     person.death = person.death.match(/\d{3,4}/)?.[0] || "";
     person.roles = [...new Set(person.roles.filter(Boolean))];
-    person.photos = person.deceased ? person.photos.map((photo) => typeof photo === "string" ? { url: photo, caption: "" } : photo).filter((photo) => /\.(?:jpe?g|png|webp)(?:[?#]|$)/i.test(photo.url)) : [];
+    person.photos = person.deceased && person.death ? person.photos.map((photo) => typeof photo === "string" ? { url: photo, caption: "" } : photo).filter((photo) => /\.(?:jpe?g|png|webp)(?:[?#]|$)/i.test(photo.url)) : [];
   }
   const photos = individuals.flatMap((person) => person.photos.map((photo) => ({ ...photo, name: person.name })));
   const surnameMap = new Map();
@@ -507,18 +522,22 @@ async function importGedcom(file) {
 
 async function loadWorkspaceArchive() {
   try {
-    const response = await fetch("/api/family-data");
-    if (!response.ok) return;
+    let response = await fetch(new URL("data/family-data.json", document.baseURI)).catch(() => null);
+    if (!response?.ok) response = await fetch("/api/family-data");
+    if (!response.ok) throw new Error(`Archive request failed with HTTP ${response.status}.`);
     const data = await response.json();
-    if (!Array.isArray(data.people) || !data.people.length) return;
+    if (!Array.isArray(data.people) || !data.people.length) {
+      throw new Error("The archive data file is empty or malformed.");
+    }
     people = data.people;
     familyLinks = data.families || [];
     archivePhotos = data.photos || [];
     surnameRecords.splice(0, surnameRecords.length, ...data.surnames);
-    $("#dataset-label").textContent = `${people.length.toLocaleString()} relatives · living details withheld`;
+    $("#dataset-label").textContent = `${people.length.toLocaleString()} relatives · living photos withheld`;
     renderAll();
-  } catch {
-    return;
+  } catch (error) {
+    console.error("Could not load family archive data.", error);
+    setToast("Could not load the family archive data.");
   }
 }
 
