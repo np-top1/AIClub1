@@ -26,6 +26,7 @@ const timelineItems = [
   { year: "1882", title: "Haim Pinhas and Yael die in Jerusalem", detail: "The account reports that Haim Pinhas Pardo and his wife Yael died in 1882 and were buried on the Mount of Olives.", citations: ["monastir-pardo"] },
   { year: "c. 1890", title: "From Baghdad to Damascus", detail: "In the family account, Joseph Obadiah Bibi, his wife Farha, and his brother Salim (Solomon) leave Baghdad and settle in Damascus.", citations: ["family-account"] },
   { year: "1895", title: "Aleppo’s hakham bashi controversy", detail: "The family tree records Abraham Dweck Hakohen Khalousi’s life as 1800–1901. Yaron Harel’s study examines his removal from office in 1895.", citations: ["gedcom", "abraham-cambridge", "abraham-liverpool"] },
+  { year: "Early 1900s", title: "Reuben Bibi escapes Beirut by sea", detail: "In an excerpt from the Sephardic Heritage Museum’s forthcoming book, Joseph Bibi recalls that his father Reuben was studying in Beirut and risked conscription. His grandfather Joseph devised a harbor escape: Reuben swam toward a boat Joseph was aboard, pretending to retrieve coins with friends. This is a family recollection; the separate Sampson Mills history describes Joseph and Reuben’s later journey to California in the 1910s.", citations: ["bibi-museum", "bibi-founder-history"] },
   { year: "1910s", title: "Joseph and Reuben Bibi reach California", detail: "The family account places Joseph Obadiah and Reuben’s departure from Damascus around 1910. Sampson Mills’ family history says Joseph and Reuben came from France for the California World’s Fair in the 1910s, then settled in the United States and moved to New York.", citations: ["family-account", "bibi-founder-history"] },
   { year: "1914", title: "Safdieh and Shmalo-Dwek", detail: "Abraham Safdieh and Sarah Shmalo-Dwek marry in New York, according to the marriage record.", citations: ["gedcom"] },
   { year: "1920", title: "A shared voyage to a new home", detail: "Farha, her remaining children, and Salim’s family are remembered as arriving on the same ship as Hacham Murad and Sarah Maslaton and their children. Salim’s descendants are not included in this ancestor tree.", citations: ["family-account"] },
@@ -99,7 +100,7 @@ const citationSources = [
   },
   {
     id: "bibi-museum",
-    label: "Sephardic Heritage Museum, excerpt from the forthcoming book Our Stories: 100 Years — Syrian Jewish Life in America, 1890–1990s; Facebook post preview.",
+    label: "Sephardic Heritage Museum, excerpt from the forthcoming book Our Stories: 100 Years — Syrian Jewish Life in America, 1890–1990s; Joseph Bibi’s family recollection of Reuben Bibi’s escape from Beirut.",
     url: "https://www.facebook.com/SephardicHeritageMuseum/posts/excerpt-from-our-upcoming-coffee-table-book-our-stories-100-years-syrian-jewish-/1139876531162019/"
   },
   {
