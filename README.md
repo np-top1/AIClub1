@@ -10,13 +10,13 @@ For local development, start the privacy-filtering server from this folder:
 python3 server.py
 ```
 
-Open `http://localhost:4173`. The local server reads `export-Ancestors.ged 3` and serves its sanitized family data at `/api/family-data`; raw GEDCOM paths are blocked. Browser GEDCOM import is local to that browser session and does not upload the file.
+Open `http://localhost:4173`. The checked-in `export-Ancestors.ged 3` is already redacted to the site's public privacy rules; the local server serves its normalized data at `/api/family-data`, and GEDCOM paths are blocked over HTTP. Keep any full, unredacted source GEDCOM outside the repository. Browser GEDCOM import is local to that browser session and does not upload the file.
 
 ## Deploy with GitHub Pages
 
-The `Deploy family archive to GitHub Pages` workflow builds the static site on pushes to `main` and on manual runs. It reads the GEDCOM from the repository checkout, writes sanitized data to `_site/data/family-data.json`, and deploys only `_site`—the GEDCOM itself is not copied into the Pages artifact.
+The `Deploy family archive to GitHub Pages` workflow builds the static site on pushes to `main` and on manual runs. It reads the already-redacted GEDCOM from the repository checkout, writes sanitized data to `_site/data/family-data.json`, and deploys only `_site`—the GEDCOM itself is not copied into the Pages artifact.
 
-The public export keeps the full family tree and its relationships. Living relatives through generation 3 (Arlette Kraiem's generation) are shown by initials and surname, except Nathan Albert Pardo, whose full name is shown. People in generations beyond 3 are shown by full name. Anyone whose recorded birth date establishes that they are older than 85 is shown with their full name, recorded birth date, and birthplace regardless of generation. Other living relatives' birth details are withheld, and photos of living people are always removed. The deployed JavaScript omits local preview records, displays the inter-branch relationship paths using the public names, and stops the public timeline before recent household events. Review the generated site data and artifact before publishing.
+The GEDCOM and public export keep the full family tree and its relationships while removing contact details, addresses, private notes, and non-public living-person data. Living relatives through generation 3 (Arlette Kraiem's generation) are shown by initials and surname, except Nathan Albert Pardo, whose full name is shown. People in generations beyond 3 are shown by full name. Anyone whose recorded birth date establishes that they are older than 85 is shown with their full name, recorded birth date, and birthplace regardless of generation. Other living relatives' birth details are withheld, and photos of living people are always removed. The deployed JavaScript omits local preview records, displays the inter-branch relationship paths using the public names, and stops the public timeline before recent household events. Review the generated site data and artifact before publishing.
 
 To enable deployment:
 
