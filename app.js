@@ -143,6 +143,8 @@ let archivePhotos = [];
 let showAllPhotos = false;
 let visiblePhotoCount = 24;
 let galleryPhotos = [];
+let publishedFeaturedPhotos = {};
+let featuredPhotoChoices = {};
 let viewerIndex = 0;
 let activeSurname = "";
 let searchTerm = "";
@@ -327,17 +329,19 @@ function renderNotables() {
 }
 
 function renderPhotos() {
-  const personOrder = new Map(people.map((person, index) => [person.name, index]));
+  const personOrder = new Map(people.map((person, index) => [person.id, index]));
+  const personOrderByName = new Map(people.map((person, index) => [person.name, index]));
   const portraitsByPerson = new Map();
   const seenUrlsByPerson = new Map();
   for (const photo of archivePhotos) {
     if (!photo.url) continue;
-    if (!seenUrlsByPerson.has(photo.name)) seenUrlsByPerson.set(photo.name, new Set());
-    const seenUrls = seenUrlsByPerson.get(photo.name);
+    const personId = photo.personId || photo.name;
+    if (!seenUrlsByPerson.has(personId)) seenUrlsByPerson.set(personId, new Set());
+    const seenUrls = seenUrlsByPerson.get(personId);
     if (seenUrls.has(photo.url)) continue;
     seenUrls.add(photo.url);
-    if (!portraitsByPerson.has(photo.name)) portraitsByPerson.set(photo.name, []);
-    portraitsByPerson.get(photo.name).push(photo);
+    if (!portraitsByPerson.has(personId)) portraitsByPerson.set(personId, []);
+    portraitsByPerson.get(personId).push(photo);
   }
   const photoQuality = (photo) => {
     const source = `${photo.url} ${photo.caption || ""}`.toLowerCase();
@@ -348,21 +352,32 @@ function renderPhotos() {
     if (photo.caption) score -= 1;
     return score;
   };
-  const curatedPhotos = [...portraitsByPerson.values()].map((portraits) => [...portraits].sort((a, b) => photoQuality(b) - photoQuality(a))[0]);
+  const curatedPhotos = [...portraitsByPerson.entries()].map(([personId, portraits]) => (
+    portraits.find((photo) => photo.url === featuredPhotoChoices[personId])
+      || [...portraits].sort((a, b) => photoQuality(b) - photoQuality(a))[0]
+  ));
   const primaryPeople = new Set(["Joseph Obadiah Bibi", "Reuben Bibi", "Mordechai Murad Maslaton", "Shemuel Eliezer Pardo", "Abraham Ezra Dweck Khalousi HaKohen", "Haim Pinhas Pardo", "Rephael רפאל מאיר Meyuhas", "Yoshiyahu Yosef Pinto", "Menahem Dweck"]);
   const sortGallery = (a, b) => Number(primaryPeople.has(b.name)) - Number(primaryPeople.has(a.name))
-    || personOrder.get(a.name) - personOrder.get(b.name);
+    || (personOrder.get(a.personId) ?? personOrderByName.get(a.name) ?? Number.MAX_SAFE_INTEGER)
+      - (personOrder.get(b.personId) ?? personOrderByName.get(b.name) ?? Number.MAX_SAFE_INTEGER);
   const curated = curatedPhotos.sort(sortGallery);
   const fullAlbum = [...portraitsByPerson.values()].flat().sort(sortGallery);
   const query = $("#photo-search").value.trim().toLocaleLowerCase();
   galleryPhotos = (showAllPhotos ? fullAlbum : curated).filter((photo) => photo.name.toLocaleLowerCase().includes(query));
   const shown = galleryPhotos.slice(0, visiblePhotoCount);
   const uniquePeople = new Set(galleryPhotos.map((photo) => photo.name)).size;
+  const unpublishedChoices = Object.entries(featuredPhotoChoices)
+    .filter(([personId, url]) => publishedFeaturedPhotos[personId] !== url).length;
   $("#photo-count").textContent = showAllPhotos
     ? `${galleryPhotos.length} photos · ${uniquePeople} relatives`
     : `${galleryPhotos.length} relatives · one portrait each`;
   $("#photo-view-toggle").textContent = showAllPhotos ? "One portrait per relative" : `Browse every photo (${fullAlbum.length})`;
   $("#photo-view-toggle").setAttribute("aria-pressed", String(showAllPhotos));
+  $("#photo-curation-status").textContent = unpublishedChoices
+    ? `${unpublishedChoices} unpublished choice${unpublishedChoices === 1 ? "" : "s"}`
+    : "Published choices shown";
+  $("#photo-export-featured").disabled = unpublishedChoices === 0;
+  $("#photo-discard-featured").disabled = unpublishedChoices === 0;
   $("#photo-grid").innerHTML = shown.length ? shown.map((photo, index) => `<button class="photo-card" type="button" data-photo-index="${index}" aria-label="View photo of ${escapeHtml(photo.name)}"><span class="photo-image-wrap"><img src="${escapeHtml(photo.url)}" alt="${escapeHtml(photo.caption ? `${photo.caption} — ${photo.name}` : `Photograph of ${photo.name}`)}" loading="lazy"><span class="photo-open-hint">OPEN GALLERY ↗</span></span><span class="photo-person">${escapeHtml(photo.name)}</span><small>${escapeHtml(photo.caption || "Family archive")}</small></button>`).join("") : `<div class="empty-state">No family photos match that name.</div>`;
   $("#photo-load-more").hidden = shown.length >= galleryPhotos.length;
   $("#photo-load-more").textContent = showAllPhotos ? "Show more photos ↓" : "Show more relatives ↓";
@@ -383,12 +398,91 @@ function updatePhotoViewer() {
   $("#photo-viewer-name").textContent = photo.name;
   $("#photo-viewer-caption").textContent = photo.caption || "Family archive";
   $("#photo-viewer-count").textContent = `${viewerIndex + 1} / ${galleryPhotos.length}`;
+  const featuredButton = $("#photo-viewer-feature");
+  featuredButton.hidden = !photo.personId;
+  featuredButton.disabled = !photo.personId || featuredPhotoChoices[photo.personId] === photo.url;
+  featuredButton.textContent = featuredPhotoChoices[photo.personId] === photo.url
+    ? "Featured portrait selected"
+    : "Use as featured portrait";
 }
 
 function movePhoto(direction) {
   if (!galleryPhotos.length) return;
   viewerIndex = (viewerIndex + direction + galleryPhotos.length) % galleryPhotos.length;
   updatePhotoViewer();
+}
+
+function chooseFeaturedPhoto() {
+  const photo = galleryPhotos[viewerIndex];
+  if (!photo?.personId) {
+    setToast("This photo is missing a person ID and cannot be saved as a featured choice.");
+    return;
+  }
+  featuredPhotoChoices[photo.personId] = photo.url;
+  try {
+    localStorage.setItem("pardo-featured-photo-draft", JSON.stringify(featuredPhotoChoices));
+  } catch (error) {
+    console.error("Could not save featured photo choices in this browser.", error);
+    setToast("The choice is active for now, but could not be saved in this browser.");
+  }
+  renderPhotos();
+  viewerIndex = galleryPhotos.findIndex((candidate) => candidate.personId === photo.personId && candidate.url === photo.url);
+  updatePhotoViewer();
+  setToast(`${photo.name}'s featured portrait is selected. Download the settings file to publish it.`);
+}
+
+function downloadFeaturedPhotoChoices() {
+  const contents = JSON.stringify({ version: 1, featuredPhotos: featuredPhotoChoices }, null, 2);
+  const file = new Blob([contents, "\n"], { type: "application/json" });
+  const url = URL.createObjectURL(file);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = "featured-photos.json";
+  link.click();
+  setTimeout(() => URL.revokeObjectURL(url), 0);
+  setToast("Downloaded featured-photos.json. Replace the project file and publish the update for everyone.");
+}
+
+function discardFeaturedPhotoChoices() {
+  featuredPhotoChoices = availableFeaturedChoices(publishedFeaturedPhotos);
+  try {
+    localStorage.removeItem("pardo-featured-photo-draft");
+  } catch (error) {
+    console.error("Could not discard featured photo choices from this browser.", error);
+    setToast("Choices were reset on this page, but the browser draft could not be cleared.");
+  }
+  renderPhotos();
+  updatePhotoViewer();
+  setToast("Unpublished featured photo choices were discarded.");
+}
+
+function restoreFeaturedPhotoChoices() {
+  featuredPhotoChoices = availableFeaturedChoices(publishedFeaturedPhotos);
+  let draft;
+  try {
+    draft = JSON.parse(localStorage.getItem("pardo-featured-photo-draft") || "{}");
+  } catch (error) {
+    console.error("Could not read saved featured photo choices from this browser.", error);
+    setToast("Saved photo choices could not be read; published choices are shown.");
+    return;
+  }
+  if (!draft || typeof draft !== "object" || Array.isArray(draft)) {
+    setToast("Saved photo choices were malformed; published choices are shown.");
+    return;
+  }
+  const available = new Set(archivePhotos.map((photo) => `${photo.personId}\n${photo.url}`));
+  const invalid = Object.entries(draft).filter(([personId, url]) => typeof url !== "string" || !available.has(`${personId}\n${url}`));
+  for (const [personId, url] of Object.entries(draft)) {
+    if (typeof url === "string" && available.has(`${personId}\n${url}`)) featuredPhotoChoices[personId] = url;
+  }
+  if (invalid.length) setToast("Some saved photo choices no longer match this archive and were skipped.");
+}
+
+function availableFeaturedChoices(choices) {
+  const available = new Set(archivePhotos.map((photo) => `${photo.personId}\n${photo.url}`));
+  return Object.fromEntries(
+    Object.entries(choices || {}).filter(([personId, url]) => typeof url === "string" && available.has(`${personId}\n${url}`))
+  );
 }
 
 function renderSurnames() {
@@ -505,7 +599,7 @@ function parseGedcom(text) {
     person.roles = [...new Set(person.roles.filter(Boolean))];
     person.photos = person.deceased && person.death ? person.photos.map((photo) => typeof photo === "string" ? { url: photo, caption: "" } : photo).filter((photo) => /\.(?:jpe?g|png|webp)(?:[?#]|$)/i.test(photo.url)) : [];
   }
-  const photos = individuals.flatMap((person) => person.photos.map((photo) => ({ ...photo, name: person.name })));
+  const photos = individuals.flatMap((person) => person.photos.map((photo) => ({ ...photo, personId: person.id, name: person.name })));
   const surnameMap = new Map();
   for (const person of individuals) {
     for (const variant of person.surnames || [person.surname]) {
@@ -524,6 +618,7 @@ async function importGedcom(file) {
     people = parsed.individuals;
     familyLinks = parsed.familyLinks;
     archivePhotos = parsed.photos;
+    restoreFeaturedPhotoChoices();
     surnameRecords.splice(0, surnameRecords.length, ...parsed.surnames);
     activeSurname = "";
     searchTerm = "";
@@ -554,6 +649,8 @@ async function loadWorkspaceArchive() {
     people = data.people;
     familyLinks = data.families || [];
     archivePhotos = data.photos || [];
+    publishedFeaturedPhotos = data.featuredPhotos || {};
+    restoreFeaturedPhotoChoices();
     surnameRecords.splice(0, surnameRecords.length, ...data.surnames);
     $("#dataset-label").textContent = `${people.length.toLocaleString()} relatives · living photos withheld`;
     renderAll();
@@ -579,6 +676,9 @@ $("#surname-search").addEventListener("input", () => { activeSurname = ""; rende
 $("#photo-search").addEventListener("input", () => { visiblePhotoCount = 24; renderPhotos(); });
 $("#photo-view-toggle").addEventListener("click", () => { showAllPhotos = !showAllPhotos; visiblePhotoCount = 24; renderPhotos(); });
 $("#photo-load-more").addEventListener("click", () => { visiblePhotoCount += 24; renderPhotos(); });
+$("#photo-viewer-feature").addEventListener("click", chooseFeaturedPhoto);
+$("#photo-export-featured").addEventListener("click", downloadFeaturedPhotoChoices);
+$("#photo-discard-featured").addEventListener("click", discardFeaturedPhotoChoices);
 $("#photo-viewer-close").addEventListener("click", () => $("#photo-viewer").close());
 $("#photo-viewer-prev").addEventListener("click", () => movePhoto(-1));
 $("#photo-viewer-next").addEventListener("click", () => movePhoto(1));

@@ -8,6 +8,7 @@ from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parent
 GEDCOM = ROOT / "export-Ancestors.ged 3"
+FEATURED_PHOTOS = ROOT / "featured-photos.json"
 PORT = 4173
 PUBLIC_HISTORICAL_ROLE = re.compile(
     r"rabbi|hakham|hacham|gaon|dayan|rishon|author|scholar|mukhtar|mayor|engraver|master craftsman",
@@ -248,10 +249,35 @@ def public_archive_data(data):
             if name and not re.fullmatch(r"[?\s]+", name):
                 surnames.setdefault(name.casefold(), {"name": name, "places": "Recorded family line"})
 
+    featured_photos = {}
+    if FEATURED_PHOTOS.is_file():
+        config = json.loads(FEATURED_PHOTOS.read_text(encoding="utf-8"))
+        if (
+            not isinstance(config, dict)
+            or type(config.get("version")) is not int
+            or config.get("version") != 1
+            or not isinstance(config.get("featuredPhotos"), dict)
+        ):
+            raise ValueError(f"Featured photo settings must contain version 1 and a featuredPhotos object: {FEATURED_PHOTOS}")
+        available_photos = {
+            (photo.get("personId"), photo.get("url"))
+            for photo in data["photos"]
+            if photo.get("personId") and photo.get("url")
+        }
+        for person_id, photo_url in config["featuredPhotos"].items():
+            if not isinstance(person_id, str) or not isinstance(photo_url, str):
+                raise ValueError(f"Featured photo entries must map person IDs to photo URLs: {FEATURED_PHOTOS}")
+            if (person_id, photo_url) not in available_photos:
+                raise ValueError(
+                    f"Featured photo for {person_id} does not match an available public photo: {FEATURED_PHOTOS}"
+                )
+            featured_photos[person_id] = photo_url
+
     return {
         "people": people,
         "families": data["families"],
         "surnames": sorted(surnames.values(), key=lambda surname: surname["name"].casefold()),
+        "featuredPhotos": featured_photos,
         "photos": [
             {**photo, "name": public_names.get(photo.get("personId"), photo["name"])}
             for photo in data["photos"]
