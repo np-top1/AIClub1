@@ -231,12 +231,9 @@ def public_archive_data(data):
         if older_than_85:
             person["birth"] = person.get("birth_date", "")
             person["place"] = person.get("birth_place", person.get("place", ""))
-        elif (
-            not person.get("death")
-            and person["name"] != "Nathan Albert Pardo"
-            and not publicly_named_generation
-        ):
-            person["name"] = initials_name(person["name"], person.get("surname", ""))
+        elif not person.get("death"):
+            if person["name"] != "Nathan Albert Pardo" and not publicly_named_generation:
+                person["name"] = initials_name(person["name"], person.get("surname", ""))
             person["birth"] = ""
             person["place"] = ""
         person.pop("birth_date", None)
