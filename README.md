@@ -14,7 +14,7 @@ Open `http://localhost:4173`. The checked-in `export-Ancestors.ged 3` is already
 
 ## Deploy with GitHub Pages
 
-The `Deploy family archive to GitHub Pages` workflow builds the static site on pushes to `main` and on manual runs. It reads the already-redacted GEDCOM from the repository checkout, embeds sanitized family data in a content-addressed JavaScript bundle so the site does not depend on JSON routing or stale script caches, also writes `_site/family-data.json`, copies the approved local archival images from `assets/`, and adds `.nojekyll` so GitHub Pages serves the artifact files directly. It deploys only `_site`—the GEDCOM itself is not copied into the Pages artifact.
+The `Deploy family archive to GitHub Pages` workflow builds the static site on pushes to `main` and on manual runs. It reads the already-redacted GEDCOM from the repository checkout, embeds sanitized family data in a content-addressed JavaScript bundle, and also publishes the same bundled app as `app.js` so cached copies of the original homepage continue to work. It also writes `_site/family-data.json`, copies the approved local archival images from `assets/`, and adds `.nojekyll` so GitHub Pages serves the artifact files directly. It deploys only `_site`—the GEDCOM itself is not copied into the Pages artifact.
 
 The build also publishes `family-archive.html` as an alternate entry point to the same site. Use it if a browser or CDN continues serving a cached copy of the root homepage after deployment.
 
