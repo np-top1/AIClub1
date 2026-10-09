@@ -83,9 +83,7 @@ def build_site(output_dir):
     if assets_dir.is_dir():
         shutil.copytree(assets_dir, output_dir / "assets")
 
-    data_dir = output_dir / "data"
-    data_dir.mkdir()
-    (data_dir / "family-data.json").write_text(
+    (output_dir / "family-data.json").write_text(
         json.dumps(public_data, ensure_ascii=False, separators=(",", ":")),
         encoding="utf-8",
     )

@@ -523,7 +523,7 @@ async function importGedcom(file) {
 
 async function loadWorkspaceArchive() {
   try {
-    let response = await fetch(new URL("data/family-data.json", document.baseURI)).catch(() => null);
+    let response = await fetch(new URL("family-data.json", document.baseURI)).catch(() => null);
     if (!response?.ok) response = await fetch("/api/family-data");
     if (!response.ok) throw new Error(`Archive request failed with HTTP ${response.status}.`);
     const data = await response.json();
