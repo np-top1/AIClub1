@@ -10,7 +10,7 @@ This repository is a small static web app backed locally by a lightweight Python
 - `server.py` serves the static site from the repo root and exposes the sanitized data API at `/api/family-data`.
 - `export-Ancestors.ged 3` is a redacted, public-safe GEDCOM used by the server and browser import flow. Keep any full source GEDCOM outside the repository.
 - `assets/` contains public-safe historical document images used in the GEDCOM; the Pages build copies this directory into its artifact.
-- `build_static.py` creates the Pages artifact with a conservative public-data filter; `.github/workflows/pages.yml` builds and deploys that artifact.
+- `build_static.py` creates the Pages artifact with a conservative public-data filter and content-addressed app bundle; `.github/workflows/pages.yml` builds and deploys that artifact.
 
 The app is intentionally framework-free: no bundler, package manager, or build step is required for normal development.
 

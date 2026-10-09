@@ -1,4 +1,5 @@
 import argparse
+import hashlib
 import json
 import re
 import shutil
@@ -8,7 +9,7 @@ from server import GEDCOM, public_archive_data, records_from_gedcom
 
 
 ROOT = Path(__file__).resolve().parent
-STATIC_FILES = ("index.html", "app.js", "styles.css")
+STATIC_FILES = ("index.html", "styles.css")
 
 
 def replace_region(source, start_marker, end_marker, replacement):
@@ -79,11 +80,18 @@ def build_site(output_dir):
     public_data = public_archive_data(archive)
 
     output_dir.mkdir(parents=True, exist_ok=True)
+    app_source = public_app_source(archive)
+    app_filename = f"app-{hashlib.sha256(app_source.encode('utf-8')).hexdigest()[:12]}.js"
     for filename in STATIC_FILES:
-        if filename == "app.js":
-            (output_dir / filename).write_text(public_app_source(archive), encoding="utf-8")
+        if filename == "index.html":
+            html = (ROOT / filename).read_text(encoding="utf-8")
+            if html.count('src="app.js"') != 1:
+                raise ValueError("Could not safely identify the app.js script reference in index.html.")
+            html = html.replace('src="app.js"', f'src="{app_filename}"')
+            (output_dir / filename).write_text(html, encoding="utf-8")
         else:
             shutil.copy2(ROOT / filename, output_dir / filename)
+    (output_dir / app_filename).write_text(app_source, encoding="utf-8")
     (output_dir / ".nojekyll").touch()
     assets_dir = ROOT / "assets"
     if assets_dir.is_dir():
