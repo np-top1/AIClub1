@@ -79,6 +79,7 @@ def build_site(output_dir):
             (output_dir / filename).write_text(public_app_source(archive), encoding="utf-8")
         else:
             shutil.copy2(ROOT / filename, output_dir / filename)
+    (output_dir / ".nojekyll").touch()
     assets_dir = ROOT / "assets"
     if assets_dir.is_dir():
         shutil.copytree(assets_dir, output_dir / "assets")
