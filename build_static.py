@@ -93,6 +93,7 @@ def build_site(output_dir):
         else:
             shutil.copy2(ROOT / filename, output_dir / filename)
     (output_dir / app_filename).write_text(app_source, encoding="utf-8")
+    (output_dir / "app.js").write_text(app_source, encoding="utf-8")
     (output_dir / ".nojekyll").touch()
     assets_dir = ROOT / "assets"
     if assets_dir.is_dir():
