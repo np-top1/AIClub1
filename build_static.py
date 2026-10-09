@@ -89,6 +89,7 @@ def build_site(output_dir):
                 raise ValueError("Could not safely identify the app.js script reference in index.html.")
             html = html.replace('src="app.js"', f'src="{app_filename}"')
             (output_dir / filename).write_text(html, encoding="utf-8")
+            (output_dir / "family-archive.html").write_text(html, encoding="utf-8")
         else:
             shutil.copy2(ROOT / filename, output_dir / filename)
     (output_dir / app_filename).write_text(app_source, encoding="utf-8")
