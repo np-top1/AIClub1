@@ -523,10 +523,15 @@ async function importGedcom(file) {
 
 async function loadWorkspaceArchive() {
   try {
-    let response = await fetch(new URL("family-data.json", document.baseURI)).catch(() => null);
-    if (!response?.ok) response = await fetch("/api/family-data");
-    if (!response.ok) throw new Error(`Archive request failed with HTTP ${response.status}.`);
-    const data = await response.json();
+    let data;
+    if (typeof embeddedArchiveData !== "undefined") {
+      data = embeddedArchiveData;
+    } else {
+      let response = await fetch(new URL("family-data.json", document.baseURI)).catch(() => null);
+      if (!response?.ok) response = await fetch("/api/family-data");
+      if (!response.ok) throw new Error(`Archive request failed with HTTP ${response.status}.`);
+      data = await response.json();
+    }
     if (!Array.isArray(data.people) || !data.people.length) {
       throw new Error("The archive data file is empty or malformed.");
     }

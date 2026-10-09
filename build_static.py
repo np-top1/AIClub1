@@ -57,7 +57,12 @@ def public_app_source(archive):
             lambda _: display_name,
             source,
         )
-    return source
+    embedded_data = json.dumps(
+        public_archive_data(archive),
+        ensure_ascii=False,
+        separators=(",", ":"),
+    )
+    return f"const embeddedArchiveData = {embedded_data};\n\n{source}"
 
 
 def build_site(output_dir):
