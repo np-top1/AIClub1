@@ -347,7 +347,7 @@ function renderPhotos() {
     : `${galleryPhotos.length} relatives · one portrait each`;
   $("#photo-view-toggle").textContent = showAllPhotos ? "One portrait per relative" : `Browse every photo (${fullAlbum.length})`;
   $("#photo-view-toggle").setAttribute("aria-pressed", String(showAllPhotos));
-  $("#photo-grid").innerHTML = shown.length ? shown.map((photo, index) => `<button class="photo-card" type="button" data-photo-index="${index}" aria-label="View photo of ${escapeHtml(photo.name)}"><span class="photo-image-wrap"><img src="${escapeHtml(photo.url)}" alt="Photograph of ${escapeHtml(photo.name)}" loading="lazy"><span class="photo-open-hint">OPEN GALLERY ↗</span></span><span class="photo-person">${escapeHtml(photo.name)}</span><small>${escapeHtml(photo.caption || "Family archive")}</small></button>`).join("") : `<div class="empty-state">No family photos match that name.</div>`;
+  $("#photo-grid").innerHTML = shown.length ? shown.map((photo, index) => `<button class="photo-card" type="button" data-photo-index="${index}" aria-label="View photo of ${escapeHtml(photo.name)}"><span class="photo-image-wrap"><img src="${escapeHtml(photo.url)}" alt="${escapeHtml(photo.caption ? `${photo.caption} — ${photo.name}` : `Photograph of ${photo.name}`)}" loading="lazy"><span class="photo-open-hint">OPEN GALLERY ↗</span></span><span class="photo-person">${escapeHtml(photo.name)}</span><small>${escapeHtml(photo.caption || "Family archive")}</small></button>`).join("") : `<div class="empty-state">No family photos match that name.</div>`;
   $("#photo-load-more").hidden = shown.length >= galleryPhotos.length;
   $("#photo-load-more").textContent = showAllPhotos ? "Show more photos ↓" : "Show more relatives ↓";
   $("#photo-grid").querySelectorAll("[data-photo-index]").forEach((card) => card.addEventListener("click", () => openPhoto(Number(card.dataset.photoIndex))));
@@ -363,7 +363,7 @@ function updatePhotoViewer() {
   const photo = galleryPhotos[viewerIndex];
   if (!photo) return;
   $("#photo-viewer-image").src = photo.url;
-  $("#photo-viewer-image").alt = `Photograph of ${photo.name}`;
+  $("#photo-viewer-image").alt = photo.caption ? `${photo.caption} — ${photo.name}` : `Photograph of ${photo.name}`;
   $("#photo-viewer-name").textContent = photo.name;
   $("#photo-viewer-caption").textContent = photo.caption || "Family archive";
   $("#photo-viewer-count").textContent = `${viewerIndex + 1} / ${galleryPhotos.length}`;
@@ -459,7 +459,7 @@ function parseGedcom(text) {
       else if ((match = line.match(/^1 (?:TITL|OCCU) (.+)/))) { person.roles.push(match[1].trim()); currentObject = false; }
       else if ((match = line.match(/^1 FAMC (@[^@]+@)/))) { person.familyIds.push(match[1]); currentObject = false; }
       else if (/^1 OBJE\b/.test(line)) { currentObject = true; currentEvent = ""; }
-      else if ((match = line.match(/^2 FILE (https:\/\/\S+)/)) && currentObject) { person.photos.push(match[1]); }
+      else if ((match = line.match(/^2 FILE (https:\/\/\S+|assets\/[A-Za-z0-9._-]+)/)) && currentObject) { person.photos.push(match[1]); }
       else if ((match = line.match(/^2 TITL (.+)/)) && currentObject && person.photos.length) { person.photos[person.photos.length - 1] = { url: person.photos.at(-1), caption: match[1].trim() }; }
       else if (/^1 /.test(line)) { currentEvent = ""; currentObject = false; }
     }

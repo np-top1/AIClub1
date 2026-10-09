@@ -146,7 +146,7 @@ def records_from_gedcom(text):
             elif re.match(r"^1 OBJE\b", line):
                 event = ""
                 in_photo = True
-            elif match := re.match(r"^2 FILE (https://\S+)", line):
+            elif match := re.match(r"^2 FILE (https://\S+|assets/[A-Za-z0-9._-]+)", line):
                 if in_photo:
                     person["_photos"].append({"url": match[1], "caption": ""})
             elif match := re.match(r"^2 TITL (.+)", line):
