@@ -49,6 +49,7 @@
 1 NAME N. Pardo
 2 GIVN N.
 2 SURN Pardo
+2 SURN פרדו
 1 FAMC @F6000000222512872044@
 1 FAMS @F6000000165835114839@
 0 @I293027142630001508@ INDI
@@ -61,15 +62,15 @@
 1 BIRT
 2 DATE 13 JAN 1924
 1 DEAT
-2 DATE 2015
+2 DATE 21 JAN 2015
 1 OBJE
-2 FILE https://media.geni.com/p14/a8/5c/48/b3/5344486accce8408/38662_original.jpg?hash=13164f9bd32142fdad22a96c4f3fd295472fc0a1dc84e89941eeb931dda89c8a.1799395199
+2 FILE https://media.geni.com/p14/a8/5c/48/b3/5344486accce8408/38662_original.jpg?hash=9aaea2df6889229ad74e8a14fcc16ddba1dd0c8c575766885c0e34c979a6145a.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/c6/b7/b5/61/5344486a76dd290b/819ea74a-63fa-41de-8472-8f2d324889b5_original.jpg?hash=3047f6c837e554ce1417eef95992ba038051f8c7384f5ab181faa1e4dd417c54.1799395199
+2 FILE https://media.geni.com/p14/c6/b7/b5/61/5344486a76dd290b/819ea74a-63fa-41de-8472-8f2d324889b5_original.jpg?hash=fbadb377cc598ca7c61673d69dc62362fb4536bb9621c9643e57f81d553d26a7.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/74/2a/bd/22/5344486a76df4f30/img_2925_original.jpg?hash=dfc0798a79c4e3309c4f428ea349b3efc62dae65ddfb55d4aa4113080f2878b4.1799395199
+2 FILE https://media.geni.com/p14/74/2a/bd/22/5344486a76df4f30/img_2925_original.jpg?hash=01d1b36f41632f1ca92763d0daa3ced0d133e4aab79d0b95ef4e81802f07ae51.1799567999
 2 FORM jpg
 0 @I293021261240007501@ INDI
 1 NAME Edward Charles Massry
@@ -81,19 +82,19 @@
 1 BIRT
 2 DATE 12 APR 1926
 1 DEAT
-2 DATE 2010
+2 DATE 4 MAY 2010
 1 OBJE
-2 FILE https://media.geni.com/p14/51/04/f2/ed/5344486a94eb4f81/img_0079_original.jpg?hash=0cb5596b7982b4832418741ea13f93621275df51ebf4a642809e0cb850962008.1799395199
+2 FILE https://media.geni.com/p14/51/04/f2/ed/5344486a94eb4f81/img_0079_original.jpg?hash=89404c84e3b9fcc05c65c50569d582ebc17bada3d267719c2af69c9ac0197ba6.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/c6/b7/b5/61/5344486a76dd290b/819ea74a-63fa-41de-8472-8f2d324889b5_original.jpg?hash=3047f6c837e554ce1417eef95992ba038051f8c7384f5ab181faa1e4dd417c54.1799395199
+2 FILE https://media.geni.com/p14/c6/b7/b5/61/5344486a76dd290b/819ea74a-63fa-41de-8472-8f2d324889b5_original.jpg?hash=fbadb377cc598ca7c61673d69dc62362fb4536bb9621c9643e57f81d553d26a7.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/f2/29/e8/24/5344486ac88cd34b/img_4286_original.jpg?hash=b93662919d8109b089e1af7632ca12f28ca7de4b5d6c406f1237a52c32a94a84.1799395199
+2 FILE https://media.geni.com/p14/f2/29/e8/24/5344486ac88cd34b/img_4286_original.jpg?hash=c38ac46e475f0749984b261843a6116240ce1087f09125ff649cea7f4c9c453d.1799567999
 2 FORM jpg
 2 TITL Edward Massry’s draft registration
 1 OBJE
-2 FILE https://media.geni.com/p14/de/ae/28/be/5344486af37fc282/my-familys-exodus-from-egypt-3_original.png?hash=68a3e8e02299b5ff5573e64e733d09ac7d8cd7d3f13c44e2e146c843640341dc.1799395199
+2 FILE https://media.geni.com/p14/de/ae/28/be/5344486af37fc282/my-familys-exodus-from-egypt-3_original.png?hash=99441659070549b8b42adde0e69f4e716d7ec3de73f7e3aa9a0706ffa783e3a1.1799567999
 2 FORM png
 2 TITL MY FAMILY’S EXODUS FROM EGYPT
 0 @I6000000000905252377@ INDI
@@ -106,69 +107,70 @@
 1 BIRT
 2 DATE 10 APR 1925
 1 DEAT
-2 DATE 2014
+2 DATE 15 JAN 2014
+2 PLAC Brooklyn
 1 OBJE
-2 FILE https://media.geni.com/p14/f9/ae/1f/d0/5344486ae5ba374b/da0656b4-9ad1-48c0-a465-a702616d541f_original.jpg?hash=ce79a8f0db6a2e061a9ed7964f925b760003bb0d27f4752f809496d11cba16d7.1799395199
+2 FILE https://media.geni.com/p14/f9/ae/1f/d0/5344486ae5ba374b/da0656b4-9ad1-48c0-a465-a702616d541f_original.jpg?hash=b084fa96f6967211afe1ccdd2f778966d145b3bf0d74d964edfe9c0de873522c.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/62/e8/49/4c/5344486a9ab30ff9/730a07f2-4d6d-4610-8c95-8df17a809dbc_original.jpg?hash=260027bbe2b9168682f621d3768966a1ed551cc771e3541b7bda16a833d1c9a6.1799395199
+2 FILE https://media.geni.com/p14/62/e8/49/4c/5344486a9ab30ff9/730a07f2-4d6d-4610-8c95-8df17a809dbc_original.jpg?hash=2756188ad490d3b9f524ec133e6f05cd78177cc29acea03fe630ca698a0b2944.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/90/ab/54/e4/5344486a7e4412b3/dsc_0006_original_original.jpg?hash=95212763e00a182777142704efd84c6fd355c04828f70300cab84a4f5cd8be3f.1799395199
+2 FILE https://media.geni.com/p14/90/ab/54/e4/5344486a7e4412b3/dsc_0006_original_original.jpg?hash=453873df76589a9533a8dcc17bfd3cb27359881e000259f6603674fffbc49a37.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/dc/62/7a/92/5344486a76dd2908/57c9a027-3e95-4373-b094-8a2cc62df68e_original.jpg?hash=c020d72c95665efad5c0a62f2e350e2bbb470e0526e69aca818f414c2b0bcfa9.1799395199
+2 FILE https://media.geni.com/p14/dc/62/7a/92/5344486a76dd2908/57c9a027-3e95-4373-b094-8a2cc62df68e_original.jpg?hash=64b02bac80039a9239c5ff6159c09dd5f050b67e99821dca4cbf55ce9bb0ca4e.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/0b/f1/08/5e/5344486a76da6580/02ceb4a8-1cbb-482a-bfb4-edfbd1ba5189_large.jpg?hash=5dac79a2de0126c3f1a9b0b580ee8a4d7f80941e64427b6444f34ecb53686f20.1799395199
+2 FILE https://media.geni.com/p14/0b/f1/08/5e/5344486a76da6580/02ceb4a8-1cbb-482a-bfb4-edfbd1ba5189_large.jpg?hash=74b74b6b3616f052101756c792fd8835958bca3b07e2681e808451f66f1173ab.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/a7/f8/20/c8/5344486a65052a67/24941b_original.jpg?hash=dd1273a0e6eadc813bfbb1de2085a550b3b846cb505cb8ff4a0fa3c379d044b6.1799395199
+2 FILE https://media.geni.com/p14/a7/f8/20/c8/5344486a65052a67/24941b_original.jpg?hash=e9544b7cb97c27cc5be32f610f2cf05925676c1e414ae06b005bc8c31c98629b.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p5/8925/1443/534448367b3e2c7a/072_original.jpg?hash=c9c2734978a1534cbf888adf2a73bba2afb39994b3921d62f529d3b9b09fe7ed.1799395199
+2 FILE https://media.geni.com/p5/8925/1443/534448367b3e2c7a/072_original.jpg?hash=5e33d1b4e6769e4a5bd60442ea412ba1e2753dbefa924e93760cd489e133f746.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p5/8925/1443/534448367b3e2c73/128_original.jpg?hash=2afc69bb39f21fbba384a517e47c6099ddbeb05bbbe8835fcfb3cd101c9bac4f.1799395199
+2 FILE https://media.geni.com/p5/8925/1443/534448367b3e2c73/128_original.jpg?hash=11a94a2083050a5dc21cd66ad04c02488041f65576d0ae82c0228470de08601d.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p5/8925/1443/534448367b410249/047_original.jpg?hash=38b0073ab5f37f18009c1af1fc9aac17f783b97a1decfbedf52d63de0cba379f.1799395199
+2 FILE https://media.geni.com/p5/8925/1443/534448367b410249/047_original.jpg?hash=1a500e81fcd8732183e3ac3895d8d7780622fc318cc954bfec3e0efdce5b2032.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p6/8925/1443/53444836c3c75649/IMG00085_large.jpg?hash=52335ccc64fc4cd8a3f479c3edd5175ee667a13585b7edc7aad6430622ec5d8c.1799395199
+2 FILE https://media.geni.com/p6/8925/1443/53444836c3c75649/IMG00085_large.jpg?hash=af655224c81dc426adae92eea1bbbffe0a7889caaefcd91eb8d4dfc5da9e6980.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p6/8925/1443/53444836c3c7564a/IMG00084_large.jpg?hash=0f4b90a76dfc978d582f4772b11e47103d67807fc3bd65ccaf5223e333a6824e.1799395199
+2 FILE https://media.geni.com/p6/8925/1443/53444836c3c7564a/IMG00084_large.jpg?hash=63d770000e58be8d8bedf8de9fe415a8b89bde78d61b7e453076018be2985407.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p6/8925/1443/53444836c3c7564b/IMG00083_large.jpg?hash=11c8f72fc2175266e3b61a47e784148b211678c99f4eeb875ff44ed8c6d51a16.1799395199
+2 FILE https://media.geni.com/p6/8925/1443/53444836c3c7564b/IMG00083_large.jpg?hash=88010221147b67f41ab456a841df002025c268a98ccf9d2e16b877e694159beb.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p5/8925/1443/534448367b410245/059_original.jpg?hash=dd322852981a22c7bb1a03a21b9c0905ddb72145009658df4f6dd74938ba7b91.1799395199
+2 FILE https://media.geni.com/p5/8925/1443/534448367b410245/059_original.jpg?hash=a54d45d53718b8b91d4f52daa2b05c1e4e8de187859c757ac5166ae63f5f9575.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p5/8925/1443/534448367b410248/050_original.jpg?hash=6f961f6f04ef449d6278beed6572e239980c8a2e0515a9ad675f2309d1d20eda.1799395199
+2 FILE https://media.geni.com/p5/8925/1443/534448367b410248/050_original.jpg?hash=cfa3cfec89446275f07eeae13dfa1701e476df2a91895167e76b8b9c4ea46d53.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p5/8925/1443/534448367b36ce73/DSC_0006_original.jpg?hash=a38abd8f7d01e5754ef3b7c9415485dd1738289096ae4b2e70c470763b622e74.1799395199
+2 FILE https://media.geni.com/p5/8925/1443/534448367b36ce73/DSC_0006_original.jpg?hash=b2ea3550d888c3e11d524753176e1e3c6ac914a8c42d219c1f11262ff473e725.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p5/8925/1443/534448367b3e2c75/100_original.jpg?hash=499ea17a52e02e5dfb9181dcb19082fb11a84faae1de111997abccb255db323e.1799395199
+2 FILE https://media.geni.com/p5/8925/1443/534448367b3e2c75/100_original.jpg?hash=583fe9ccc040aab1ffa4fb51d84f652f00b102953a9d3982e3430682c90c2c72.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p5/8925/1443/534448367b410295/145_original.jpg?hash=f219d9ee7963d273b045f520128df81513384679c96d85d27b4f49aa55c1c731.1799395199
+2 FILE https://media.geni.com/p5/8925/1443/534448367b410295/145_original.jpg?hash=0157d0d56188092188e41fa8323b12c6dc2b81963e4e2bd885b72c532dcc1101.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p5/8925/1443/534448367b410297/140_original.jpg?hash=c68655ea595f1acd5355278406dbf365ecb2a3e986ba076a689b3c216ea12d53.1799395199
+2 FILE https://media.geni.com/p5/8925/1443/534448367b410297/140_original.jpg?hash=7ab1a99d3b5d465205754e2c0fc9e83f27785e666954f57a886efbc7840fd6ea.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p5/8925/1443/534448367b410298/139_original.jpg?hash=de2e0db626fb543cccf94eb881b31ead089405ec24ff4da9e95b06bb8ba491f8.1799395199
+2 FILE https://media.geni.com/p5/8925/1443/534448367b410298/139_original.jpg?hash=8eb720edb04365b288754c9407f81ad6e3c53171e9932f2868b47751304278cf.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p5/8925/1443/534448367b410299/137_original.jpg?hash=a4ea286332a2e1baa41cea22350a1fea4e3ef61caefe503b622e3bf0f215b340.1799395199
+2 FILE https://media.geni.com/p5/8925/1443/534448367b410299/137_original.jpg?hash=b85599c00d66702c49d95554858bad0099dbaf93e2da16b41abda3cd66e76849.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/2f/98/19/85/5344486ac88c4325/img_4288_original.jpg?hash=53106fa0f7cb8428f0ad0dfed6e1f63f6372080028ee00c57a0f6b622f44c175.1799395199
+2 FILE https://media.geni.com/p14/2f/98/19/85/5344486ac88c4325/img_4288_original.jpg?hash=d67e38b182013950f28c2cc7953e0efa7a991de45fcc0932fc8e53cd55df0aaf.1799567999
 2 FORM jpg
 2 TITL Joseph Reuben Bibi’s draft registration
 0 @I6000000000905452026@ INDI
@@ -182,30 +184,31 @@
 2 DATE 28 MAR 1925
 2 PLAC New York
 1 DEAT
-2 DATE 2022
+2 DATE 28 DEC 2022
+2 PLAC Brooklyn
 1 OBJE
-2 FILE https://media.geni.com/p14/aa/ab/1e/ba/5344486a94eb4f84/img_0176_original.jpg?hash=24817ced10764a40a4c47f357caaed3c79a31b4f94ae0cb62182bbf611d8e966.1799395199
+2 FILE https://media.geni.com/p14/aa/ab/1e/ba/5344486a94eb4f84/img_0176_original.jpg?hash=0154408b32cee409ec4f6072152522809b1d1de83d305991e92c8b47908d3c67.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/90/ab/54/e4/5344486a7e4412b3/dsc_0006_original_original.jpg?hash=95212763e00a182777142704efd84c6fd355c04828f70300cab84a4f5cd8be3f.1799395199
+2 FILE https://media.geni.com/p14/90/ab/54/e4/5344486a7e4412b3/dsc_0006_original_original.jpg?hash=453873df76589a9533a8dcc17bfd3cb27359881e000259f6603674fffbc49a37.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/0b/f1/08/5e/5344486a76da6580/02ceb4a8-1cbb-482a-bfb4-edfbd1ba5189_large.jpg?hash=5dac79a2de0126c3f1a9b0b580ee8a4d7f80941e64427b6444f34ecb53686f20.1799395199
+2 FILE https://media.geni.com/p14/0b/f1/08/5e/5344486a76da6580/02ceb4a8-1cbb-482a-bfb4-edfbd1ba5189_large.jpg?hash=74b74b6b3616f052101756c792fd8835958bca3b07e2681e808451f66f1173ab.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p5/8925/1443/534448367b410249/047_original.jpg?hash=38b0073ab5f37f18009c1af1fc9aac17f783b97a1decfbedf52d63de0cba379f.1799395199
+2 FILE https://media.geni.com/p5/8925/1443/534448367b410249/047_original.jpg?hash=1a500e81fcd8732183e3ac3895d8d7780622fc318cc954bfec3e0efdce5b2032.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p5/8925/1443/534448367b410248/050_original.jpg?hash=6f961f6f04ef449d6278beed6572e239980c8a2e0515a9ad675f2309d1d20eda.1799395199
+2 FILE https://media.geni.com/p5/8925/1443/534448367b410248/050_original.jpg?hash=cfa3cfec89446275f07eeae13dfa1701e476df2a91895167e76b8b9c4ea46d53.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p5/8925/1443/534448367b36ce73/DSC_0006_original.jpg?hash=a38abd8f7d01e5754ef3b7c9415485dd1738289096ae4b2e70c470763b622e74.1799395199
+2 FILE https://media.geni.com/p5/8925/1443/534448367b36ce73/DSC_0006_original.jpg?hash=b2ea3550d888c3e11d524753176e1e3c6ac914a8c42d219c1f11262ff473e725.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p5/8925/1443/534448367b410296/143_original.jpg?hash=5610cb6c6a98c3503b04702b4d36abb3315123b274cdf9a4f8141b30c40d491c.1799395199
+2 FILE https://media.geni.com/p5/8925/1443/534448367b410296/143_original.jpg?hash=289f83539834aad0833c3e9b71367d19738f0e0b44de3a8c858243d217e51855.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p5/8925/1443/534448367b410298/139_original.jpg?hash=de2e0db626fb543cccf94eb881b31ead089405ec24ff4da9e95b06bb8ba491f8.1799395199
+2 FILE https://media.geni.com/p5/8925/1443/534448367b410298/139_original.jpg?hash=8eb720edb04365b288754c9407f81ad6e3c53171e9932f2868b47751304278cf.1799567999
 2 FORM jpg
 0 @I5659731663560127422@ INDI
 1 NAME Esther Maslaton
@@ -218,30 +221,30 @@
 2 DATE 11 JAN 1927
 2 PLAC Brooklyn
 1 DEAT
-2 DATE 2019
+2 DATE 6 JUL 2019
 1 OBJE
-2 FILE https://media.geni.com/p14/d0/6d/61/31/5344486aa514e6ec/photo_2026-07-03_162147_large.jpg?hash=aaf8920cc70b563db9ba88bd9d083e6aac90aa9fa8935c01d10478ede3b05ffc.1799395199
+2 FILE https://media.geni.com/p14/d0/6d/61/31/5344486aa514e6ec/photo_2026-07-03_162147_large.jpg?hash=da504c8ccfebe2d2fc4d823448e3f023eb968937e816ccc492100d9ff2e6185f.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/09/ef/08/17/5344486a925e0187/screenshot_2026-06-16_at_3_original.jpg?hash=59a62a2159858fd7e085bca91f10407a7dbf2ea22b2c60cbb3e0bc84ba8a8e56.1799395199
+2 FILE https://media.geni.com/p14/09/ef/08/17/5344486a925e0187/screenshot_2026-06-16_at_3_original.jpg?hash=f7dfb8eda1eeda9cb2a77ee7649e869d2f2999884cce1d6f7d72b0478bb04a24.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/52/61/5f/c4/5344486a925e0189/screenshot_2026-06-16_at_3_original.jpg?hash=cf041bd1ad4360eb8986ecdcfeae9aa3a692d2ae2abeefb433b9e569a2c501f6.1799395199
+2 FILE https://media.geni.com/p14/52/61/5f/c4/5344486a925e0189/screenshot_2026-06-16_at_3_original.jpg?hash=165b2f3a3e772fcf782e0340f637379d8c442b3aebd00696d5bc1301aac89496.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/7d/ea/32/9f/5344486a7f64cc36/img_1056_original.jpg?hash=098ec74a6012e97649a4d3a2b0691ebb46306c60040c37ec88f596b34453f5d7.1799395199
+2 FILE https://media.geni.com/p14/7d/ea/32/9f/5344486a7f64cc36/img_1056_original.jpg?hash=e6b770f3741a1190fb3a086759e0a8b8290389d61a569bdeca496d2e390cb897.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/8a/49/ac/62/5344486a7a96e0dc/img_5411_original.jpg?hash=e145f1c8596cc3ef6ff1b0564e4e42aba6b20b04e535bb47a2b457e17aca7748.1799395199
+2 FILE https://media.geni.com/p14/8a/49/ac/62/5344486a7a96e0dc/img_5411_original.jpg?hash=29eec80059487ff7de96dd9037d79a8158e0cde9f96d00dca3c31851e2c890ce.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/f0/7a/59/74/5344486a7a982cc2/8-25-06_061_original.jpg?hash=dec4c4ae30c94b4d138b1f7f51325754362d75ce23e9c0f32390c18e7fb8e818.1799395199
+2 FILE https://media.geni.com/p14/f0/7a/59/74/5344486a7a982cc2/8-25-06_061_original.jpg?hash=29ea04caf9adb7379911f0f84623d60b4267f7ddc97147bfd872a1647df910ea.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/72/1a/80/36/5344486a7993b1b4/8-25-06_096_original.jpg?hash=1492dc8e9f1f481e8beed47d7a857fb34bd94a5b1c1ed62531468f9cff324384.1799395199
+2 FILE https://media.geni.com/p14/72/1a/80/36/5344486a7993b1b4/8-25-06_096_original.jpg?hash=a6a101d7772e7b80b0cabf67eded911735ddc427516b51908a4c967ef8f8a635.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/66/5a/b2/eb/5344486a76dbe447/img_1057_original.jpg?hash=57af76f2f0025cffff6000eec2d78febd7f6396587ef9d63264108b77106afd3.1799395199
+2 FILE https://media.geni.com/p14/66/5a/b2/eb/5344486a76dbe447/img_1057_original.jpg?hash=956920464d833ef9351f2473f3b3240c41042d93900cb446dad0ef7082274dee.1799567999
 2 FORM jpg
 1 OBJE
 2 FILE https://www.geni.com/images/documents/doc.png
@@ -257,33 +260,33 @@
 1 BIRT
 2 DATE 5 FEB 1923
 1 DEAT
-2 DATE 2009
+2 DATE 5 OCT 2009
 1 OBJE
-2 FILE https://media.geni.com/p14/d0/6d/61/31/5344486aa514e6ec/photo_2026-07-03_162147_large.jpg?hash=aaf8920cc70b563db9ba88bd9d083e6aac90aa9fa8935c01d10478ede3b05ffc.1799395199
+2 FILE https://media.geni.com/p14/d0/6d/61/31/5344486aa514e6ec/photo_2026-07-03_162147_large.jpg?hash=da504c8ccfebe2d2fc4d823448e3f023eb968937e816ccc492100d9ff2e6185f.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/f9/cd/c1/77/5344486abe3eeab5/5239_large.jpg?hash=8a4817455a7bf786334298c998338f5e88ff2acadd0f35e51dc54e57b77d6731.1799395199
+2 FILE https://media.geni.com/p14/f9/cd/c1/77/5344486abe3eeab5/5239_large.jpg?hash=f88b85b00858db220a8f9082f1a0150f8530d3b796b6f30842063f7584d3d29d.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/83/24/b9/51/5344486ab7306637/img_4146_original.jpg?hash=a17152b75414f3eb6979d398305f68b65a583440de2fc9b5ec5e11aae524fe8e.1799395199
+2 FILE https://media.geni.com/p14/83/24/b9/51/5344486ab7306637/img_4146_original.jpg?hash=e158bbdd7efaef9cdaecda56eefdf3a8eb00716a7cbefda38f38183eed98b563.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/7d/ea/32/9f/5344486a7f64cc36/img_1056_original.jpg?hash=098ec74a6012e97649a4d3a2b0691ebb46306c60040c37ec88f596b34453f5d7.1799395199
+2 FILE https://media.geni.com/p14/7d/ea/32/9f/5344486a7f64cc36/img_1056_original.jpg?hash=e6b770f3741a1190fb3a086759e0a8b8290389d61a569bdeca496d2e390cb897.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/b9/58/5e/41/5344486a7a982cc3/8-25-06_056_original.jpg?hash=b40d7d2e0cfd77324b0c79d2e20d5b167e5daa8100c74bc7c22c0c19072d6421.1799395199
+2 FILE https://media.geni.com/p14/b9/58/5e/41/5344486a7a982cc3/8-25-06_056_original.jpg?hash=bd6bdf830cc9a03a169169bd911ed77dddc12e9cb5e968e2c041767fa2bda5fa.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/f0/7a/59/74/5344486a7a982cc2/8-25-06_061_original.jpg?hash=dec4c4ae30c94b4d138b1f7f51325754362d75ce23e9c0f32390c18e7fb8e818.1799395199
+2 FILE https://media.geni.com/p14/f0/7a/59/74/5344486a7a982cc2/8-25-06_061_original.jpg?hash=29ea04caf9adb7379911f0f84623d60b4267f7ddc97147bfd872a1647df910ea.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/66/5a/b2/eb/5344486a76dbe447/img_1057_original.jpg?hash=57af76f2f0025cffff6000eec2d78febd7f6396587ef9d63264108b77106afd3.1799395199
+2 FILE https://media.geni.com/p14/66/5a/b2/eb/5344486a76dbe447/img_1057_original.jpg?hash=956920464d833ef9351f2473f3b3240c41042d93900cb446dad0ef7082274dee.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/2f/9a/22/ec/5344486a5bb062f5/37831_large.jpg?hash=ab773a38d3d03294b820e6f156088b49b856fcc026c897c167c7b534a159aeec.1799395199
+2 FILE https://media.geni.com/p14/2f/9a/22/ec/5344486a5bb062f5/37831_large.jpg?hash=849285125c05be7bd121f28eb18c5956d90a28b9cb30720c3e280f16623f62d3.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/20/ef/9c/07/5344486ac890fd7d/img_4287_original.jpg?hash=6199648dc874a339680552fa12eba2f8ca49468a960807307dc2bd0f0685a272.1799395199
+2 FILE https://media.geni.com/p14/20/ef/9c/07/5344486ac890fd7d/img_4287_original.jpg?hash=693419422e4fd4c64308f01423ae0ff7f5bde15f559446e59b381808f2efdc0f.1799567999
 2 FORM jpg
 2 TITL Eli A. Safdieh’s draft registration
 1 OBJE
@@ -309,9 +312,10 @@
 1 BIRT
 2 DATE 18 NOV 1924
 1 DEAT
-2 DATE 1996
+2 DATE 2 MAR 1996
+2 PLAC Brooklyn
 1 OBJE
-2 FILE https://media.geni.com/p14/41/b5/36/0a/5344486a9e91e89d/img_0395_original.jpg?hash=cd663febc73523bd7099ce9dc6aee8ecbfe6fd7584b7720f332be2d3abd915ef.1799395199
+2 FILE https://media.geni.com/p14/41/b5/36/0a/5344486a9e91e89d/img_0395_original.jpg?hash=c3b9c3834eb3fc0751517fe3daf53be89c3eac925aacb696c74ac663b46dae41.1799567999
 2 FORM jpg
 0 @I6000000135756409852@ INDI
 1 NAME Sarah Fallas
@@ -324,9 +328,9 @@
 2 DATE 1895
 2 PLAC Turkey, Alepe
 1 DEAT
-2 DATE 1947
+2 DATE 11 MAR 1947
 1 OBJE
-2 FILE https://media.geni.com/p14/a8/5c/48/b3/5344486accce8408/38662_original.jpg?hash=13164f9bd32142fdad22a96c4f3fd295472fc0a1dc84e89941eeb931dda89c8a.1799395199
+2 FILE https://media.geni.com/p14/a8/5c/48/b3/5344486accce8408/38662_original.jpg?hash=9aaea2df6889229ad74e8a14fcc16ddba1dd0c8c575766885c0e34c979a6145a.1799567999
 2 FORM jpg
 0 @I6000000165620003133@ INDI
 1 NAME Eli Cohen Shurba
@@ -338,9 +342,9 @@
 1 BIRT
 2 DATE 10 DEC 1893
 1 DEAT
-2 DATE 1975
+2 DATE OCT 1975
 1 OBJE
-2 FILE https://media.geni.com/p14/a8/5c/48/b3/5344486accce8408/38662_original.jpg?hash=13164f9bd32142fdad22a96c4f3fd295472fc0a1dc84e89941eeb931dda89c8a.1799395199
+2 FILE https://media.geni.com/p14/a8/5c/48/b3/5344486accce8408/38662_original.jpg?hash=9aaea2df6889229ad74e8a14fcc16ddba1dd0c8c575766885c0e34c979a6145a.1799567999
 2 FORM jpg
 0 @I6000000125929458890@ INDI
 1 NAME Sophie Simbol Abade
@@ -349,15 +353,16 @@
 1 FAMC @F6000000193118657292@
 1 FAMS @F6000000125929458968@
 1 BIRT
-2 DATE 1899
+2 DATE BET 2 JUL 1899 AND 14 OCT 1902
 1 DEAT
-2 DATE 1973
+2 DATE NOV 1973
+2 PLAC South Carolina, USA
 1 OBJE
 2 FILE https://www.geni.com/images/documents/doc.png
 2 FORM png
 2 TITL Askenazi Web Site
 1 OBJE
-2 FILE https://media.geni.com/p14/bc/67/5b/31/5344486ac88c0808/img_4284_original.jpg?hash=30f9bbadc1a49e9d941a5125e4125e3a7be4a528737f9ff926228315c8dc7d3b.1799395199
+2 FILE https://media.geni.com/p14/bc/67/5b/31/5344486ac88c0808/img_4284_original.jpg?hash=8f4564302951465a9dc4e636b765818c7ab3ee03448ae281054757e47119d010.1799567999
 2 FORM jpg
 2 TITL Divorce Record of Charles Massry and Sophie Simbol Abade
 0 @I6000000003196314097@ INDI
@@ -368,10 +373,11 @@
 1 FAMC @F6000000003176499674@
 1 FAMS @F6000000125929458968@
 1 BIRT
-2 DATE 1892
-2 PLAC Ḩalab
+2 DATE BET 5 MAR 1892 AND 5 MAR 1895
+2 PLAC Ḩalab, Halab, Syrian Arab Republic
 1 DEAT
-2 DATE 1966
+2 DATE 24 MAY 1966
+2 PLAC Myrtle Beach, Horry, South Carolina, USA
 1 OBJE
 2 FILE https://www.geni.com/images/documents/doc.png
 2 FORM png
@@ -381,19 +387,19 @@
 2 FORM png
 2 TITL Askenazi Web Site
 1 OBJE
-2 FILE https://media.geni.com/p14/8a/ad/47/2d/5344486a8c947fdf/1_1_qggn-16vt_original.png?hash=6fe0a4f4096a2341fc0481e89d77f8bbce71b6ab45d556128bcdddf628b58916.1799395199
+2 FILE https://media.geni.com/p14/8a/ad/47/2d/5344486a8c947fdf/1_1_qggn-16vt_original.png?hash=c61802c90e63f3ddb65649df897f85dc817972c6ec5303d59d45471e096d1f12.1799567999
 2 FORM png
 2 TITL https://familysearch.org/ark:/61903/1:1:QGGN-16VT?lang=en
 1 OBJE
-2 FILE https://media.geni.com/p14/fe/92/6b/04/5344486ac88b73b2/img_4285_original.jpg?hash=798f1d9b70a39025524089e446098a3a453c91d19d2e7cf33a65095c5fc38ccf.1799395199
+2 FILE https://media.geni.com/p14/fe/92/6b/04/5344486ac88b73b2/img_4285_original.jpg?hash=b36ee413383e51130543dee25a5c05a7e6aa6ccc17f76434325ca001ae43c8c8.1799567999
 2 FORM jpg
 2 TITL The Marriage Record of Charles Massry to Annabell Marie Snyder
 1 OBJE
-2 FILE https://media.geni.com/p14/f2/29/e8/24/5344486ac88cd34b/img_4286_original.jpg?hash=b93662919d8109b089e1af7632ca12f28ca7de4b5d6c406f1237a52c32a94a84.1799395199
+2 FILE https://media.geni.com/p14/f2/29/e8/24/5344486ac88cd34b/img_4286_original.jpg?hash=c38ac46e475f0749984b261843a6116240ce1087f09125ff649cea7f4c9c453d.1799567999
 2 FORM jpg
 2 TITL Edward Massry’s draft registration
 1 OBJE
-2 FILE https://media.geni.com/p14/bc/67/5b/31/5344486ac88c0808/img_4284_original.jpg?hash=30f9bbadc1a49e9d941a5125e4125e3a7be4a528737f9ff926228315c8dc7d3b.1799395199
+2 FILE https://media.geni.com/p14/bc/67/5b/31/5344486ac88c0808/img_4284_original.jpg?hash=8f4564302951465a9dc4e636b765818c7ab3ee03448ae281054757e47119d010.1799567999
 2 FORM jpg
 2 TITL Divorce Record of Charles Massry and Sophie Simbol Abade
 0 @I6000000005380347549@ INDI
@@ -405,21 +411,22 @@
 1 BIRT
 2 DATE 1 FEB 1902
 1 DEAT
-2 DATE 1988
+2 DATE 19 DEC 1988
+2 PLAC Brooklyn
 1 OBJE
-2 FILE https://media.geni.com/p14/4b/31/9d/87/5344486aee0ba7e6/5ecea9a5-46a2-44c9-b9d4-c98781c30924_large.jpg?hash=fa8dbc045ac8334c6037adc2f46ffe2d71f38b8a9f226ea96b7a00dbe91f7c7f.1799395199
+2 FILE https://media.geni.com/p14/4b/31/9d/87/5344486aee0ba7e6/5ecea9a5-46a2-44c9-b9d4-c98781c30924_large.jpg?hash=f33e9b739c6e91abdbd8c21f2048166305e35f9ff3620099be06915b4f4b3704.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/a3/48/3b/e5/5344486a9ab30ffa/dc9290c5-e162-408f-a11a-f3df2c519f19_original.jpg?hash=584627c8092664cdc7538d9d3eb0beab5a419a91971ff401f1fb2376e9322c0a.1799395199
+2 FILE https://media.geni.com/p14/a3/48/3b/e5/5344486a9ab30ffa/dc9290c5-e162-408f-a11a-f3df2c519f19_original.jpg?hash=5cfa9e4b6736cf5211813f71d5412831861934f0b7b43b2213b11f872bd25d78.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/00/87/0d/4f/5344486a923da840/6189_original.jpg?hash=f82ce9acdde240b6972db5b1736a85807cf53966e61695d0bfbd893662b5ec08.1799395199
+2 FILE https://media.geni.com/p14/00/87/0d/4f/5344486a923da840/6189_original.jpg?hash=262fe3e6f79399765fd7eabb75c3cad0d520d1621367bac827b9289719207bf2.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/0b/f1/08/5e/5344486a76da6580/02ceb4a8-1cbb-482a-bfb4-edfbd1ba5189_large.jpg?hash=5dac79a2de0126c3f1a9b0b580ee8a4d7f80941e64427b6444f34ecb53686f20.1799395199
+2 FILE https://media.geni.com/p14/0b/f1/08/5e/5344486a76da6580/02ceb4a8-1cbb-482a-bfb4-edfbd1ba5189_large.jpg?hash=74b74b6b3616f052101756c792fd8835958bca3b07e2681e808451f66f1173ab.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/de/ae/28/be/5344486af37fc282/my-familys-exodus-from-egypt-3_original.png?hash=68a3e8e02299b5ff5573e64e733d09ac7d8cd7d3f13c44e2e146c843640341dc.1799395199
+2 FILE https://media.geni.com/p14/de/ae/28/be/5344486af37fc282/my-familys-exodus-from-egypt-3_original.png?hash=99441659070549b8b42adde0e69f4e716d7ec3de73f7e3aa9a0706ffa783e3a1.1799567999
 2 FORM png
 2 TITL MY FAMILY’S EXODUS FROM EGYPT
 0 @I6000000000427045674@ INDI
@@ -432,30 +439,30 @@
 1 BIRT
 2 DATE 5 JAN 1896
 1 DEAT
-2 DATE 1980
+2 DATE 8 JUL 1980
 1 TITL Engraver
 1 OBJE
-2 FILE https://media.geni.com/p14/4b/31/9d/87/5344486aee0ba7e6/5ecea9a5-46a2-44c9-b9d4-c98781c30924_large.jpg?hash=fa8dbc045ac8334c6037adc2f46ffe2d71f38b8a9f226ea96b7a00dbe91f7c7f.1799395199
+2 FILE https://media.geni.com/p14/4b/31/9d/87/5344486aee0ba7e6/5ecea9a5-46a2-44c9-b9d4-c98781c30924_large.jpg?hash=f33e9b739c6e91abdbd8c21f2048166305e35f9ff3620099be06915b4f4b3704.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/16/7c/90/47/5344486ae63552ef/11862ps_original.jpg?hash=b1eeeee9a93761c16edf0434e648ba500fedd0f70913cdcc136515943573593a.1799395199
+2 FILE https://media.geni.com/p14/16/7c/90/47/5344486ae63552ef/11862ps_original.jpg?hash=ca8307c9bfd453afcc682355860977b616552d0fea81e194086db3c3c6b29727.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/a3/48/3b/e5/5344486a9ab30ffa/dc9290c5-e162-408f-a11a-f3df2c519f19_original.jpg?hash=584627c8092664cdc7538d9d3eb0beab5a419a91971ff401f1fb2376e9322c0a.1799395199
+2 FILE https://media.geni.com/p14/a3/48/3b/e5/5344486a9ab30ffa/dc9290c5-e162-408f-a11a-f3df2c519f19_original.jpg?hash=5cfa9e4b6736cf5211813f71d5412831861934f0b7b43b2213b11f872bd25d78.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/0b/f1/08/5e/5344486a76da6580/02ceb4a8-1cbb-482a-bfb4-edfbd1ba5189_large.jpg?hash=5dac79a2de0126c3f1a9b0b580ee8a4d7f80941e64427b6444f34ecb53686f20.1799395199
+2 FILE https://media.geni.com/p14/0b/f1/08/5e/5344486a76da6580/02ceb4a8-1cbb-482a-bfb4-edfbd1ba5189_large.jpg?hash=74b74b6b3616f052101756c792fd8835958bca3b07e2681e808451f66f1173ab.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/2f/98/19/85/5344486ac88c4325/img_4288_original.jpg?hash=53106fa0f7cb8428f0ad0dfed6e1f63f6372080028ee00c57a0f6b622f44c175.1799395199
+2 FILE https://media.geni.com/p14/2f/98/19/85/5344486ac88c4325/img_4288_original.jpg?hash=d67e38b182013950f28c2cc7953e0efa7a991de45fcc0932fc8e53cd55df0aaf.1799567999
 2 FORM jpg
 2 TITL Joseph Reuben Bibi’s draft registration
 1 OBJE
-2 FILE assets/TOURAINE.jpg
+2 FILE https://media.geni.com/p14/21/87/c5/bc/5344486ae5ddf3a0/image_original.jpg?hash=e139ac4973c0db1f8098dbb25e4ada0a63fda749021cce156284b19941490745.1799567999
 2 FORM jpg
-2 TITL La Touraine manifest — Yousseff (Joseph Obadiah) and Tofik (Reuben/Rubin) Bibi
+2 TITL La Touraine manifest
 1 OBJE
-2 FILE https://media.geni.com/p14/de/ae/28/be/5344486af37fc282/my-familys-exodus-from-egypt-3_original.png?hash=68a3e8e02299b5ff5573e64e733d09ac7d8cd7d3f13c44e2e146c843640341dc.1799395199
+2 FILE https://media.geni.com/p14/de/ae/28/be/5344486af37fc282/my-familys-exodus-from-egypt-3_original.png?hash=99441659070549b8b42adde0e69f4e716d7ec3de73f7e3aa9a0706ffa783e3a1.1799567999
 2 FORM png
 2 TITL MY FAMILY’S EXODUS FROM EGYPT
 0 @I6000000053178946284@ INDI
@@ -466,12 +473,13 @@
 1 BIRT
 2 DATE 20 MAY 1895
 1 DEAT
-2 DATE 1986
+2 DATE 6 AUG 1986
+2 PLAC Brooklyn
 1 OBJE
-2 FILE https://media.geni.com/p14/cb/52/69/4b/5344486a94eb4f80/img_0034_original.jpg?hash=44a3a738424a73093ec61281607f20ff8a87e14b89541f34aff108000c183fac.1799395199
+2 FILE https://media.geni.com/p14/cb/52/69/4b/5344486a94eb4f80/img_0034_original.jpg?hash=5d76b0031e754550c1bd3ff96dece63a320c80158ea61dedf6120138266064c2.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/0b/f1/08/5e/5344486a76da6580/02ceb4a8-1cbb-482a-bfb4-edfbd1ba5189_large.jpg?hash=5dac79a2de0126c3f1a9b0b580ee8a4d7f80941e64427b6444f34ecb53686f20.1799395199
+2 FILE https://media.geni.com/p14/0b/f1/08/5e/5344486a76da6580/02ceb4a8-1cbb-482a-bfb4-edfbd1ba5189_large.jpg?hash=74b74b6b3616f052101756c792fd8835958bca3b07e2681e808451f66f1173ab.1799567999
 2 FORM jpg
 0 @I6000000000531572322@ INDI
 1 NAME David Gindi Dakneesh
@@ -481,17 +489,17 @@
 1 FAMC @F4029903203790011146@
 1 FAMS @F6000000053179721887@
 1 BIRT
-2 DATE 1891
+2 DATE BET 10 MAY 1891 AND 10 MAY 1892
 1 DEAT
-2 DATE 1972
+2 DATE 17 SEP 1972
 1 OBJE
-2 FILE https://media.geni.com/p14/9d/1c/4d/67/5344486af2c54cec/img_4690_original.jpg?hash=bf6305a354ba4208cacc9063c87da256c2e369fe939bc816caa4e71194442b4a.1799395199
+2 FILE https://media.geni.com/p14/9d/1c/4d/67/5344486af2c54cec/img_4690_original.jpg?hash=716eaf697b6e2d7c50a8536c75df5c599851c0e6be6507675a19c318c275013a.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/0b/f1/08/5e/5344486a76da6580/02ceb4a8-1cbb-482a-bfb4-edfbd1ba5189_large.jpg?hash=5dac79a2de0126c3f1a9b0b580ee8a4d7f80941e64427b6444f34ecb53686f20.1799395199
+2 FILE https://media.geni.com/p14/0b/f1/08/5e/5344486a76da6580/02ceb4a8-1cbb-482a-bfb4-edfbd1ba5189_large.jpg?hash=74b74b6b3616f052101756c792fd8835958bca3b07e2681e808451f66f1173ab.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/cb/52/69/4b/5344486a94eb4f80/img_0034_original.jpg?hash=44a3a738424a73093ec61281607f20ff8a87e14b89541f34aff108000c183fac.1799395199
+2 FILE https://media.geni.com/p14/cb/52/69/4b/5344486a94eb4f80/img_0034_original.jpg?hash=5d76b0031e754550c1bd3ff96dece63a320c80158ea61dedf6120138266064c2.1799567999
 2 FORM jpg
 1 OBJE
 2 FILE https://www.geni.com/images/documents/doc.png
@@ -519,28 +527,28 @@
 1 BIRT
 2 DATE 10 MAR 1903
 1 DEAT
-2 DATE 1996
+2 DATE 21 MAR 1996
 1 OBJE
-2 FILE https://media.geni.com/p14/27/33/61/c7/5344486a925e0186/screenshot_2026-06-16_at_3_original.jpg?hash=6c2ddd94dc333d9db8d6e575ef056d08c898ec488a7bd9c0acde7c944d925b1a.1799395199
+2 FILE https://media.geni.com/p14/27/33/61/c7/5344486a925e0186/screenshot_2026-06-16_at_3_original.jpg?hash=72dffdb37f66ee4397cc619f4fce4b8033621eee19d57615c7391892e431ce49.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/3a/95/7e/52/5344486a925e2c7f/screenshot_2026-04-17_at_5_large.jpg?hash=8c56ae8dcff5fa874db133769123a9dffab127a86bac0b4bfbae4a6f606c3ad0.1799395199
+2 FILE https://media.geni.com/p14/3a/95/7e/52/5344486a925e2c7f/screenshot_2026-04-17_at_5_large.jpg?hash=497ee80ef961d37fb90697f29e11da1cd443c2c3ed459a4af20d1b9d910c5e47.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/66/5a/b2/eb/5344486a76dbe447/img_1057_original.jpg?hash=57af76f2f0025cffff6000eec2d78febd7f6396587ef9d63264108b77106afd3.1799395199
+2 FILE https://media.geni.com/p14/66/5a/b2/eb/5344486a76dbe447/img_1057_original.jpg?hash=956920464d833ef9351f2473f3b3240c41042d93900cb446dad0ef7082274dee.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/2f/6a/2b/58/5344486a65052a64/11537_original.jpg?hash=78c98113171b47897c37ad243f600b94e79ef0586945217af9c45172714dea23.1799395199
+2 FILE https://media.geni.com/p14/2f/6a/2b/58/5344486a65052a64/11537_original.jpg?hash=2ecb0728264723d29535c86ef1a023ea018be79a372577c2e71eb50b52dea2e1.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/b7/20/dc/14/5344486a65052a68/33661_1__original.jpg?hash=3338d3adbefd6718b5bce602688bc1536d94aeaa3ec0825e473f84677ec3b221.1799395199
+2 FILE https://media.geni.com/p14/b7/20/dc/14/5344486a65052a68/33661_1__original.jpg?hash=abea0c794346b36e549e5368ff00b97521b6ac6fc22708af29c6704a933acb62.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/de/ae/28/be/5344486af37fc282/my-familys-exodus-from-egypt-3_original.png?hash=68a3e8e02299b5ff5573e64e733d09ac7d8cd7d3f13c44e2e146c843640341dc.1799395199
+2 FILE https://media.geni.com/p14/de/ae/28/be/5344486af37fc282/my-familys-exodus-from-egypt-3_original.png?hash=99441659070549b8b42adde0e69f4e716d7ec3de73f7e3aa9a0706ffa783e3a1.1799567999
 2 FORM png
 2 TITL MY FAMILY’S EXODUS FROM EGYPT
 1 OBJE
-2 FILE https://media.geni.com/p14/57/58/09/b7/5344486af3b58474/image_1__original.jpg?hash=320f2c085ca61ee33ccc0803bd35d154015a1b5d4227b28826aa3250d446d750.1799395199
+2 FILE https://media.geni.com/p14/57/58/09/b7/5344486af3b58474/image_1__original.jpg?hash=56bf95ea9a372edc984dab68f7faf448b55d46ec073ad75cf5a78987f21b7800.1799567999
 2 FORM jpg
 2 TITL SS Paris manifest
 0 @I236947@ INDI
@@ -551,32 +559,32 @@
 1 FAMC @F5607003041520069768@
 1 FAMS @F4027094939620011123@
 1 BIRT
-2 DATE 1902
+2 DATE BET 15 JUL 1902 AND 15 JUL 1904
 1 DEAT
-2 DATE 1982
+2 DATE 1 SEP 1982
 1 OBJE
-2 FILE https://media.geni.com/p14/81/ca/07/ba/5344486b0266de3c/img_4765_original.jpg?hash=e6bd9fbb1d21c67bbe941a0a1493e4d019401df151d038a60c7f2f867a587c51.1799395199
+2 FILE https://media.geni.com/p14/81/ca/07/ba/5344486b0266de3c/img_4765_original.jpg?hash=5ea9dd6ff2f305043ba98d9adcc40c815d50fb84323c3b64cf7ed988f8f9a9cd.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/f9/ae/1f/d0/5344486ae5ba374b/da0656b4-9ad1-48c0-a465-a702616d541f_original.jpg?hash=ce79a8f0db6a2e061a9ed7964f925b760003bb0d27f4752f809496d11cba16d7.1799395199
+2 FILE https://media.geni.com/p14/f9/ae/1f/d0/5344486ae5ba374b/da0656b4-9ad1-48c0-a465-a702616d541f_original.jpg?hash=b084fa96f6967211afe1ccdd2f778966d145b3bf0d74d964edfe9c0de873522c.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/27/33/61/c7/5344486a925e0186/screenshot_2026-06-16_at_3_original.jpg?hash=6c2ddd94dc333d9db8d6e575ef056d08c898ec488a7bd9c0acde7c944d925b1a.1799395199
+2 FILE https://media.geni.com/p14/27/33/61/c7/5344486a925e0186/screenshot_2026-06-16_at_3_original.jpg?hash=72dffdb37f66ee4397cc619f4fce4b8033621eee19d57615c7391892e431ce49.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/3a/95/7e/52/5344486a925e2c7f/screenshot_2026-04-17_at_5_large.jpg?hash=8c56ae8dcff5fa874db133769123a9dffab127a86bac0b4bfbae4a6f606c3ad0.1799395199
+2 FILE https://media.geni.com/p14/3a/95/7e/52/5344486a925e2c7f/screenshot_2026-04-17_at_5_large.jpg?hash=497ee80ef961d37fb90697f29e11da1cd443c2c3ed459a4af20d1b9d910c5e47.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/66/5a/b2/eb/5344486a76dbe447/img_1057_original.jpg?hash=57af76f2f0025cffff6000eec2d78febd7f6396587ef9d63264108b77106afd3.1799395199
+2 FILE https://media.geni.com/p14/66/5a/b2/eb/5344486a76dbe447/img_1057_original.jpg?hash=956920464d833ef9351f2473f3b3240c41042d93900cb446dad0ef7082274dee.1799567999
 2 FORM jpg
 1 OBJE
 2 FILE https://www.geni.com/images/documents/doc.png
 2 FORM png
 2 TITL Rabbi Jacob Kassin Ketubah record of Eli & Esther Safdieh’s marriage
 1 OBJE
-2 FILE assets/LORRAINE.jpg
+2 FILE https://media.geni.com/p14/f8/86/d9/36/5344486af3b58476/image_original.jpg?hash=bd4c1bf96f647535b9924901cd0ac81e0215045754949a0c36d7d341676fc887.1799567999
 2 FORM jpg
-2 TITL La Lorraine manifest — Maslaton family (listed as “Masallor”)
+2 TITL La Lorraine manifest
 0 @I5593594898530139550@ INDI
 1 NAME Sarah Shmalo-Dwek
 2 GIVN Sarah
@@ -586,34 +594,34 @@
 1 BIRT
 2 DATE 15 DEC 1894
 1 DEAT
-2 DATE 1982
+2 DATE 2 JUL 1982
 1 OBJE
-2 FILE https://media.geni.com/p14/4b/55/b1/c1/5344486ab8a08c8a/sisters_and_cousins_dancing_original.jpg?hash=e6d9a7892abebc48e4b775b3d7ebac6882fa52218d5ec13256c8874de276c5be.1799395199
+2 FILE https://media.geni.com/p14/4b/55/b1/c1/5344486ab8a08c8a/sisters_and_cousins_dancing_original.jpg?hash=65d51862e1fabf7487651e93331bbd24b69028b07fef5e8873c94e9c59b83ebc.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/c1/68/1f/b7/5344486ab8a3f2e5/fullsizeoutput_d8b6_original.jpg?hash=a4fa6b4d6993920c41c93935ed2bb46a889ffd6fa473b256d4959f087ef26d04.1799395199
+2 FILE https://media.geni.com/p14/c1/68/1f/b7/5344486ab8a3f2e5/fullsizeoutput_d8b6_original.jpg?hash=abac20e1327e18da71d6e7cf3f152fdc6a02594d265757318e9d87663ce9531f.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/75/a1/e2/87/5344486ab8a0e5b1/sisters_born_shmalo-duek_and_some_of_the_children_original.jpg?hash=bdca0e0eb2329fa217b5e0eb6df78ed4225a11ce1884be845a498a15fbe6043b.1799395199
+2 FILE https://media.geni.com/p14/75/a1/e2/87/5344486ab8a0e5b1/sisters_born_shmalo-duek_and_some_of_the_children_original.jpg?hash=fa081c426562fae8f2fe748db277cbb1ff8376a8a6ad7ba96a07a5be0ae70835.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/88/d3/ed/d6/5344486aa514e6eb/photo_2026-07-03_161215_large.jpg?hash=eb9dfa6aebbd35df66529a883f812451d8f3e0cc7fbb856e06d220b7ebca181b.1799395199
+2 FILE https://media.geni.com/p14/88/d3/ed/d6/5344486aa514e6eb/photo_2026-07-03_161215_large.jpg?hash=25da7741d4429d18968fb8e26f7474345ec468f2f07ac1df744ff41c7754eb0e.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/6e/fd/34/bd/5344486a93a35326/sisters_and_cousins_shmalo-duek_-_safdie_large.jpg?hash=b39aff575b02be700a95a65d8214991d1f540233bc3d8dad54eb6e313fa66abb.1799395199
+2 FILE https://media.geni.com/p14/6e/fd/34/bd/5344486a93a35326/sisters_and_cousins_shmalo-duek_-_safdie_large.jpg?hash=a53d145eb06bdc33f768f79cf77768b46db3d177a16743c9d338ca7bd8e0c0e3.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/2f/9a/22/ec/5344486a5bb062f5/37831_large.jpg?hash=ab773a38d3d03294b820e6f156088b49b856fcc026c897c167c7b534a159aeec.1799395199
+2 FILE https://media.geni.com/p14/2f/9a/22/ec/5344486a5bb062f5/37831_large.jpg?hash=849285125c05be7bd121f28eb18c5956d90a28b9cb30720c3e280f16623f62d3.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p13/f3/06/d7/62/5344484bac800ec1/sisters_shmalo-dwek_original.jpg?hash=66116979b6d6b03129975956a98f3d842fc7deef8cb068b1e64d0f5d58323356.1799395199
+2 FILE https://media.geni.com/p13/f3/06/d7/62/5344484bac800ec1/sisters_shmalo-dwek_original.jpg?hash=3cc0feec85ceeee8910de2d00339d7bfebbb2633a4c40d7f3a43b0c481a5bf2b.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/06/72/5b/dd/53444861d2230b05/m-m-1914-0014783_page_1_original.jpg?hash=e269a0084608a8e9abaa2c5656a74645c890ab41b4d8d21efac59358d845b675.1799395199
+2 FILE https://media.geni.com/p14/06/72/5b/dd/53444861d2230b05/m-m-1914-0014783_page_1_original.jpg?hash=bcee8320b3bd22b7eea17ffef0184b318c4cc27fbe58abf2f4b2fb9c3c28c485.1799567999
 2 FORM jpg
 2 TITL M-M-1914-0014783_page_1.jpeg
 1 OBJE
-2 FILE https://media.geni.com/p14/b8/37/ad/16/53444861d2230b07/m-m-1914-0014783_page_2_original.jpg?hash=529d59e2673ae295d174f67e0f4a6c4fa7b4e8e5ba78832f28dbf09ddc7660aa.1799395199
+2 FILE https://media.geni.com/p14/b8/37/ad/16/53444861d2230b07/m-m-1914-0014783_page_2_original.jpg?hash=1c5df17f8c284cf6bc03f3ddbf5b063e3e93a9a6f4009677a47ff8ca437ab54c.1799567999
 2 FORM jpg
 2 TITL M-M-1914-0014783_page_2.jpeg
 0 @I6000000000883404384@ INDI
@@ -626,16 +634,17 @@
 1 BIRT
 2 DATE 15 OCT 1885
 1 DEAT
-2 DATE 1952
+2 DATE 7 JUN 1952
+2 PLAC Brooklyn
 1 OBJE
-2 FILE https://media.geni.com/p14/2f/9a/22/ec/5344486a5bb062f5/37831_large.jpg?hash=ab773a38d3d03294b820e6f156088b49b856fcc026c897c167c7b534a159aeec.1799395199
+2 FILE https://media.geni.com/p14/2f/9a/22/ec/5344486a5bb062f5/37831_large.jpg?hash=849285125c05be7bd121f28eb18c5956d90a28b9cb30720c3e280f16623f62d3.1799567999
 2 FORM jpg
 1 OBJE
 2 FILE https://www.geni.com/images/documents/doc.png
 2 FORM png
 2 TITL Rabbi Jacob Kassin Ketubah record of Eli & Esther Safdieh’s marriage
 1 OBJE
-2 FILE https://media.geni.com/p14/7e/ea/26/52/5344486adf0870f5/screenshot_2026-08-24_at_1_original.png?hash=45a5e95dcbb7fb4bccb69231a69cbd07f41cc4d27650f3b9c9b4dcc626087e8b.1799395199
+2 FILE https://media.geni.com/p14/7e/ea/26/52/5344486adf0870f5/screenshot_2026-08-24_at_1_original.png?hash=45b50648e7ecad7a83e941582091a7dac7bd05a1cc1e0798264888b4cedc743b.1799567999
 2 FORM png
 2 TITL Ma'aneh Lashon
 0 @I6000000101443845254@ INDI
@@ -648,7 +657,7 @@
 1 BIRT
 2 DATE 2 NOV 1902
 1 DEAT
-2 DATE 1968
+2 DATE 8 DEC 1968
 0 @I6000000146008553917@ INDI
 1 NAME Bella Beda
 2 GIVN Bella
@@ -659,9 +668,10 @@
 1 BIRT
 2 DATE 1906
 1 DEAT
-2 DATE 1964
+2 DATE 27 NOV 1964
+2 PLAC Brooklyn
 1 OBJE
-2 FILE https://media.geni.com/p14/4f/a0/d6/56/5344486a76da3eb1/66569952-e2e3-4498-8914-decb636f83ec_original.jpg?hash=32f520ea469e1389e7ac2ea980a643bd609cc1b1301a6b6129681fb9e62ba197.1799395199
+2 FILE https://media.geni.com/p14/4f/a0/d6/56/5344486a76da3eb1/66569952-e2e3-4498-8914-decb636f83ec_original.jpg?hash=862e23687ee20887475f5a609f12b9abf5044c8a57ff484bbdeee0cafbc9fc66.1799567999
 2 FORM jpg
 0 @I6000000000788035036@ INDI
 1 NAME David Pardo
@@ -673,12 +683,12 @@
 1 BIRT
 2 DATE 1898
 1 DEAT
-2 DATE 1968
+2 DATE 11 FEB 1968
 1 OBJE
-2 FILE https://media.geni.com/p4/9960/4375/534448361b3b9b5f/peh77gad_original.jpg?hash=f9d86d3077e6eb0eba3bb6b800a8e695345b13b06540096fb5278fc50b226d4e.1799395199
+2 FILE https://media.geni.com/p4/9960/4375/534448361b3b9b5f/peh77gad_original.jpg?hash=36ded99264ff3e55aff025e7d6763b25a6ac250605003a12cd98a191da0e10cc.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/19/77/94/66/5344486a76dd8627/sb_-byldwtw-1536x1035_original.jpg?hash=c13736c6514449b6b61b58611acbbaf2f4737235c34d7247f5d5143cfd14cc00.1799395199
+2 FILE https://media.geni.com/p14/19/77/94/66/5344486a76dd8627/sb_-byldwtw-1536x1035_original.jpg?hash=f29fc3a183f62753a58aa483091cc16e6f4361606960867ff29d7df40ab22ca5.1799567999
 2 FORM jpg
 0 @I6000000002727461616@ INDI
 1 NAME Matilda Betesh
@@ -690,9 +700,9 @@
 1 BIRT
 2 DATE 1906
 1 DEAT
-2 DATE 1958
+2 DATE 16 MAR 1958
 1 OBJE
-2 FILE https://media.geni.com/p14/19/77/94/66/5344486a76dd8627/sb_-byldwtw-1536x1035_original.jpg?hash=c13736c6514449b6b61b58611acbbaf2f4737235c34d7247f5d5143cfd14cc00.1799395199
+2 FILE https://media.geni.com/p14/19/77/94/66/5344486a76dd8627/sb_-byldwtw-1536x1035_original.jpg?hash=f29fc3a183f62753a58aa483091cc16e6f4361606960867ff29d7df40ab22ca5.1799567999
 2 FORM jpg
 0 @I6000000135756409848@ INDI
 1 NAME Faraj Paredes-Fallas
@@ -705,9 +715,9 @@
 2 DATE 1871
 2 PLAC Aleppo, Halab, Syrian Arab Republic
 1 DEAT
-2 DATE 1933
+2 DATE 24 NOV 1933
 1 OBJE
-2 FILE https://media.geni.com/p14/9c/c9/46/20/5344486abff3ddfd/img_4203_original.jpg?hash=91eac50247c74ce96519e3c8fb5ac14e273aad9f506023a7c602e1df0247929c.1799395199
+2 FILE https://media.geni.com/p14/9c/c9/46/20/5344486abff3ddfd/img_4203_original.jpg?hash=ddcd48d5e166bafda8210c6e1b53a8572e19ad560c07929080168b2a48cc6240.1799567999
 2 FORM jpg
 0 @I6000000136822603084@ INDI
 1 NAME Latifeh "Effie" Esses
@@ -718,12 +728,12 @@
 1 BIRT
 2 DATE 1873
 1 DEAT
-2 DATE 1948
+2 DATE 19 SEP 1948
 1 OBJE
-2 FILE https://media.geni.com/p14/37/ec/15/6d/534448653e64d5f0/latifeh_original.jpg?hash=3b40bf3a614b286ab246c82845199ebce0ecef7f4567d619046e8e846e3ead35.1799395199
+2 FILE https://media.geni.com/p14/37/ec/15/6d/534448653e64d5f0/latifeh_original.jpg?hash=bcf47f789b59826487a6d034d8c00871c1a8b5754ffd71f4839461381f6e9d1f.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/51/df/fe/5e/5344486a63dd9e01/img_8436_original.jpg?hash=f89e3caad194a0fd42c0ea593ab6034e8edb49ea37528ac4611d7dff42dbb43b.1799395199
+2 FILE https://media.geni.com/p14/51/df/fe/5e/5344486a63dd9e01/img_8436_original.jpg?hash=c08fdc2739912eacecf727da34892cf150ef75caf9b176a13d46db922677af2e.1799567999
 2 FORM jpg
 0 @I6000000200749468389@ INDI
 1 NAME Samuel Cohen Shurba
@@ -735,9 +745,9 @@
 1 BIRT
 2 DATE 1855
 1 DEAT
-2 DATE 1947
+2 DATE 4 JUL 1947
 1 OBJE
-2 FILE https://media.geni.com/p14/a8/5c/48/b3/5344486accce8408/38662_original.jpg?hash=13164f9bd32142fdad22a96c4f3fd295472fc0a1dc84e89941eeb931dda89c8a.1799395199
+2 FILE https://media.geni.com/p14/a8/5c/48/b3/5344486accce8408/38662_original.jpg?hash=9aaea2df6889229ad74e8a14fcc16ddba1dd0c8c575766885c0e34c979a6145a.1799567999
 2 FORM jpg
 0 @I6000000200749468393@ INDI
 1 NAME Sarah Haddad Alfie
@@ -749,9 +759,10 @@
 1 BIRT
 2 DATE 11 SEP 1871
 1 DEAT
-2 DATE 1941
+2 DATE 12 NOV 1941
+2 PLAC Mount Sinai Hospital
 1 OBJE
-2 FILE https://media.geni.com/p14/a8/5c/48/b3/5344486accce8408/38662_original.jpg?hash=13164f9bd32142fdad22a96c4f3fd295472fc0a1dc84e89941eeb931dda89c8a.1799395199
+2 FILE https://media.geni.com/p14/a8/5c/48/b3/5344486accce8408/38662_original.jpg?hash=9aaea2df6889229ad74e8a14fcc16ddba1dd0c8c575766885c0e34c979a6145a.1799567999
 2 FORM jpg
 0 @I6000000193118647062@ INDI
 1 NAME Ezra Abade
@@ -763,7 +774,8 @@
 2 DATE 1868
 2 PLAC Aleppo, Syria, Turkey (Ottoman Empire)
 1 DEAT
-2 DATE 1925
+2 DATE 26 APR 1925
+2 PLAC Manhattan, New York, USA
 0 @I6000000193118647083@ INDI
 1 NAME Jennie Cohen
 2 GIVN Jennie
@@ -774,7 +786,8 @@
 2 DATE 1880
 2 PLAC Aleppo, Halab, Syrian Arab Republic
 1 DEAT
-2 DATE 1969
+2 DATE 5 MAY 1969
+2 PLAC Brooklyn, New York City, New York, USA
 0 @I6000000003196273160@ INDI
 1 NAME Abraham Misri
 2 GIVN Abraham
@@ -801,14 +814,14 @@
 1 DEAT
 2 DATE 1929
 1 OBJE
-2 FILE https://media.geni.com/p14/24/7e/8a/eb/5344486a8c7f6d54/img_3357_original.jpg?hash=d812479377e3ecebf36c51f9db478055e4bc50098cc72ab486a3ec1c071c3dae.1799395199
+2 FILE https://media.geni.com/p14/24/7e/8a/eb/5344486a8c7f6d54/img_3357_original.jpg?hash=8cf6e78afc972c08adece0b7c5c0a6cd7cbcf166386efbd5f7c756f2eceaea28.1799567999
 2 FORM jpg
 1 OBJE
 2 FILE https://www.geni.com/images/documents/doc.png
 2 FORM png
 2 TITL Askenazi Web Site
 1 OBJE
-2 FILE https://media.geni.com/p14/8a/ad/47/2d/5344486a8c947fdf/1_1_qggn-16vt_original.png?hash=6fe0a4f4096a2341fc0481e89d77f8bbce71b6ab45d556128bcdddf628b58916.1799395199
+2 FILE https://media.geni.com/p14/8a/ad/47/2d/5344486a8c947fdf/1_1_qggn-16vt_original.png?hash=c61802c90e63f3ddb65649df897f85dc817972c6ec5303d59d45471e096d1f12.1799567999
 2 FORM png
 2 TITL https://familysearch.org/ark:/61903/1:1:QGGN-16VT?lang=en
 0 @I6000000002775576914@ INDI
@@ -826,9 +839,9 @@
 1 BIRT
 2 DATE 9 OCT 1875
 1 DEAT
-2 DATE 1964
+2 DATE 7 NOV 1964
 1 OBJE
-2 FILE https://media.geni.com/p14/fb/67/1f/55/5344486a97445eb5/106801f0-e5ec-487c-8bf1-93cf46f40120_original.jpg?hash=4c87b2035a6cf0e140a2069f1b937a8c143263aeea2870fe45e3c4d84593609a.1799395199
+2 FILE https://media.geni.com/p14/fb/67/1f/55/5344486a97445eb5/106801f0-e5ec-487c-8bf1-93cf46f40120_original.jpg?hash=10a824970f5e31eb3e7a615910df4fef9cc35998bc152457054543c9dc6487cb.1799567999
 2 FORM jpg
 0 @I6000000001220980373@ INDI
 1 NAME Farha Bakal
@@ -840,9 +853,9 @@
 1 BIRT
 2 DATE 1875
 1 DEAT
-2 DATE 1931
+2 DATE 27 APR 1931
 1 OBJE
-2 FILE https://media.geni.com/p14/cb/16/22/08/5344486ae63552f1/5390_original.jpg?hash=2f6fb79a1de8d42e86ef52600a29f3c40c3f91fc596db97d6d2f20423e8f81ee.1799395199
+2 FILE https://media.geni.com/p14/cb/16/22/08/5344486ae63552f1/5390_original.jpg?hash=f877818fca6818ee5e593c9d215645afbbc6f0c5ebcfe459b19b10bb13f1b354.1799567999
 2 FORM jpg
 0 @I6000000005380502578@ INDI
 1 NAME Joseph Obadiah Bibi
@@ -852,31 +865,31 @@
 1 FAMC @F6000000000922753528@
 1 FAMS @F6000000000921736289@
 1 BIRT
-2 DATE 1860
+2 DATE BET 5 JAN 1860 AND 1 SEP 1867
 1 DEAT
-2 DATE 1927
+2 DATE 16 SEP 1927
 1 TITL Engraver
 1 OBJE
-2 FILE https://media.geni.com/p14/16/7c/90/47/5344486ae63552ef/11862ps_original.jpg?hash=b1eeeee9a93761c16edf0434e648ba500fedd0f70913cdcc136515943573593a.1799395199
+2 FILE https://media.geni.com/p14/16/7c/90/47/5344486ae63552ef/11862ps_original.jpg?hash=ca8307c9bfd453afcc682355860977b616552d0fea81e194086db3c3c6b29727.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/19/a5/c6/b7/5344486ae63552f0/6148_original.jpg?hash=a9cb20db6c7f6484bb33b87d875f661ae1e31c4546382af7f94b8e581f9b10fb.1799395199
+2 FILE https://media.geni.com/p14/19/a5/c6/b7/5344486ae63552f0/6148_original.jpg?hash=7dd5d1f06c389507ff1b787a25cb916d1293bbea5063d783e3436e56bdcac891.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/ad/cb/36/30/5344486ae63552f2/4930_original.jpg?hash=b6ba399ce062b84a521bd4e6ccc6c5c8f10d9f1226a3ec0740489039ee3aa3c0.1799395199
+2 FILE https://media.geni.com/p14/ad/cb/36/30/5344486ae63552f2/4930_original.jpg?hash=dc5cf9b57e598f120afd1c458e75f23e06c58861501b76a16f7ff45cd2503501.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/22/04/86/83/5344486ae63552f3/4729_large.jpg?hash=fd0af6e88f00b3e6d09222891104b5c376c889ab7b212b7266a7cb0e5bd01922.1799395199
+2 FILE https://media.geni.com/p14/22/04/86/83/5344486ae63552f3/4729_large.jpg?hash=bbde2de6471d0cefca710371dc508240985460995a4f01ad70ceb2c588dce5b9.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/a1/78/fa/31/5344486ae53f0441/nourh-ex-3_original.jpg?hash=84aeacd821c469bc807acc724a382fbfc4d141f9f72b5f60ccec023cfaf41085.1799395199
+2 FILE https://media.geni.com/p14/a1/78/fa/31/5344486ae53f0441/nourh-ex-3_original.jpg?hash=9d4409c6ae9317a6af27d62d7db439051b6e4f0148e51291fff2bb6879cc52a5.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE assets/TOURAINE.jpg
+2 FILE https://media.geni.com/p14/21/87/c5/bc/5344486ae5ddf3a0/image_original.jpg?hash=e139ac4973c0db1f8098dbb25e4ada0a63fda749021cce156284b19941490745.1799567999
 2 FORM jpg
-2 TITL La Touraine manifest — Yousseff (Joseph Obadiah) and Tofik (Reuben/Rubin) Bibi
+2 TITL La Touraine manifest
 1 OBJE
-2 FILE https://media.geni.com/p14/cf/03/69/81/5344486ae5df7284/grave_original.png?hash=7557a06add181ae04abede081234022e765ce9999e264c6a7ccf1ae8e2be0b89.1799395199
+2 FILE https://media.geni.com/p14/cf/03/69/81/5344486ae5df7284/grave_original.png?hash=fc22c611fe5ea20af7d4ae8e2e539dfaa87832e0f003137853ddc5a08d25e70b.1799567999
 2 FORM png
 2 TITL JOSEPH BIBI - grave
 0 @I4068592@ INDI
@@ -915,6 +928,7 @@
 2 GIVN Esther
 2 SURN Cohen
 1 FAMS @F6000000075612062876@
+1 DEAT
 0 @I4026171675590010536@ INDI
 1 NAME Abraham Joseph Cohen
 2 GIVN Abraham Joseph
@@ -923,9 +937,9 @@
 1 FAMC @F6000000222928484860@
 1 FAMS @F6000000075612062876@
 1 BIRT
-2 DATE 1878
+2 DATE BET 1878 AND 1883
 1 DEAT
-2 DATE 1920
+2 DATE BET 1920 AND 1949
 0 @I5607003005380069761@ INDI
 1 NAME Mordechai Murad Maslaton
 2 GIVN Mordechai Murad
@@ -934,39 +948,39 @@
 1 FAMC @F6000000042863822845@
 1 FAMS @F5607003041520069768@
 1 BIRT
-2 DATE 1876
+2 DATE BET 2 FEB 1876 AND 17 MAR 1880
 1 DEAT
-2 DATE 1959
+2 DATE 1 MAR 1959
 1 TITL Hacham
 1 OBJE
-2 FILE https://media.geni.com/p14/81/ca/07/ba/5344486b0266de3c/img_4765_original.jpg?hash=e6bd9fbb1d21c67bbe941a0a1493e4d019401df151d038a60c7f2f867a587c51.1799395199
+2 FILE https://media.geni.com/p14/81/ca/07/ba/5344486b0266de3c/img_4765_original.jpg?hash=5ea9dd6ff2f305043ba98d9adcc40c815d50fb84323c3b64cf7ed988f8f9a9cd.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/f9/20/55/d6/5344486b0266de3b/img_4766_original.jpg?hash=dcd2dfc821959e3d99bc42daa6417cc9562059da6e5f03da4c6a8104523bff9c.1799395199
+2 FILE https://media.geni.com/p14/f9/20/55/d6/5344486b0266de3b/img_4766_original.jpg?hash=8d04c759897d8412c7dc748b865c1b01fbdea8d2d202bdf844d81ec09353817f.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/4d/d9/2c/a4/5344486a7f63a73f/4742_original.jpg?hash=104eb7ea96f1d503c15ad1f8f120d6f4aa40455815e3b5b4de974eee5555bca6.1799395199
+2 FILE https://media.geni.com/p14/4d/d9/2c/a4/5344486a7f63a73f/4742_original.jpg?hash=674bc31f57766890eedc509103dee7540dc8e9cb5226460987f6a97dd641eb39.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/b0/4e/eb/d8/5344486a93a24566/img_0061_large.jpg?hash=617735aa68bb066436edaca27adce6ce7a0b6711757c16f722ec514830d0bc0d.1799395199
+2 FILE https://media.geni.com/p14/b0/4e/eb/d8/5344486a93a24566/img_0061_large.jpg?hash=1148d26a4a17906d2de089b1a4d7b67dcd510d027c689ceed6202840b26b168c.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/21/87/60/16/5344486a65052a5f/4648_original.jpg?hash=ae6bb49ff3ac0730192927c9121dd16945f4387ca851223ef9cccd4a537f2f33.1799395199
+2 FILE https://media.geni.com/p14/21/87/60/16/5344486a65052a5f/4648_original.jpg?hash=f34ded1f6b661201f71e448a499cdb3e45f165a57b6a2348f17d20ff4436b003.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/a5/7c/67/90/5344486a65052a62/6731_original.jpg?hash=3932ea622508a91528714617e518af23867dfe26c7fdf4ef9135c10db5d57b74.1799395199
+2 FILE https://media.geni.com/p14/a5/7c/67/90/5344486a65052a62/6731_original.jpg?hash=7fe53307e2c3953a5c5ee60bb443dd040ae70a54d5d5f72222ae0ffa062841de.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p13/9c/ad/29/33/53444860ef16bebf/mm_original.jpg?hash=2b3fbb3dc6eabc24a799323c9a595e7a38d65bf513dc33665c5467c0ce10b3fb.1799395199
+2 FILE https://media.geni.com/p13/9c/ad/29/33/53444860ef16bebf/mm_original.jpg?hash=96d03175161e49647a835bf2e86cb0485304ceee7b86b388143050c857b802ca.1799567999
 2 FORM jpg
 1 OBJE
 2 FILE https://www.geni.com/images/documents/doc.png
 2 FORM png
 2 TITL Rabbi Jacob Kassin Ketubah record of Eli & Esther Safdieh’s marriage
 1 OBJE
-2 FILE assets/LORRAINE.jpg
+2 FILE https://media.geni.com/p14/f8/86/d9/36/5344486af3b58476/image_original.jpg?hash=bd4c1bf96f647535b9924901cd0ac81e0215045754949a0c36d7d341676fc887.1799567999
 2 FORM jpg
-2 TITL La Lorraine manifest — Maslaton family (listed as “Masallor”)
+2 TITL La Lorraine manifest
 0 @I5607003041310069767@ INDI
 1 NAME Sarah Cohen
 2 GIVN Sarah
@@ -977,20 +991,17 @@
 1 BIRT
 2 DATE 10 OCT 1884
 1 DEAT
-2 DATE 1975
+2 DATE 6 JUN 1975
 1 OBJE
-2 FILE https://media.geni.com/p14/0d/12/55/5c/5344486a925e0185/screenshot_2026-06-16_at_3_original.jpg?hash=f327d65528d4b15bc7e8eda4e87f07b0315d543b4b4bd9e70a1a80b3e29abddf.1799395199
+2 FILE https://media.geni.com/p14/0d/12/55/5c/5344486a925e0185/screenshot_2026-06-16_at_3_original.jpg?hash=63c1bde5ddefd01e04f630eae98162511a8e0bcd655e9cbf3aa9393fe37a32f1.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/4d/d9/2c/a4/5344486a7f63a73f/4742_original.jpg?hash=104eb7ea96f1d503c15ad1f8f120d6f4aa40455815e3b5b4de974eee5555bca6.1799395199
+2 FILE https://media.geni.com/p14/4d/d9/2c/a4/5344486a7f63a73f/4742_original.jpg?hash=674bc31f57766890eedc509103dee7540dc8e9cb5226460987f6a97dd641eb39.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/3c/9a/11/15/5344486a65052a65/14093_large.jpg?hash=0cba96b4b132e488198b026bc43a37952b8ab1b7ffd61dceb8ce544a85ba4568.1799395199
+2 FILE https://media.geni.com/p14/f8/86/d9/36/5344486af3b58476/image_original.jpg?hash=bd4c1bf96f647535b9924901cd0ac81e0215045754949a0c36d7d341676fc887.1799567999
 2 FORM jpg
-1 OBJE
-2 FILE assets/LORRAINE.jpg
-2 FORM jpg
-2 TITL La Lorraine manifest — Maslaton family (listed as “Masallor”)
+2 TITL La Lorraine manifest
 0 @I6000000001090267072@ INDI
 1 NAME Rafael Shmalo-Dwek
 2 GIVN Rafael
@@ -1014,13 +1025,14 @@
 1 BIRT
 2 DATE ABT 1865
 1 DEAT
-2 DATE 1932
+2 DATE 13 APR 1932
+2 PLAC Israel Zion Hospital
 1 OBJE
-2 FILE https://media.geni.com/p14/f6/e5/28/cb/5344486a5f84f255/d-k-1932-0008591_1_page_2_original.jpg?hash=a695f8c585a782c42f4d259e0e88810275bb08e73ef9c28fb87e9a8a10b53ffa.1799395199
+2 FILE https://media.geni.com/p14/f6/e5/28/cb/5344486a5f84f255/d-k-1932-0008591_1_page_2_original.jpg?hash=043ceb3dda7928a900ac9cdbb22a6ad0d5f13805c706a14bfb506cd1e3dc127a.1799567999
 2 FORM jpg
 2 TITL D-K-1932-0008591(1)_page_2.jpg
 1 OBJE
-2 FILE https://media.geni.com/p14/12/bb/23/bf/5344486a5f84f253/d-k-1932-0008591_1_page_1_original.jpg?hash=cd60496d63151e89a49b21066d08c6348b0359a2a16e7d59dfa544a50b1d2941.1799395199
+2 FILE https://media.geni.com/p14/12/bb/23/bf/5344486a5f84f253/d-k-1932-0008591_1_page_1_original.jpg?hash=69c7b61d736b47652df3d0aae0e9b370ecf15040896809f351dce920f4119b7c.1799567999
 2 FORM jpg
 2 TITL D-K-1932-0008591(1)_page_1.jpg
 0 @I6000000000460750423@ INDI
@@ -1040,7 +1052,7 @@
 1 DEAT
 2 DATE 1929
 1 OBJE
-2 FILE https://media.geni.com/p14/2c/c9/3e/3c/5344486a9eb4ed3f/000083_366592yr4527e66vuxhcdh_a_original.jpg?hash=2360d5a95d4e8e457fb90a0f11e696d13a3c567c9bd6f9f4d996c4a909b271de.1799395199
+2 FILE https://media.geni.com/p14/2c/c9/3e/3c/5344486a9eb4ed3f/000083_366592yr4527e66vuxhcdh_a_original.jpg?hash=915889eec0a2826fa770b08d4d4805e23a37f94dbd2d7931101e3e07c510d93c.1799567999
 2 FORM jpg
 1 OBJE
 2 FILE https://www.geni.com/images/documents/doc.png
@@ -1093,7 +1105,7 @@
 1 BIRT
 2 DATE 1875
 1 DEAT
-2 DATE 1940
+2 DATE 7 MAR 1940
 0 @I6000000004069475189@ INDI
 1 NAME Jack Beda Hamoui
 2 GIVN Jack
@@ -1104,23 +1116,24 @@
 1 BIRT
 2 DATE 1863
 1 DEAT
-2 DATE 1938
+2 DATE 2 DEC 1938
 0 @I6000000000687162346@ INDI
 1 NAME Shemuel Eliezer Pardo
 2 GIVN Shemuel Eliezer
 2 SURN Pardo
+2 SURN פארדו
 1 FAMC @F6000000009252663694@
 1 FAMS @F6000000223207468848@
 1 BIRT
 2 DATE 23 MAY 1857
 1 DEAT
-2 DATE 1938
+2 DATE 24 FEB 1938
 1 TITL Rabbi
 1 OBJE
-2 FILE https://media.geni.com/p3/9170/0346/53444836155425d9/vuf47qin_original.jpg?hash=8a56a64fe417eaa37842532a0861b1b05dfa2488b7adf4960482341a4420422c.1799395199
+2 FILE https://media.geni.com/p3/9170/0346/53444836155425d9/vuf47qin_original.jpg?hash=9a73f1fb99861bb8a1df18489bc5410a440a8b89a63203bfc4e2b620dd420bca.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p3/9170/0346/5344483616697197/nuz83zeq_original.jpg?hash=bc3dbd7a3c2d428dbe30eccf536f08175e9ebce433772eb92535bda403bfa618.1799395199
+2 FILE https://media.geni.com/p3/9170/0346/5344483616697197/nuz83zeq_original.jpg?hash=a734d8fbe466fe4161231a94711afe09208d6f5fa4e450746fe1b2c4d712f03a.1799567999
 2 FORM jpg
 0 @I6000000223207468844@ INDI
 1 NAME Ester Pardo
@@ -1192,7 +1205,7 @@
 1 FAMC @F6000000226740408852@
 1 FAMS @F6000000000753326065@
 1 DEAT
-2 DATE 1933
+2 DATE 9 FEB 1933
 0 @I6000000226078963603@ INDI
 1 NAME Ephraim Abade
 2 GIVN Ephraim
@@ -1230,14 +1243,14 @@
 2 DATE 1800
 2 PLAC then, Aleppo, Ottoman Empire
 1 DEAT
-2 DATE 1901
+2 DATE 29 JUN 1901
 1 TITL Grand Rabbi of Aleppo, Chief Rabbi Of Aleppo, Chief Rabbi of Allepo
 1 TITL Hakham Bashi
 1 OBJE
-2 FILE https://media.geni.com/p13/b7/14/ab/70/5344484cdf3cfd4d/dwekkhalousi_original.jpg?hash=f3afd3f2ae4432dba53907403a5576cc771a3b3b9a707eb8ae5f7a2703907e67.1799395199
+2 FILE https://media.geni.com/p13/b7/14/ab/70/5344484cdf3cfd4d/dwekkhalousi_original.jpg?hash=735777dfcc56e507105f98f6cbf7b6485cde3cba3a7a1eac75b828def1584620.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p6/9578/4080/53444836b50932dd/Rabbi_Dwek_original.jpg?hash=f5a76176ee107b2248d1dfbab907a43a83b37824067988d05b60406424e4f4c1.1799395199
+2 FILE https://media.geni.com/p6/9578/4080/53444836b50932dd/Rabbi_Dwek_original.jpg?hash=8d2946ef30f1c900f81d0191d489a6ece822f0fddacaf0b688019e76d1fb1b9a.1799567999
 2 FORM jpg
 1 OBJE
 2 FILE https://www.geni.com/images/documents/doc.png
@@ -1301,6 +1314,7 @@
 1 NAME Salha Nakash
 2 GIVN Salha
 2 SURN Nakash
+1 FAMC @F6000000228157910000@
 1 FAMS @F6000000000922753528@
 1 BIRT
 2 DATE 1845
@@ -1332,8 +1346,9 @@
 2 SURN סית
 1 FAMC @F6000000226209124859@
 1 FAMS @F6000000222928484860@
+1 BIRT
 1 DEAT
-2 DATE 1944
+2 DATE 15 MAR 1944
 0 @I6000000222928484856@ INDI
 1 NAME Joseph Cohen
 2 GIVN Joseph
@@ -1341,9 +1356,9 @@
 1 FAMC @F6000000226209483826@
 1 FAMS @F6000000222928484860@
 1 BIRT
-2 DATE 1848
+2 DATE FEB 1848
 1 DEAT
-2 DATE 1923
+2 DATE 23 MAR 1923
 0 @I6000000042863822841@ INDI
 1 NAME Joseph Maslaton Tarrab Antebi
 2 GIVN Joseph
@@ -1352,7 +1367,7 @@
 1 FAMC @F6000000025724348125@
 1 FAMS @F6000000042863822845@
 1 DEAT
-2 DATE 1893
+2 DATE 26 MAR 1893
 1 TITL Rabbi
 0 @I6000000168911231952@ INDI
 1 NAME Ribka Douek
@@ -1370,13 +1385,14 @@
 1 BIRT
 2 DATE 1860
 1 DEAT
-2 DATE 1931
+2 DATE 23 DEC 1931
+2 PLAC New York City, New York, USA
 1 TITL Hacham
 1 OBJE
-2 FILE https://media.geni.com/p14/3c/9a/11/15/5344486a65052a65/14093_large.jpg?hash=0cba96b4b132e488198b026bc43a37952b8ab1b7ffd61dceb8ce544a85ba4568.1799395199
+2 FILE https://media.geni.com/p14/3c/9a/11/15/5344486a65052a65/14093_large.jpg?hash=748c64bad712ae7fcf7d87a032fccde8de2fd9abe69bf9a2caf445a765835208.1799567999
 2 FORM jpg
 1 OBJE
-2 FILE https://media.geni.com/p13/c8/bb/10/f8/53444860ef0db26a/dc2_original.jpg?hash=0a2457454be8935713b8c516d18df2a8cdb2f1c861b7f84cc6e5ae2c97ea4430.1799395199
+2 FILE https://media.geni.com/p13/c8/bb/10/f8/53444860ef0db26a/dc2_original.jpg?hash=4f639efd62d0aec632702679bed140643e2a79e78fd3cc9941c8f0a9d0b394d1.1799567999
 2 FORM jpg
 1 OBJE
 2 FILE https://www.geni.com/images/documents/doc.png
@@ -1396,6 +1412,7 @@
 2 PLAC Aleppo, Halab, Syrian Arab Republic
 1 DEAT
 2 DATE 1896
+2 PLAC New York
 0 @I6000000060901869972@ INDI
 1 NAME Shabetai Shmalo-Dwek
 2 GIVN Shabetai
@@ -1456,32 +1473,35 @@
 2 SURN ביצ’ה חמווי
 1 FAMC @F6000000220035112878@
 1 FAMS @F6000000226244287867@
+1 DEAT
 0 @I6000000000688126865@ INDI
 1 NAME Yael Diamenta Meyuhas
 2 GIVN Yael Diamenta
 2 SURN Meyuhas
+2 SURN מיוחס
 1 FAMC @F6000000063166548083@
 1 FAMS @F6000000009252663694@
 1 BIRT
 2 DATE 1829
 1 DEAT
-2 DATE 1881
+2 DATE 6 AUG 1881
 1 OBJE
-2 FILE https://media.geni.com/p3/9170/0346/53444836155dd116/jin39jej_original.jpg?hash=aa49a2554da1f21079fe8b801b802f5f838d933597777173b842a1688d628443.1799395199
+2 FILE https://media.geni.com/p3/9170/0346/53444836155dd116/jin39jej_original.jpg?hash=5babe2f2b9967f6d10ad0b1789fb326bc30cb1f6ba65ead90360b2eb13357f8f.1799567999
 2 FORM jpg
 0 @I6000000009252663690@ INDI
 1 NAME Haim Pinhas Pardo
 2 GIVN Haim Pinhas
 2 SURN Pardo
+2 SURN פארדו
 1 FAMC @F6000000000688396976@
 1 FAMS @F6000000009252663694@
 1 BIRT
 2 DATE 1822
 1 DEAT
-2 DATE 1882
+2 DATE 9 JAN 1882
 1 TITL Rabbi
 1 OBJE
-2 FILE https://media.geni.com/p3/9170/0346/53444836155bd971/wag64naz_original.jpg?hash=a0960ee3945a598a04bcab73dc915be2862e1ca8fc7243ed43332baa448826f2.1799395199
+2 FILE https://media.geni.com/p3/9170/0346/53444836155bd971/wag64naz_original.jpg?hash=b3659f7afad809f56c865814ebe837566cf30db5049fca97f4c38a71cf9fa97d.1799567999
 2 FORM jpg
 0 @I6000000173313146411@ INDI
 1 NAME ? Betesh
@@ -1519,7 +1539,7 @@
 1 FAMC @F6000000227887285983@
 1 FAMS @F6000000226740408852@
 1 DEAT
-2 DATE 1876
+2 DATE JUL 1876
 1 TITL Rabbi
 0 @I6000000226740427827@ INDI
 1 NAME Rachel Cohen
@@ -1535,6 +1555,8 @@
 1 FAMS @F6000000125929317331@
 1 BIRT
 2 DATE 1770
+1 DEAT
+2 PLAC Alep,,,,SYRIE,
 0 @I6000000125929317317@ INDI
 1 NAME Rachel?
 2 GIVN Rachel?
@@ -1548,13 +1570,18 @@
 1 BIRT
 2 DATE 1805
 1 DEAT
-2 DATE 1900
+2 DATE BEF 1900
 1 TITL Rabbi
 0 @I6000000013726411157@ INDI
 1 NAME Zohra Mann
 2 GIVN Zohra
 2 SURN Mann
 1 FAMS @F6000000003824744637@
+0 @I6000000228157909996@ INDI
+1 NAME Jacob Nakash
+2 GIVN Jacob
+2 SURN Nakash
+1 FAMS @F6000000228157910000@
 0 @I6000000226209219997@ INDI
 1 NAME Esther Dwek
 2 GIVN Esther
@@ -1591,7 +1618,7 @@
 1 BIRT
 2 DATE 1770
 1 DEAT
-2 DATE 1845
+2 DATE 1 NOV 1845
 1 TITL Hacham
 0 @I6000000169665833859@ INDI
 1 NAME Kamar Maslaton Tarrab Antebi
@@ -1612,7 +1639,7 @@
 1 BIRT
 2 DATE 1825
 1 DEAT
-2 DATE 1868
+2 DATE 9 MAY 1868
 1 OBJE
 2 FILE https://www.geni.com/images/documents/doc.png
 2 FORM png
@@ -1664,13 +1691,14 @@
 1 NAME David Pardo
 2 GIVN David
 2 SURN Pardo
+2 SURN פארדו
 1 FAMS @F6000000000688396976@
 1 BIRT
 2 DATE 23 MAY 1794
 1 DEAT
-2 DATE 1846
+2 DATE 11 AUG 1846
 1 OBJE
-2 FILE https://media.geni.com/p3/9170/0346/53444836160016dc/nec38gek_original.jpg?hash=865d1dd3396a04ebccf5f38c15ef5d811346b0b826699fa4fd038a93bd29f01c.1799395199
+2 FILE https://media.geni.com/p3/9170/0346/53444836160016dc/nec38gek_original.jpg?hash=d76f47fecddfa7966e4dfc03bebd9151a7b8ea08be6f860c98e77553d6ed2419.1799567999
 2 FORM jpg
 0 @I6000000228119624909@ INDI
 1 NAME unknown Ben Seruya
@@ -1696,6 +1724,7 @@
 1 FAMS @F6000000008642248734@
 1 BIRT
 2 DATE ABT 1783
+1 DEAT
 0 @I6000000008642248730@ INDI
 1 NAME Isaac Mann
 2 GIVN Isaac
@@ -1705,14 +1734,14 @@
 1 BIRT
 2 DATE ABT 1785
 1 DEAT
-2 DATE 1848
+2 DATE ABT 1848
 0 @I6000000226760749850@ INDI
 1 NAME Eliyahu Nissim Dwek
 2 GIVN Eliyahu Nissim
 2 SURN Dwek
 1 FAMS @F6000000226760749855@
 1 DEAT
-2 DATE 1868
+2 DATE 13 OCT 1868
 0 @I6000000226223261826@ INDI
 1 NAME unknown Dweck
 2 GIVN unknown
@@ -1744,6 +1773,7 @@
 2 PLAC ירושלים
 1 DEAT
 2 DATE 1771
+2 PLAC ירושלים
 1 TITL HaRishon Le-Zion
 0 @I6000000226473922842@ INDI
 1 NAME Joseph Dwek
@@ -1759,6 +1789,7 @@
 1 FAMS @F6000000008641911023@
 1 BIRT
 2 DATE 1760
+1 DEAT
 0 @I6000000013733985380@ INDI
 1 NAME ? ?
 2 GIVN ?
@@ -1821,6 +1852,7 @@
 2 SURN מיוחס
 1 FAMC @F6000000063167228070@
 1 FAMS @F6000000063167531838@
+1 BIRT
 1 DEAT
 2 DATE 1751
 1 TITL Rabbi
@@ -1841,7 +1873,7 @@
 1 DEAT
 2 DATE 1674
 1 OBJE
-2 FILE https://media.geni.com/p13/f6/ce/6f/9f/5344483d0122b4dc/screen_shot_2014-12-27_at_11_original.jpg?hash=462939b1a03d980620468a451c69460c0931a8ab302d59c543c9689cb3471e24.1799395199
+2 FILE https://media.geni.com/p13/f6/ce/6f/9f/5344483d0122b4dc/screen_shot_2014-12-27_at_11_original.jpg?hash=1a076da3d9416329cf82f4118c796bb9de76c0bca56a2ece04b70b32d29635bd.1799567999
 2 FORM jpg
 2 TITL https://openlibrary.org/works/OL12470494W/Sefer_Halakhot_ketanot
 0 @I6000000028103570190@ INDI
@@ -1894,6 +1926,7 @@
 2 SURN מיוחס הראשון
 1 FAMC @F6000000024945446042@
 1 FAMS @F6000000063167228070@
+1 BIRT
 1 DEAT
 2 DATE 1615
 1 TITL Rabbi
@@ -1965,7 +1998,7 @@
 1 FAMC @F6000000226223541828@
 1 FAMS @F6000000226223426861@
 1 DEAT
-2 DATE 1681
+2 DATE 30 JUL 1681
 1 TITL Rabbi
 0 @I6000000221425367844@ INDI
 1 NAME Yochanan Meyuchas
@@ -1974,16 +2007,17 @@
 1 FAMC @F6000000221425411831@
 1 FAMS @F6000000221425367848@
 0 @I6000000028103608477@ INDI
-1 NAME Moshe משה Galante (the elder) of Rome
-2 GIVN Moshe משה Galante (the elder) of Rome
-2 SURN Galante (the elder)
-2 SURN גלנטי הזקן
+1 NAME Moshe Galante of Rome
+2 GIVN Moshe Galante of Rome
+2 SURN Galante
+2 SURN גלנטי
 1 FAMC @F6000000028103692233@
 1 FAMS @F6000000028103608482@
 1 BIRT
 2 DATE ABT 1522
 1 DEAT
-2 DATE 1612
+2 DATE AFT 1612
+1 TITL Rabbi
 0 @I6000000112917425827@ INDI
 1 NAME Yoshiyahu Yosef Pinto
 2 GIVN Yoshiyahu Yosef
@@ -2281,6 +2315,9 @@
 1 CHIL @I6000000003824744632@
 0 @F6000000226205969847@ FAM
 1 CHIL @I6000000226205969843@
+0 @F6000000228157910000@ FAM
+1 HUSB @I6000000228157909996@
+1 CHIL @I6000000002398926370@
 0 @F6000000226209124859@ FAM
 1 WIFE @I6000000226209219997@
 1 HUSB @I6000000226209361870@
