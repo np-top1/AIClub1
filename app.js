@@ -27,9 +27,10 @@ const timelineItems = [
   { year: "c. 1890", title: "From Baghdad to Damascus", detail: "In the family account, Joseph Obadiah Bibi, his wife Farha, and his brother Salim (Solomon) leave Baghdad and settle in Damascus.", citations: ["family-account"] },
   { year: "1895", title: "Aleppo’s hakham bashi controversy", detail: "The family tree records Abraham Dweck Hakohen Khalousi’s life as 1800–1901. Yaron Harel’s study examines his removal from office in 1895.", citations: ["gedcom", "abraham-cambridge", "abraham-liverpool"] },
   { year: "Early 1900s", title: "Reuben Bibi escapes Beirut by sea", detail: "In an excerpt from the Sephardic Heritage Museum’s forthcoming book, Joseph Bibi recalls that his father Reuben was studying in Beirut and risked conscription. His grandfather Joseph devised a harbor escape: Reuben swam toward a boat Joseph was aboard, pretending to retrieve coins with friends. This is a family recollection; the separate Sampson Mills history describes Joseph and Reuben’s later journey to California in the 1910s.", citations: ["bibi-museum", "bibi-founder-history"] },
-  { year: "1915", title: "Bibi passengers listed on La Touraine", detail: "The passenger manifest for the S.S. La Touraine, sailing from Bordeaux on 13 April 1915, lists Yousseff Bibi and Tofik Bibi (noted as Reuben/Rubin). The separate family history describes their later journey to California and settlement in the United States.", citations: ["touraine-manifest", "bibi-founder-history"] },
   { year: "1914", title: "Safdieh and Shmalo-Dwek", detail: "Abraham Safdieh and Sarah Shmalo-Dwek marry in New York, according to the marriage record.", citations: ["gedcom"] },
-  { year: "1920", title: "Maslaton family listed on La Lorraine", detail: "The S.S. La Lorraine manifest records a 22 May 1920 sailing from Le Havre and lists the Maslaton family under the spelling “Masallor,” including Murad and Sarah. The family account separately remembers Farha and Salim’s family arriving on the same ship; this manifest scan independently verifies the Maslaton passenger listing, not the Bibi family’s presence.", citations: ["lorraine-manifest", "family-account"] },
+  { year: "1915", title: "Bibi passengers listed on La Touraine", detail: "The passenger manifest for the S.S. La Touraine, sailing from Bordeaux on 13 April 1915, lists Yousseff Bibi and Tofik Bibi (noted as Reuben/Rubin). The separate family history describes their later journey to California and settlement in the United States.", citations: ["touraine-manifest", "bibi-founder-history"] },
+  { year: "22 May 1920", title: "Maslaton family listed on La Lorraine", detail: "The S.S. La Lorraine manifest records a 22 May 1920 sailing from Le Havre and lists the Maslaton family under the spelling “Masallor,” including Murad and Sarah.", citations: ["lorraine-manifest"] },
+  { year: "29 May 1920", title: "Bibi family passengers listed on La Touraine", detail: "The S.S. La Touraine manifest records a 29 May 1920 sailing from Le Havre and lists Salim, Farideh, Salha, Chafica, Farha, Moussa, and David under the Bibi surname. Family relationships and Moussa’s later name Morris are identified by the archive owner.", citations: ["touraine-1920-manifest"] },
   { year: "1938", title: "Shemuel Eliezer Pardo dies", detail: "A Monastir community history remembers Rabbi Shemuel Eliezer Pardo as a Jerusalem preacher, Hebrew educator, and teacher in the Sephardic Talmud Torah for about 30 years.", citations: ["monastir-pardo"] },
   { year: "1946", title: "A Brooklyn ketubah", detail: "The marriage record for Eli Safdieh and Esther Maslaton places the family at Ocean Parkway Jewish Center.", citations: ["gedcom"] },
   { year: "1956", title: "David and Matilda go to Israel", detail: "David Pardo and Matilda Betesh leave Egypt for Israel, while their son Albert Pardo and his wife Arlette take a separate route to America with their children.", citations: ["gedcom"] },
@@ -107,6 +108,11 @@ const citationSources = [
     id: "touraine-manifest",
     label: "S.S. La Touraine passenger manifest, sailing from Bordeaux, 13 April 1915; lists Yousseff Bibi and Tofik Bibi (annotated Reuben/Rubin). Archival scan supplied by the archive owner.",
     url: "assets/TOURAINE.jpg"
+  },
+  {
+    id: "touraine-1920-manifest",
+    label: "S.S. La Touraine passenger manifest, sailing from Le Havre, 29 May 1920; lists Salim, Farideh, Salha, Chafica, Farha, Moussa, and David under the Bibi surname. Family relationships and Moussa’s later name Morris are identified by the archive owner.",
+    url: "assets/TOURAINE-1920.jpg"
   },
   {
     id: "lorraine-manifest",
