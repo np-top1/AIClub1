@@ -9,6 +9,7 @@ This repository is a small static web app backed locally by a lightweight Python
 - `app.js` is the app logic: it renders the family tree, surname directory, search results, imported GEDCOM parsing, and timeline state.
 - `server.py` serves the static site from the repo root and exposes the sanitized data API at `/api/family-data`.
 - `export-Ancestors.ged 3` is a redacted, public-safe GEDCOM used by the server and browser import flow. Keep any full source GEDCOM outside the repository.
+- `assets/` contains public-safe historical document images used in the GEDCOM; the Pages build copies this directory into its artifact.
 - `build_static.py` creates the Pages artifact with a conservative public-data filter; `.github/workflows/pages.yml` builds and deploys that artifact.
 
 The app is intentionally framework-free: no bundler, package manager, or build step is required for normal development.
@@ -46,7 +47,7 @@ If you change the frontend behavior, verify the static build output and reload t
 
 - Preserve the privacy-first behavior: never check in an unredacted GEDCOM or expose raw GEDCOM records over HTTP.
 - Keep `server.py` responsible for sanitizing archive data before the browser receives it.
-- Keep the Pages artifact limited to `index.html`, `app.js`, `styles.css`, and generated sanitized data; never copy the GEDCOM into it.
+- Keep the Pages artifact limited to `index.html`, `app.js`, `styles.css`, approved local assets, and generated sanitized data; never copy the GEDCOM into it.
 - Keep every person and relationship in the public export. Abbreviate living names through generation 3 except Nathan Albert Pardo; generation 4 and later are named publicly. Disclose full name, birth date, and birthplace for people older than 85. Never export living people's photos.
 - Keep the app static and client-rendered: use existing `renderAll()`, `renderTree()`, `renderSurnames()`, and `renderPeople()` patterns rather than introducing a framework or build pipeline.
 - When working with GEDCOM data, normalize names and family relationships in the same shape used by `app.js` (`people`, `families`, `surnames`, `familyLinks`).

@@ -79,6 +79,9 @@ def build_site(output_dir):
             (output_dir / filename).write_text(public_app_source(archive), encoding="utf-8")
         else:
             shutil.copy2(ROOT / filename, output_dir / filename)
+    assets_dir = ROOT / "assets"
+    if assets_dir.is_dir():
+        shutil.copytree(assets_dir, output_dir / "assets")
 
     data_dir = output_dir / "data"
     data_dir.mkdir()
