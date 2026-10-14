@@ -214,7 +214,7 @@ function renderTree() {
       }
     }
   }
-  const menahem = people.find((person) => person.surname === "Dweck" && seen.has(person.id));
+  const menahem = people.find((person) => person.name === "Menahem Dweck" && seen.has(person.id));
   if (menahem && seen.has(menahem.id)) {
     if (!branchMembership.has(menahem.id)) branchMembership.set(menahem.id, new Set());
     branchMembership.get(menahem.id).add("paternal");
@@ -251,7 +251,7 @@ function renderTreeConnections(root) {
   const parents = (root?.parents || []).map(personById).filter(Boolean);
   const adele = parents.find((person) => person.surname === "Bibi");
   const albertAri = parents.find((person) => person.surname === "Pardo");
-  const menahem = people.find((person) => person.surname === "Dweck"
+  const menahem = people.find((person) => person.name === "Menahem Dweck"
     && findParentPath(adele, person.id) && findParentPath(albertAri, person.id));
   const eliyahu = people.find((person) => person.surname.toLocaleLowerCase().includes("seruya")
     && person.name.startsWith("E") && findParentPath(adele, person.id));
