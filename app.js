@@ -206,22 +206,8 @@ function renderTree() {
       if (person) pending.push(...(person.parents || []));
     }
   });
-  const sharedParents = new Map();
-  for (const generation of generations.slice(1)) {
-    for (const person of generation) {
-      for (const parentId of person.parents || []) {
-        sharedParents.set(parentId, (sharedParents.get(parentId) || 0) + 1);
-      }
-    }
-  }
-  const menahem = people.find((person) => person.name === "Menahem Dweck" && seen.has(person.id));
-  if (menahem && seen.has(menahem.id)) {
-    if (!branchMembership.has(menahem.id)) branchMembership.set(menahem.id, new Set());
-    branchMembership.get(menahem.id).add("paternal");
-    sharedParents.set(menahem.id, Math.max(sharedParents.get(menahem.id) || 0, 2));
-  }
   $("#tree-count").textContent = `${seen.size.toLocaleString()} connected relatives · ${generations.length} generations`;
-  $("#family-tree").innerHTML = `<p class="tree-hint">Scroll sideways to follow the generations. Each relative lists their recorded parents; names marked “shared ancestor” connect multiple branches.</p><div class="tree-scroll" tabindex="0" aria-label="Scrollable family tree across recorded generations"><div class="tree-generations">${generations.map((generation, index) => `<section class="tree-generation"><h3>${index === 0 ? "ROOT" : index === 1 ? "PARENTS" : index === 2 ? "GRANDPARENTS" : `GENERATION ${index}`}<span>${generation.length} ${generation.length === 1 ? "person" : "people"}</span></h3><div class="tree-generation-people">${generation.map((person) => { const branches = branchMembership.get(person.id) || new Set(); const branch = branches.size > 1 ? "interwoven-line" : branches.has("maternal") ? "maternal-line" : branches.has("paternal") ? "paternal-line" : ""; return nodeMarkup(person, sharedParents.get(person.id) || 0, branch); }).join("")}</div></section>`).join("")}</div></div>`;
+  $("#family-tree").innerHTML = `<p class="tree-hint">Scroll sideways to follow the generations. Each relative lists their recorded parents; “shared ancestor” marks ancestors reached through multiple root-family branches.</p><div class="tree-scroll" tabindex="0" aria-label="Scrollable family tree across recorded generations"><div class="tree-generations">${generations.map((generation, index) => `<section class="tree-generation"><h3>${index === 0 ? "ROOT" : index === 1 ? "PARENTS" : index === 2 ? "GRANDPARENTS" : `GENERATION ${index}`}<span>${generation.length} ${generation.length === 1 ? "person" : "people"}</span></h3><div class="tree-generation-people">${generation.map((person) => { const branches = branchMembership.get(person.id) || new Set(); const branch = branches.size > 1 ? "interwoven-line" : branches.has("maternal") ? "maternal-line" : branches.has("paternal") ? "paternal-line" : ""; return nodeMarkup(person, branches.size > 1 ? branches.size : 0, branch); }).join("")}</div></section>`).join("")}</div></div>`;
   $("#family-tree").querySelectorAll("[data-person]").forEach((node) => node.addEventListener("click", () => focusPerson(node.dataset.person)));
   renderTreeConnections(root);
 }
