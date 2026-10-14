@@ -1,6 +1,6 @@
 # The Pardo Family Archive
 
-A responsive family-history site for the Pardo, Bibi, Safdieh, Massry, and connected family lines. It includes a generational tree, searchable relatives and surnames, historical stories, and a timeline. The interactive photo gallery starts with one featured portrait per relative; visitors can search names, browse the complete photo collection, choose featured portraits, and move between images in an accessible viewer.
+A responsive family-history site for the Pardo, Bibi, Safdieh, Massry, and connected family lines. It includes a generational tree, searchable relatives and surnames, historical stories, and a timeline. The interactive photo gallery starts with one approved portrait per relative, and visitors can search names, browse the complete collection, and move between images in an accessible viewer.
 
 ## Run locally
 
@@ -18,11 +18,7 @@ The `Deploy family archive to GitHub Pages` workflow builds the static site on p
 
 The build also publishes `family-archive.html` as an alternate entry point to the same site. Use it if a browser or CDN continues serving a cached copy of the root homepage after deployment.
 
-### Choosing featured portraits
-
-In the gallery, choose **Browse every photo**, open a photo, and select **Use as featured portrait**. Your draft choices are saved in that browser. Select **Download choices** to export `featured-photos.json`; replace the repository's `featured-photos.json` with that download and publish the change to make the choices the default for everyone. The static site cannot write to GitHub directly, so this workflow does not require a GitHub token in the public page. **Discard draft** returns this browser to the current published choices.
-
-The GEDCOM and public export keep the full family tree and its relationships while removing contact details, addresses, private notes, and non-public living-person data. Living relatives through generation 3 (Arlette Kraiem's generation) are shown by initials and surname, except Nathan Albert Pardo, whose full name is shown. People in generations beyond 3 are shown by full name. Anyone whose recorded birth date establishes that they are older than 85 is shown with their full name, recorded birth date, and birthplace regardless of generation. Other living relatives' birth details are withheld, and photos of living people are always removed. The deployed JavaScript omits local preview records, displays the inter-branch relationship paths using the public names, and stops the public timeline before recent household events. Review the generated site data and artifact before publishing.
+The gallery uses the approved public portrait set stored in `featured-photos.json`. The repository keeps the final defaults in version control and the site renders from that published configuration. The GEDCOM and public export keep the full family tree and its relationships while removing contact details, addresses, private notes, and non-public living-person data. Living relatives through generation 3 (Arlette Kraiem's generation) are shown by initials and surname, except Nathan Albert Pardo, whose full name is shown. People in generations beyond 3 are shown by full name. Anyone whose recorded birth date establishes that they are older than 85 is shown with their full name, recorded birth date, and birthplace regardless of generation. Other living relatives' birth details are withheld, and photos of living people are always removed. The deployed JavaScript omits local preview records, displays the inter-branch relationship paths using the public names, and stops the public timeline before recent household events. Review the generated site data and artifact before publishing.
 
 To enable deployment:
 

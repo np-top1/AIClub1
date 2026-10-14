@@ -373,11 +373,16 @@ function renderPhotos() {
     : `${galleryPhotos.length} relatives · one portrait each`;
   $("#photo-view-toggle").textContent = showAllPhotos ? "One portrait per relative" : `Browse every photo (${fullAlbum.length})`;
   $("#photo-view-toggle").setAttribute("aria-pressed", String(showAllPhotos));
-  $("#photo-curation-status").textContent = unpublishedChoices
-    ? `${unpublishedChoices} unpublished choice${unpublishedChoices === 1 ? "" : "s"}`
-    : "Published choices shown";
-  $("#photo-export-featured").disabled = unpublishedChoices === 0;
-  $("#photo-discard-featured").disabled = unpublishedChoices === 0;
+  const curationStatus = $("#photo-curation-status");
+  if (curationStatus) {
+    curationStatus.textContent = unpublishedChoices
+      ? `${unpublishedChoices} unpublished choice${unpublishedChoices === 1 ? "" : "s"}`
+      : "Published choices shown";
+  }
+  const exportButton = $("#photo-export-featured");
+  if (exportButton) exportButton.disabled = unpublishedChoices === 0;
+  const discardButton = $("#photo-discard-featured");
+  if (discardButton) discardButton.disabled = unpublishedChoices === 0;
   $("#photo-grid").innerHTML = shown.length ? shown.map((photo, index) => `<button class="photo-card" type="button" data-photo-index="${index}" aria-label="View photo of ${escapeHtml(photo.name)}"><span class="photo-image-wrap"><img src="${escapeHtml(photo.url)}" alt="${escapeHtml(photo.caption ? `${photo.caption} — ${photo.name}` : `Photograph of ${photo.name}`)}" loading="lazy"><span class="photo-open-hint">OPEN GALLERY ↗</span></span><span class="photo-person">${escapeHtml(photo.name)}</span><small>${escapeHtml(photo.caption || "Family archive")}</small></button>`).join("") : `<div class="empty-state">No family photos match that name.</div>`;
   $("#photo-load-more").hidden = shown.length >= galleryPhotos.length;
   $("#photo-load-more").textContent = showAllPhotos ? "Show more photos ↓" : "Show more relatives ↓";
@@ -399,11 +404,13 @@ function updatePhotoViewer() {
   $("#photo-viewer-caption").textContent = photo.caption || "Family archive";
   $("#photo-viewer-count").textContent = `${viewerIndex + 1} / ${galleryPhotos.length}`;
   const featuredButton = $("#photo-viewer-feature");
-  featuredButton.hidden = !photo.personId;
-  featuredButton.disabled = !photo.personId || featuredPhotoChoices[photo.personId] === photo.url;
-  featuredButton.textContent = featuredPhotoChoices[photo.personId] === photo.url
-    ? "Featured portrait selected"
-    : "Use as featured portrait";
+  if (featuredButton) {
+    featuredButton.hidden = !photo.personId;
+    featuredButton.disabled = !photo.personId || featuredPhotoChoices[photo.personId] === photo.url;
+    featuredButton.textContent = featuredPhotoChoices[photo.personId] === photo.url
+      ? "Featured portrait selected"
+      : "Use as featured portrait";
+  }
 }
 
 function movePhoto(direction) {
@@ -676,9 +683,12 @@ $("#surname-search").addEventListener("input", () => { activeSurname = ""; rende
 $("#photo-search").addEventListener("input", () => { visiblePhotoCount = 24; renderPhotos(); });
 $("#photo-view-toggle").addEventListener("click", () => { showAllPhotos = !showAllPhotos; visiblePhotoCount = 24; renderPhotos(); });
 $("#photo-load-more").addEventListener("click", () => { visiblePhotoCount += 24; renderPhotos(); });
-$("#photo-viewer-feature").addEventListener("click", chooseFeaturedPhoto);
-$("#photo-export-featured").addEventListener("click", downloadFeaturedPhotoChoices);
-$("#photo-discard-featured").addEventListener("click", discardFeaturedPhotoChoices);
+const viewerFeatureButton = $("#photo-viewer-feature");
+if (viewerFeatureButton) viewerFeatureButton.addEventListener("click", chooseFeaturedPhoto);
+const exportFeaturedButton = $("#photo-export-featured");
+if (exportFeaturedButton) exportFeaturedButton.addEventListener("click", downloadFeaturedPhotoChoices);
+const discardFeaturedButton = $("#photo-discard-featured");
+if (discardFeaturedButton) discardFeaturedButton.addEventListener("click", discardFeaturedPhotoChoices);
 $("#photo-viewer-close").addEventListener("click", () => $("#photo-viewer").close());
 $("#photo-viewer-prev").addEventListener("click", () => movePhoto(-1));
 $("#photo-viewer-next").addEventListener("click", () => movePhoto(1));
