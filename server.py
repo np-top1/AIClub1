@@ -184,6 +184,12 @@ def records_from_gedcom(text):
         parent_ids = [parent for parent in (family["husband"], family["wife"]) if parent in people_by_id]
         for child_id in family["children"]:
             parents_by_child.setdefault(child_id, []).extend(parent_ids)
+    living_photo_urls = {
+        urlsplit(photo["url"]).path.casefold()
+        for person in people
+        if not person["death"]
+        for photo in person["_photos"]
+    }
     photos = []
     for person in people:
         parent_ids = []
@@ -195,7 +201,12 @@ def records_from_gedcom(text):
         person["parents"] = list(dict.fromkeys(parent_ids))
         for photo in person.pop("_photos"):
             path = urlsplit(photo["url"]).path.casefold()
-            if person["deceased"] and person["death"] and path.endswith((".jpg", ".jpeg", ".png", ".webp")):
+            if (
+                person["deceased"]
+                and person["death"]
+                and path not in living_photo_urls
+                and path.endswith((".jpg", ".jpeg", ".png", ".webp"))
+            ):
                 photos.append({"personId": person["id"], "name": person["name"], **photo})
         person.pop("deceased")
         person["roles"] = list(dict.fromkeys(person["roles"]))
