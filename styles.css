@@ -74,10 +74,15 @@ h2 { margin-bottom: 0; font: 500 clamp(30px, 4vw, 43px)/1.15 var(--display); }
 .quiet-button, .clear-filter { padding: 0; border: 0; background: none; color: var(--green-dark); font-size: 11px; cursor: pointer; }
 .quiet-button span { padding-left: 6px; }
 .tree-canvas { padding-top: 15px; }
-.person-node { min-width: 0; min-height: 87px; position: relative; padding: 12px; border: 1px solid var(--line); background: var(--paper); text-align: left; cursor: pointer; transition: border-color .18s, transform .18s; }
+.person-node { display: grid; grid-template-columns: 48px minmax(0, 1fr); align-items: center; gap: 0 10px; min-width: 0; min-height: 87px; position: relative; padding: 12px; border: 1px solid var(--line); background: var(--paper); text-align: left; cursor: pointer; transition: border-color .18s, transform .18s; }
 .person-node:hover { transform: translateY(-2px); border-color: var(--green); }
 .person-node strong { display: block; font: 500 16px/1.2 var(--display); overflow-wrap: break-word; }
 .person-node span { display: block; margin-top: 7px; color: var(--muted); font-size: 10px; }
+.person-node .node-portrait, .person-node .node-portrait-placeholder { grid-column: 1; grid-row: 1; width: 48px; height: 56px; margin: 0; border: 1px solid var(--line); background: var(--paper-deep); object-fit: cover; }
+.person-node .node-portrait-placeholder { display: grid; place-items: center; color: var(--green); font: 500 19px var(--display); }
+.person-node .person-node-copy { grid-column: 2; grid-row: 1; min-width: 0; margin-top: 0; }
+.person-node .person-node-copy > span { overflow-wrap: anywhere; }
+.person-node .person-node-copy > span:first-of-type { margin-top: 7px; }
 .node-generation { margin: 17px 0 7px; color: var(--muted); font: 9px var(--mono); }
 .tree-root { grid-column: 1 / -1; display: flex; align-items: center; justify-content: center; gap: 13px; margin-top: 8px; padding: 17px; border-top: 1px solid var(--line); background: var(--paper-deep); }
 .root-seal { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 50%; background: var(--green-dark); color: white; font: 19px var(--display); }
@@ -154,6 +159,7 @@ h2 { margin-bottom: 0; font: 500 clamp(30px, 4vw, 43px)/1.15 var(--display); }
 .tree-generation .person-node strong { font-size: 15px; line-height: 1.28; overflow-wrap: break-word; word-break: normal; }
 .tree-generation .person-node span { line-height: 1.45; overflow-wrap: break-word; word-break: normal; }
 .tree-generation .person-node .node-parents { color: var(--muted); font-size: 9px; }
+.tree-generation .person-node .node-portrait-placeholder { margin: 0; }
 .person-node.paternal-line { border-top: 2px solid var(--green); }
 .person-node.maternal-line { border-top: 2px solid var(--coral); }
 .person-node.interwoven-line { border-top: 2px solid var(--gold); }

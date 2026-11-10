@@ -20,6 +20,30 @@ The build also publishes `family-archive.html` as an alternate entry point to th
 
 The gallery uses the approved public portrait set stored in `featured-photos.json`. The repository keeps the final defaults in version control and the site renders from that published configuration. The GEDCOM and public export keep the full family tree and its relationships while removing contact details, addresses, private notes, and non-public living-person data. Living relatives through generation 3 (Arlette Kraiem's generation) are shown by initials and surname, except Nathan Albert Pardo, whose full name is shown. People in generations beyond 3 are shown by full name. Anyone whose recorded birth date establishes that they are older than 85 is shown with their full name, recorded birth date, and birthplace regardless of generation. Other living relatives' birth details are withheld, and photos of living people are always removed. The deployed JavaScript omits local preview records, displays the inter-branch relationship paths using the public names, and stops the public timeline before recent household events. Review the generated site data and artifact before publishing.
 
+## Deploy the sanitized archive to Modal
+
+Build the site locally from `export-Ancestors.ged` using the same public-data filter as the Pages build. `modal_app.py` includes only this generated static artifact in the Modal image; the source GEDCOM is not added. Modal serves the interactive family tree and per-relative photo gallery as a public website; only deceased relatives' approved photos are included. Modal web apps are publicly accessible, so inspect the generated artifact before deploying.
+
+Install the Modal CLI in a local virtual environment. Revoke any token previously shared in chat, create a replacement in the Modal dashboard, and enter it at the local prompt. Do not paste tokens into chat or commit them:
+
+```sh
+mkdir -p ~/.venvs
+python3 -m venv ~/.venvs/modal
+. ~/.venvs/modal/bin/activate
+python -m pip install -r requirements-modal.txt
+modal token set --profile natpardo111
+modal profile activate natpardo111
+```
+
+Build and inspect the sanitized artifact before deploying:
+
+```sh
+python3 build_static.py --gedcom export-Ancestors.ged --output /tmp/pardo-modal-preview
+PARDO_MODAL_SITE_DIRECTORY=/tmp/pardo-modal-preview modal deploy modal_app.py
+```
+
+Modal creates a public URL for the app. Do not use a raw GEDCOM in the Modal image or upload source GEDCOMs directly.
+
 To enable deployment:
 
 1. In the repository, open **Settings → Pages** and set **Build and deployment → Source** to **GitHub Actions**.

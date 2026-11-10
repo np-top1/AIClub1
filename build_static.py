@@ -66,9 +66,10 @@ def public_app_source(archive):
     return f"const embeddedArchiveData = {embedded_data};\n\n{source}"
 
 
-def build_site(output_dir):
-    if not GEDCOM.is_file():
-        raise FileNotFoundError(f"GEDCOM source not found: {GEDCOM}")
+def build_site(output_dir, gedcom_path=GEDCOM):
+    gedcom_path = Path(gedcom_path).resolve()
+    if not gedcom_path.is_file():
+        raise FileNotFoundError(f"GEDCOM source not found: {gedcom_path}")
 
     output_dir = output_dir.resolve()
     if output_dir == ROOT:
@@ -76,7 +77,7 @@ def build_site(output_dir):
     if output_dir.exists() and any(output_dir.iterdir()):
         raise FileExistsError(f"Build output directory must be empty: {output_dir}")
 
-    archive = records_from_gedcom(GEDCOM.read_text(encoding="utf-8", errors="replace"))
+    archive = records_from_gedcom(gedcom_path.read_text(encoding="utf-8", errors="replace"))
     public_data = public_archive_data(archive)
 
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -107,10 +108,16 @@ def build_site(output_dir):
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Build the public, sanitized GitHub Pages site.")
+    parser = argparse.ArgumentParser(description="Build the public, sanitized family archive site.")
     parser.add_argument("--output", type=Path, required=True, help="An empty output directory for the Pages artifact.")
+    parser.add_argument(
+        "--gedcom",
+        type=Path,
+        default=GEDCOM,
+        help=f"GEDCOM source to sanitize (default: {GEDCOM.name}).",
+    )
     arguments = parser.parse_args()
-    result = build_site(arguments.output)
+    result = build_site(arguments.output, gedcom_path=arguments.gedcom)
     print(
         f"Built static site with {len(result['people'])} relatives, "
         f"{len(result['surnames'])} surnames, and {len(result['photos'])} photos."

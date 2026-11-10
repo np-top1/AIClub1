@@ -219,7 +219,13 @@ function nodeMarkup(person, sharedCount = 0, branch = "") {
     : person.birth ? `Born ${person.birth}` : "";
   const parents = (person.parents || []).map(personById).filter(Boolean).map((parent) => parent.name);
   const detail = [[dates, person.place].filter(Boolean).join(" · ") || person.surname || "Family record", parents.length ? `Parents: ${parents.join(" + ")}` : ""].filter(Boolean);
-  return `<button class="person-node ${branch}" type="button" data-person="${escapeHtml(person.id)}"><strong>${escapeHtml(person.name)}</strong><span>${escapeHtml(detail[0])}</span>${parents.length ? `<span class="node-parents">${escapeHtml(detail[1])}</span>` : ""}${sharedCount > 1 ? `<span class="shared-ancestor">SHARED ANCESTOR · ${sharedCount} BRANCHES</span>` : ""}</button>`;
+  const preferredPhoto = featuredPhotoChoices[person.id] || publishedFeaturedPhotos[person.id];
+  const photo = archivePhotos.find((item) => item.personId === person.id && item.url === preferredPhoto)
+    || archivePhotos.find((item) => item.personId === person.id);
+  const portrait = photo
+    ? `<img class="node-portrait" src="${escapeHtml(photo.url)}" alt="" loading="lazy">`
+    : `<span class="node-portrait-placeholder" aria-hidden="true">${escapeHtml(person.name.trim().charAt(0).toLocaleUpperCase())}</span>`;
+  return `<button class="person-node ${branch}" type="button" data-person="${escapeHtml(person.id)}">${portrait}<span class="person-node-copy"><strong>${escapeHtml(person.name)}</strong><span>${escapeHtml(detail[0])}</span>${parents.length ? `<span class="node-parents">${escapeHtml(detail[1])}</span>` : ""}${sharedCount > 1 ? `<span class="shared-ancestor">SHARED ANCESTOR · ${sharedCount} BRANCHES</span>` : ""}</span></button>`;
 }
 
 function findParentPath(descendant, ancestorId, visited = new Set()) {
